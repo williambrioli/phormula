@@ -1,0 +1,236 @@
+/* ============================================================
+   RESET BÁSICO
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFFFF;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ============================================================
+   VARIÁVEIS DE CORES (PALETA DA FARMÁCIA)
+   ============================================================ */
+:root {
+  --azul-escuro: #1B7396;   /* institucional */
+  --azul-medio:  #01A1DB;   /* destaque */
+  --turquesa:    #2CCCD3;   /* apoio / promoção */
+  --coral:       #C49154;   /* CTA suave */
+  --rosa-claro:  #EBEBEB;   /* fundo leve */
+
+  --branco: #FFFFFF;
+  --cinza-claro: #F5F5F5;
+  --cinza: #777;
+}
+
+/* ============================================================
+   CONTAINER PADRÃO
+   ============================================================ */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   HEADER / TOPO
+   ============================================================ */
+.header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  padding: 16px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+}
+
+/* Menu */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Busca */
+.search-box input {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  width: 220px;
+}
+
+/* ============================================================
+   BANNER DINÂMICO
+   ============================================================ */
+.banner {
+  background-color: var(--cinza-claro);
+  padding: 32px 0;
+}
+
+.banner h2 {
+  margin-bottom: 16px;
+  color: var(--azul-escuro);
+}
+
+.banner-cards {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+/* ============================================================
+   CONTEÚDO PRINCIPAL
+   ============================================================ */
+.main {
+  padding: 32px 0;
+}
+
+/* Seção de categoria */
+.categoria-section {
+  margin-bottom: 48px;
+}
+
+.categoria-section h2 {
+  margin-bottom: 16px;
+  color: var(--azul-escuro);
+}
+
+/* Grid de produtos */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* ============================================================
+   CARD DE PRODUTO
+   ============================================================ */
+.card {
+  background-color: var(--branco);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: var(--azul-escuro);
+}
+
+.card .preco {
+  font-weight: bold;
+  color: var(--coral);
+}
+
+.card .descricao {
+  font-size: 0.85rem;
+  color: var(--cinza);
+  display: none; /* JS controla */
+}
+
+.card button {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Quantidade */
+.quantidade {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantidade button {
+  background-color: var(--azul-medio);
+  color: var(--branco);
+  width: 32px;
+}
+
+/* Botão comprar */
+.btn-comprar {
+  background-color: var(--turquesa);
+  color: var(--branco);
+  font-weight: bold;
+}
+
+.btn-comprar:hover {
+  opacity: 0.9;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  padding: 32px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer a {
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.btn-whatsapp {
+  background-color: var(--turquesa);
+  padding: 10px 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+}
