@@ -28,7 +28,7 @@ const categorias = [
   },
 
    {
-    id: "Energia",
+    id: "energia",
     nome: "Energia"
   }
 ];
@@ -41,7 +41,7 @@ const produtos = [
   {
     id: 1,
     nome: "B-BURN DIA A DIA",
-    categoria: "Energia",
+    categoria: "energia",
     preco: 90.00,
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/B-BURN DIA-DIA POST ATIVA.jpg
