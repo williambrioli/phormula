@@ -252,6 +252,25 @@ img {
 }
 
 /* ============================================================
+   BUSCA POR CATEGORIA (SELECT)
+   ============================================================ */
+
+.category-box {
+  width: 100%;
+  max-width: 260px;
+}
+
+.category-box select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 24px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* ============================================================
    RESPONSIVO
    ============================================================ */
 @media (max-width: 768px) {
@@ -283,4 +302,14 @@ img {
 .logo img {
   margin: 0 auto;
 }
+
+ .header-bottom-content {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.category-box,
+.search-box {
+  max-width: 100%;
+}  
 }
