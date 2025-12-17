@@ -25,6 +25,11 @@ const categorias = [
   {
     id: "higiene",
     nome: "Higiene"
+  },
+
+   {
+    id: "Energia",
+    nome: "Energia"
   }
 ];
 
@@ -35,11 +40,12 @@ const categorias = [
 const produtos = [
   {
     id: 1,
-    nome: "Dipirona 500mg",
-    categoria: "analgesicos",
-    preco: 9.90,
-    descricao: "Indicado para alívio de dores e redução da febre.",
-    imagem: "assets/img/dipirona.jpg",
+    nome: "B-BURN DIA A DIA",
+    categoria: "Energia",
+    preco: 90.00,
+    descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
+    imagem: "assets/img/B-BURN DIA-DIA POST ATIVA.jpg
+",
     destaque: true
   },
   {
