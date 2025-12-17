@@ -44,8 +44,7 @@ const produtos = [
     categoria: "energia",
     preco: 90.00,
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
-    imagem: "assets/img/B-BURN DIA-DIA POST ATIVA.jpg
-",
+    imagem: "assets/img/BBURNDIADIAPOSTATIVA.jpg",
     destaque: true
   },
   {
