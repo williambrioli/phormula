@@ -97,6 +97,7 @@ function criarCardProduto(produto, isBanner = false) {
 
   const card = document.createElement("div");
   card.classList.add("card");
+  card.id = `produto-${produto.id}`;
 
   card.innerHTML = `
     <img src="${produto.imagem}" alt="${produto.nome}">
@@ -146,7 +147,7 @@ btnComprar.addEventListener("click", () => {
   // 1️⃣ calcula o total
   const valorUnitario = produto.preco;
   const valorTotal = valorUnitario * quantidade;
-  const linkProduto = `${window.location.origin}${window.location.pathname}#${produto.categoria}`;
+  const linkProduto = `${window.location.origin}${window.location.pathname}#produto-${produto.id}`;
   // 2️⃣ monta a mensagem
   const mensagem =
     `Olá! Gostaria de fazer um pedido:%0A%0A` +
