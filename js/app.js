@@ -154,7 +154,8 @@ btnComprar.addEventListener("click", () => {
     `Categoria: ${slugParaNomeCategoria(produto.categoria)}%0A` +
     `Quantidade: ${quantidade} unidade(s)%0A` +
     `Valor unitário: ${formatarPreco(valorUnitario)}%0A` +
-    `Valor total: ${formatarPreco(valorTotal)}`;
+    `Valor total: ${formatarPreco(valorTotal)}%0A%0A` +
+    `Link do produto:%0A${linkProduto}`;
 
   // 3️⃣ abre o WhatsApp
   const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagem}`;
