@@ -13,32 +13,44 @@
   <!-- ======================================================
        HEADER / TOPO
        ====================================================== -->
-  <header class="header">
-    <div class="container header-content">
+<header class="header">
 
-      <!-- Logo / Nome da Farmácia -->
-      <div class="logo">
-        <h1>Farmácia</h1>
-      </div>
+  <!-- LINHA 1: MENU DE CATEGORIAS -->
+  <div class="header-top">
+    <div class="container header-top-content">
 
-      <!-- Menu dinâmico (categorias via JS) -->
       <nav class="nav">
         <ul id="menu-categorias">
-          <!-- JS injeta as categorias aqui -->
+          <!-- JS injeta as categorias -->
         </ul>
       </nav>
 
-      <!-- Busca -->
+    </div>
+  </div>
+
+  <!-- LINHA 2: LOGO + BUSCA -->
+  <div class="header-bottom">
+    <div class="container header-bottom-content">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="assets/img/logo-farmacia.png" alt="Logo da Farmácia">
+      </div>
+
+      <!-- BUSCA -->
       <div class="search-box">
+        <span class="search-icon">🔍</span>
         <input 
           type="text" 
           id="searchInput" 
-          placeholder="Buscar por produto, categoria ou descrição..." 
+          placeholder="O que você está buscando?" 
         />
       </div>
 
     </div>
-  </header>
+  </div>
+
+</header>
 
   <!-- ======================================================
        BANNER DINÂMICO (PROMOÇÕES / DESTAQUES)
