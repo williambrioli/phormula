@@ -13,22 +13,9 @@
   <!-- ======================================================
        HEADER / TOPO
        ====================================================== -->
+
 <header class="header">
 
-  <!-- LINHA 1: MENU DE CATEGORIAS -->
-  <div class="header-top">
-    <div class="container header-top-content">
-
-      <nav class="nav">
-        <ul id="menu-categorias">
-          <!-- JS injeta as categorias -->
-        </ul>
-      </nav>
-
-    </div>
-  </div>
-
-  <!-- LINHA 2: LOGO + BUSCA -->
   <div class="header-bottom">
     <div class="container header-bottom-content">
 
@@ -37,7 +24,7 @@
         <img src="assets/img/logophormula.png" alt="Logo da Farmácia">
       </div>
 
-      <!-- BUSCA -->
+      <!-- BUSCA POR TEXTO -->
       <div class="search-box">
         <span class="search-icon">🔍</span>
         <input 
@@ -47,11 +34,17 @@
         />
       </div>
 
+      <!-- BUSCA POR CATEGORIA -->
+      <div class="category-box">
+        <select id="categorySelect">
+          <option value="">📂 Todas as categorias</option>
+        </select>
+      </div>
+
     </div>
   </div>
 
 </header>
-
   <!-- ======================================================
        BANNER DINÂMICO (PROMOÇÕES / DESTAQUES)
        ====================================================== -->
