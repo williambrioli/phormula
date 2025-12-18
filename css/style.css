@@ -364,12 +364,33 @@ img {
 }
 
 .slider-track {
-  display: flex;              /* 🔥 ISSO resolve o problema */
+  display: flex;
   gap: 16px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding-bottom: 12px;
+  padding-bottom: 16px;
+
+  /* ESCONDE A BARRA FEIA */
+  scrollbar-width: none;       /* Firefox */
 }
+
+.slider-track::-webkit-scrollbar {
+  display: none;               /* Chrome / Edge */
+}
+
+
+
+/* Desktop: cards inteiros, sem corte */
+@media (min-width: 769px) {
+  .slider-track {
+    overflow-x: hidden; /* desktop NÃO rola com scroll */
+  }
+
+  .slider-track .card {
+    flex: 0 0 260px; /* largura fixa do card */
+  }
+}
+
 
 /* cada card */
 .slider-track .card {
