@@ -278,10 +278,11 @@ document.addEventListener("click", function (event) {
 });
 
 // ============================================================
-// SLIDER PROFISSIONAL (DESKTOP + MOBILE)
+// SLIDER PROFISSIONAL — LÓGICA FINAL
 // ============================================================
 
 document.querySelectorAll(".slider").forEach(slider => {
+
   const track = slider.querySelector(".slider-track");
   const left = slider.querySelector(".arrow.left");
   const right = slider.querySelector(".arrow.right");
@@ -290,15 +291,13 @@ document.querySelectorAll(".slider").forEach(slider => {
   if (!track) return;
 
   const cards = [...track.children];
-  if (cards.length === 0) return;
-
   const gap = 16;
-  const cardWidth = cards[0].offsetWidth + gap;
+  const cardWidth = 260 + gap;
 
   const isMobile = window.innerWidth <= 768;
   const visible = isMobile ? 1 : 4;
 
-  const maxPage = Math.max(0, Math.ceil(cards.length / visible) - 1);
+  const totalPages = Math.ceil(cards.length / visible);
   let page = 0;
 
   /* ESCONDE SETAS SE NÃO PRECISAR */
@@ -307,10 +306,10 @@ document.querySelectorAll(".slider").forEach(slider => {
     right.style.display = "none";
   }
 
-  /* BOLINHAS (APENAS MOBILE) */
-  if (isMobile && dots) {
+  /* DOTS */
+  if (dots) {
     dots.innerHTML = "";
-    for (let i = 0; i <= maxPage; i++) {
+    for (let i = 0; i < totalPages; i++) {
       const dot = document.createElement("span");
       if (i === 0) dot.classList.add("active");
       dots.appendChild(dot);
@@ -318,17 +317,8 @@ document.querySelectorAll(".slider").forEach(slider => {
   }
 
   function update() {
-    const targetIndex = page * visible;
-    const maxTranslate =
-      (cards.length * cardWidth) -
-      (visible * cardWidth);
-
-    const translate = Math.min(
-      targetIndex * cardWidth,
-      maxTranslate
-    );
-
-    track.style.transform = `translateX(-${translate}px)`;
+    const translateX = page * visible * cardWidth;
+    track.style.transform = `translateX(-${translateX}px)`;
 
     if (dots) {
       [...dots.children].forEach((d, i) =>
@@ -343,7 +333,8 @@ document.querySelectorAll(".slider").forEach(slider => {
   });
 
   right?.addEventListener("click", () => {
-    page = Math.min(maxPage, page + 1);
+    page = Math.min(totalPages - 1, page + 1);
     update();
   });
+
 });
