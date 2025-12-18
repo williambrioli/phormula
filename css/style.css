@@ -248,6 +248,48 @@ img {
     max-width: 100%;       /* remove limite do desktop */
     margin: 0 auto;        /* centraliza */
   }
+
+
+
+   /* ============================================================
+   MOBILE – TODAS AS SESSÕES COM SCROLL HORIZONTAL
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* container de cards vira faixa horizontal */
+  .produtos-grid {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+  }
+
+  /* remove grid do desktop */
+  .produtos-grid > * {
+    scroll-snap-align: start;
+  }
+
+
+ .card {
+    flex: 0 0 85%;   /* largura do card */
+    max-width: 85%;
+  }
+
+.banner-cards {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .banner-cards .card {
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: start;
+  }
+   
 }
+
 
 
