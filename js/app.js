@@ -281,60 +281,60 @@ document.addEventListener("click", function (event) {
 // SLIDER PROFISSIONAL — LÓGICA FINAL
 // ============================================================
 
-document.querySelectorAll(".slider").forEach(slider => {
+function initSliders() {
+  document.querySelectorAll(".slider").forEach(slider => {
+    const track = slider.querySelector(".slider-track");
+    const left = slider.querySelector(".arrow.left");
+    const right = slider.querySelector(".arrow.right");
+    const dots = slider.parentElement.querySelector(".slider-dots");
 
-  const track = slider.querySelector(".slider-track");
-  const left = slider.querySelector(".arrow.left");
-  const right = slider.querySelector(".arrow.right");
-  const dots = slider.parentElement.querySelector(".slider-dots");
+    const cards = [...track.children];
+    const isMobile = window.innerWidth <= 768;
+    const perPage = isMobile ? 1 : 4;
 
-  if (!track) return;
+    const totalPages = Math.ceil(cards.length / perPage);
+    let page = 0;
 
-  const cards = [...track.children];
-  const gap = 16;
-  const cardWidth = 260 + gap;
+    // esconde setas se não precisar
+    if (!isMobile && cards.length <= perPage) {
+      left.style.display = "none";
+      right.style.display = "none";
+      dots.innerHTML = "";
+      return;
+    }
 
-  const isMobile = window.innerWidth <= 768;
-  const visible = isMobile ? 1 : 4;
-
-  const totalPages = Math.ceil(cards.length / visible);
-  let page = 0;
-
-  /* ESCONDE SETAS SE NÃO PRECISAR */
-  if (!isMobile && cards.length <= visible) {
-    left.style.display = "none";
-    right.style.display = "none";
-  }
-
-  /* DOTS */
-  if (dots) {
+    // cria dots por página
     dots.innerHTML = "";
     for (let i = 0; i < totalPages; i++) {
-      const dot = document.createElement("span");
-      if (i === 0) dot.classList.add("active");
-      dots.appendChild(dot);
+      const d = document.createElement("span");
+      if (i === 0) d.classList.add("active");
+      dots.appendChild(d);
     }
-  }
 
-  function update() {
-    const translateX = page * visible * cardWidth;
-    track.style.transform = `translateX(-${translateX}px)`;
+    function update() {
+      const cardWidth = cards[0].offsetWidth;
+      const gap = 16;
+      const offset = page * perPage * (cardWidth + gap);
+      track.style.transform = `translateX(-${offset}px)`;
 
-    if (dots) {
       [...dots.children].forEach((d, i) =>
         d.classList.toggle("active", i === page)
       );
     }
-  }
 
-  left?.addEventListener("click", () => {
-    page = Math.max(0, page - 1);
+    left.onclick = () => {
+      page = Math.max(0, page - 1);
+      update();
+    };
+
+    right.onclick = () => {
+      page = Math.min(totalPages - 1, page + 1);
+      update();
+    };
+
     update();
   });
+}
 
-  right?.addEventListener("click", () => {
-    page = Math.min(totalPages - 1, page + 1);
-    update();
-  });
-
-});
+window.addEventListener("load", initSliders);
+window.addEventListener("resize", () => location.reload());
