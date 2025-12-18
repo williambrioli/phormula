@@ -3,119 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phormula Ativa – Catálogo Online</title>
-
-  <!-- CSS externo -->
+  <title>Phormula Ativa – Catálogo</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/menu.css" />
 </head>
 <body>
 
-  <!-- ======================================================
-       HEADER / TOPO
-       ====================================================== -->
 <header class="header">
   <div class="container header-content">
-  
-
-    
-    <div class="logo">
-  <img src="assets/img/logophormula1.png" alt="Logo da Farmácia">
-</div>
-
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    
-    <nav class="nav">
-    <div class="menu-overlay" id="menuOverlay"></div>
-      
-      <ul id="menu-categorias"></ul>
-    </nav>
-
-    <div class="search-box">
-      <input 
-        type="text" 
-        id="searchInput" 
-        placeholder="O que você está buscando?" 
-      />
-    </div>
-
+    <img src="assets/img/logophormula1.png" class="logo" alt="Phormula Ativa">
+    <input type="text" id="searchInput" placeholder="O que você está buscando?" />
   </div>
 </header>
 
+<main class="main container">
 
-  <!-- ======================================================
-       BANNER DINÂMICO (PROMOÇÕES / DESTAQUES)
-       ====================================================== -->
-  <section class="banner">
-    <div class="container">
-      <h2>Destaques</h2>
-
-      <div class="slider banner-slider">
-  <button class="arrow left">‹</button>
-
-  <div id="banner-container" class="slider-track"></div>
-
-  <button class="arrow right">›</button>
-</div>
-
-<div class="slider-dots">
-        <!-- Cards do banner gerados via JS -->
-      </div>
-    </div>
+  <!-- DESTAQUES -->
+  <section>
+    <h2>Destaques</h2>
+    <div id="banner" class="product-row"></div>
   </section>
 
-  <!-- ======================================================
-       CONTEÚDO PRINCIPAL
-       ====================================================== -->
-  <main class="main">
-  <div id="produtos-container">
+  <!-- CATEGORIAS -->
+  <div id="produtos-container"></div>
 
+</main>
 
-      <!-- ==================================================
-           As seções de categorias são criadas via JavaScript
-           Cada categoria vira uma <section>
-           ================================================== -->
+<footer class="footer">
+  <p>© Phormula Ativa</p>
+</footer>
 
-    </div>
-  </main>
-
-  <!-- ======================================================
-       FOOTER / RODAPÉ
-       ====================================================== -->
-  <footer class="footer">
-    <div class="container footer-content">
-
-      <!-- Informações -->
-      <div class="footer-info">
-        <h3>Contato</h3>
-        <p>Entre em contato conosco pelas redes sociais ou WhatsApp.</p>
-      </div>
-
-      <!-- Redes Sociais -->
-      <div class="footer-social">
-        <a href="#" target="_blank">Instagram</a>
-        <a href="#" target="_blank">Facebook</a>
-      </div>
-
-      <!-- Botão WhatsApp -->
-      <div class="footer-whatsapp">
-        <a href="#" id="whatsappFooter" class="btn-whatsapp">
-          Falar no WhatsApp
-        </a>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- ======================================================
-       SCRIPTS
-       ====================================================== -->
-
-  <!-- Dados (produtos, categorias, banner) -->
-  <script src="js/data.js"></script>
-
-  <!-- Lógica do site -->
-  <script src="js/app.js"></script>
-
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
