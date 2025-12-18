@@ -90,7 +90,11 @@ function renderProdutos(listaProdutos) {
 
     section.appendChild(titulo);
     section.appendChild(grid);
-    produtosContainer.appendChild(section);
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("categoria-wrapper");
+
+    wrapper.appendChild(section);
+    produtosContainer.appendChild(wrapper);
   });
 }
 
