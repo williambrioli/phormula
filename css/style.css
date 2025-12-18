@@ -180,3 +180,56 @@ body {
     height: 180px;
   }
 }
+
+/* ============================================================
+   AJUSTE VISUAL DAS SESSÕES (SEM QUEBRAR ESTRUTURA)
+   ============================================================ */
+
+/* espaço entre Destaques e a próxima sessão */
+.banner {
+  margin-bottom: 40px;
+}
+
+/* cada seção de categoria */
+.categoria-section {
+  margin-bottom: 40px; /* espaço entre sessões */
+}
+
+/* deixa as listas de produtos com comportamento de slide */
+.categoria-section .produtos-grid,
+.banner-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+
+/* esconde scrollbar feia */
+.categoria-section .produtos-grid::-webkit-scrollbar,
+.banner-cards::-webkit-scrollbar {
+  height: 6px;
+}
+
+.categoria-section .produtos-grid::-webkit-scrollbar-thumb,
+.banner-cards::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+/* cards NÃO mudam de estrutura */
+.produtos-grid > *,
+.banner-cards > * {
+  flex: 0 0 auto;
+}
+
+/* ============================================================
+   MOBILE – cards mais largos
+   ============================================================ */
+@media (max-width: 768px) {
+
+  .produtos-grid > *,
+  .banner-cards > * {
+    min-width: 85%;
+  }
+}
+
