@@ -13,16 +13,19 @@ const categorias = [
   {
     id: "emagrecimento",
     nome: "Manipulados para emagrecimento",
+    nomeMenu: "Emagrecimento",
     mostrarNoMenu: true
   },
   {
     id: "desempenhofisico",
     nome: "Manipulados para desempenho físico",
+    nomeMenu: "Desempenho físico",
     mostrarNoMenu: true
   },
   {
     id: "saude",
     nome: "Manipulados para saúde e bem-estar",
+    nomeMenu: "Saúde",
     mostrarNoMenu: true
   }
   
