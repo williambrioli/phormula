@@ -1,62 +1,57 @@
-const banner = document.getElementById("banner");
+const menu = document.getElementById("menu-categorias");
 const container = document.getElementById("produtos-container");
-const searchInput = document.getElementById("searchInput");
+const destaques = document.getElementById("destaques");
 
-function format(v) {
-  return v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-}
-
-function criarCard(p) {
-  return `
-    <div class="card">
-      <img src="${p.imagem}">
-      <h3>${p.nome}</h3>
-      <div class="preco">${format(p.preco)}</div>
-      <div class="card-actions">
-        <div class="qty">
-          <button>-</button><span>1</span><button>+</button>
-        </div>
-        <button class="buy">Comprar</button>
-      </div>
-    </div>
-  `;
-}
-
-/* ===== DESTAQUES ===== */
-produtos.filter(p => p.destaque).forEach(p => {
-  banner.innerHTML += criarCard(p);
-});
-
-/* ===== CATEGORIAS ===== */
+// MENU
 categorias.forEach(cat => {
-  const lista = produtos.filter(p => p.categoria === cat.id);
-  if (!lista.length) return;
-
-  const section = document.createElement("section");
-  section.innerHTML = `<h2>${cat.nome}</h2><div class="product-row"></div>`;
-  const row = section.querySelector(".product-row");
-
-  lista.forEach(p => row.innerHTML += criarCard(p));
-  container.appendChild(section);
+  if (cat.mostrarNoMenu) {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="#${cat.id}">${cat.nome}</a>`;
+    menu.appendChild(li);
+  }
 });
 
-/* ===== BUSCA ===== */
-searchInput.addEventListener("input", e => {
-  const termo = e.target.value.toLowerCase();
-  container.innerHTML = "";
+// DESTAQUES
+produtos.filter(p => p.destaque).forEach(p => {
+  destaques.appendChild(cardProduto(p));
+});
 
-  categorias.forEach(cat => {
-    const lista = produtos.filter(p =>
-      p.categoria === cat.id &&
-      p.nome.toLowerCase().includes(termo)
-    );
-    if (!lista.length) return;
+// CATEGORIAS
+categorias.forEach(cat => {
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.id = cat.id;
 
-    const section = document.createElement("section");
-    section.innerHTML = `<h2>${cat.nome}</h2><div class="product-row"></div>`;
-    const row = section.querySelector(".product-row");
+  const h2 = document.createElement("h2");
+  h2.textContent = cat.nome;
 
-    lista.forEach(p => row.innerHTML += criarCard(p));
-    container.appendChild(section);
+  const grid = document.createElement("div");
+  grid.className = "product-grid";
+
+  produtos.filter(p => p.categoria === cat.id).forEach(p => {
+    grid.appendChild(cardProduto(p));
   });
+
+  sec.appendChild(h2);
+  sec.appendChild(grid);
+  container.appendChild(sec);
 });
+
+// CARD
+function cardProduto(p) {
+  const div = document.createElement("div");
+  div.className = "card";
+
+  div.innerHTML = `
+    <img src="${p.imagem}">
+    <h3>${p.nome}</h3>
+    <p class="price">R$ ${p.preco.toFixed(2)}</p>
+    <button class="btn">Comprar</button>
+  `;
+  return div;
+}
+
+// MENU MOBILE
+document.getElementById("menuToggle").onclick = () => {
+  document.getElementById("navMenu").classList.toggle("active");
+};
