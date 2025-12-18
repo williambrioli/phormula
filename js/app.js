@@ -337,5 +337,27 @@ document.querySelectorAll(".slider").forEach(slider => {
     update();
   });
 
+     /* ============================================================
+     SINCRONIZA DOTS COM SCROLL NO MOBILE
+     ============================================================ */
+
+  if (window.innerWidth < 1024 && dots) {
+    track.addEventListener("scroll", () => {
+      const scrollLeft = track.scrollLeft;
+      const newPage = Math.round(
+        scrollLeft / (cardWidth * visible)
+      );
+
+      if (newPage !== page) {
+        page = Math.min(Math.max(newPage, 0), pages - 1);
+
+        [...dots.children].forEach((d, i) =>
+          d.classList.toggle("active", i === page)
+        );
+      }
+    });
+  }
+
+   
   update();
 });
