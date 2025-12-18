@@ -208,13 +208,19 @@ renderBanner();
 renderProdutos(produtos);
 
 /* ============================================================
-   MENU HAMBÚRGUER MOBILE
+   MENU HAMBÚRGUER FLUTUANTE (MOBILE)
    ============================================================ */
 
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.querySelector(".nav");
+const menuOverlay = document.getElementById("menuOverlay");
 
 menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
+  navMenu.classList.add("active");
+  menuOverlay.classList.add("active");
 });
 
+menuOverlay.addEventListener("click", () => {
+  navMenu.classList.remove("active");
+  menuOverlay.classList.remove("active");
+});
