@@ -13,7 +13,7 @@ const categorias = [
   {
     id: "analgesicos",
     nome: "Analgésicos",
-    mostrarNoMenu: true
+    mostrarNoMenu: false
   },
   {
     id: "cosmeticos",
