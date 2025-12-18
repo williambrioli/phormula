@@ -50,8 +50,8 @@ img {
    ============================================================ */
 .banner {
   background-color: var(--cinza-claro);
-  padding: 32px 0;
-  margin-bottom: 5px; /* 👈 ESPAÇO ENTRE DESTAQUES E CATEGORIAS */
+  padding: 32px 8;
+  margin-bottom: 8px; /* 👈 ESPAÇO ENTRE DESTAQUES E CATEGORIAS */
 }
 
 .banner h2 {
@@ -265,8 +265,8 @@ img {
 .categoria-section {
   width: 100%;
   background-color: var(--cinza-claro); /* MESMO CINZA DOS DESTAQUES */
-  padding: 48px 0; /* 🔹 espaço interno da sessão */
-  margin-bottom: 5px; /* 🔹 espaço ENTRE uma sessão e outra */
+  padding: 32px 8px; /* 🔹 espaço interno da sessão */
+  margin-bottom: 8px; /* 🔹 espaço ENTRE uma sessão e outra */
 }
 
 /* título da categoria */
