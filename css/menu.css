@@ -124,4 +124,62 @@ text-decoration: underline;
   .nav a {
     font-size: 1rem;
   }
+
+   /* ============================================================
+   MENU FLUTUANTE MOBILE (OFF-CANVAS)
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* botão hamburguer no canto esquerdo */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 20px;
+    z-index: 1001;
+  }
+
+  /* menu lateral */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -260px;              /* escondido */
+    width: 260px;
+    height: 100vh;
+    background-color: var(--azul-escuro);
+    padding-top: 80px;
+    transition: left 0.3s ease;
+    z-index: 1002;
+  }
+
+  /* menu aberto */
+  .nav.active {
+    left: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .nav a {
+    font-size: 1rem;
+    color: var(--branco);
+  }
+
+  /* overlay escuro */
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1000;
+  }
+
+  .menu-overlay.active {
+    display: block;
+  }
 }
+
