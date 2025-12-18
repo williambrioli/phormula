@@ -66,6 +66,21 @@ img {
   gap: 16px;
   overflow-x: auto;
 }
+/* ============================================================
+   FUNDO DAS SEÇÕES (IGUAL DESTAQUES)
+   ============================================================ */
+
+.categoria-wrapper {
+  background-color: var(--cinza-claro);
+  padding: 32px 0;
+}
+
+/* mantém conteúdo centralizado */
+.categoria-wrapper .categoria-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 /* ============================================================
    CONTEÚDO PRINCIPAL
