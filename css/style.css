@@ -81,7 +81,7 @@ img {
    ============================================================ */
 .card {
   background-color: transparent; /* 🔹 remove fundo branco */
-  border: 1.5px solid var(--cinza); /* 🔹 contorno azul */
+  border: 1.3px solid var(--cinza); /* 🔹 contorno azul */
   border-radius: 16px;
 
   box-shadow: none; /* 🔹 remove sombra pesada */
