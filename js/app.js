@@ -70,17 +70,16 @@ function renderProdutos(listaProdutos) {
 
   categorias.forEach(cat => {
     const produtosDaCategoria = listaProdutos.filter(p => p.categoria === cat.id);
-
     if (produtosDaCategoria.length === 0) return;
 
     const section = document.createElement("section");
-section.classList.add("categoria-bg"); // fundo full width
-
-const container = document.createElement("div");
-container.classList.add("container"); // conteúdo central
-
-section.appendChild(container);
+    section.classList.add("categoria-bg");
     section.id = cat.id;
+
+    const container = document.createElement("div");
+    container.classList.add("container");
+
+    section.appendChild(container);
 
     const titulo = document.createElement("h2");
     titulo.textContent = cat.nome;
@@ -93,13 +92,10 @@ section.appendChild(container);
       grid.appendChild(card);
     });
 
-    section.appendChild(titulo);
-    section.appendChild(grid);
-    const wrapper = document.createElement("div");
-    wrapper.classList.add("categoria-wrapper");
+    container.appendChild(titulo);
+    container.appendChild(grid);
 
-    wrapper.appendChild(section);
-    produtosContainer.appendChild(wrapper);
+    produtosContainer.appendChild(section);
   });
 }
 
