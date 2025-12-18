@@ -82,20 +82,38 @@ function renderProdutos(listaProdutos) {
      const titulo = document.createElement("h2");
      titulo.textContent = cat.nome;
 
-     const grid = document.createElement("div");
-     grid.classList.add("produtos-grid");
+     const slider = document.createElement("div");
+slider.classList.add("slider");
 
-     produtosDaCategoria.forEach(produto => {
-     const card = criarCardProduto(produto);
-     grid.appendChild(card);
+const arrowLeft = document.createElement("button");
+arrowLeft.className = "arrow left";
+arrowLeft.innerHTML = "‹";
+
+const arrowRight = document.createElement("button");
+arrowRight.className = "arrow right";
+arrowRight.innerHTML = "›";
+
+const track = document.createElement("div");
+track.classList.add("slider-track");
+
+produtosDaCategoria.forEach(produto => {
+  const card = criarCardProduto(produto);
+  track.appendChild(card);
 });
 
+const dots = document.createElement("div");
+dots.classList.add("slider-dots");
+
+slider.appendChild(arrowLeft);
+slider.appendChild(track);
+slider.appendChild(arrowRight);
+
 container.appendChild(titulo);
-container.appendChild(grid);
+container.appendChild(slider);
+container.appendChild(dots);
 section.appendChild(container);
-
 produtosContainer.appendChild(section);
-
+     
   });
 }
 
