@@ -316,26 +316,23 @@ img {
    SLIDER PROFISSIONAL — MODELO ESTÁVEL
    ============================================================ */
 
+/* ===== SLIDER BASE ===== */
 .slider {
   position: relative;
   overflow: hidden;
-  width: 100%;
 }
 
-/* TRACK */
 .slider-track {
   display: flex;
   gap: 16px;
-  transition: transform 0.45s ease;
-  will-change: transform;
+  transition: transform 0.4s ease;
 }
 
-/* CARD */
-.slider-track > .card {
+.slider-track > * {
   flex: 0 0 260px;
 }
 
-/* SETAS */
+/* ===== SETAS ===== */
 .arrow {
   position: absolute;
   top: 50%;
@@ -346,28 +343,28 @@ img {
   border: 1px solid #ccc;
   background: #fff;
   cursor: pointer;
-  z-index: 5;
+  z-index: 10;
 }
 
 .arrow.left {
-  left: 0;
+  left: -18px;
 }
 
 .arrow.right {
-  right: 0;
+  right: -18px;
 }
 
-/* BOLINHAS */
+/* ===== DOTS ===== */
 .slider-dots {
-  display: none;
+  display: flex;
   justify-content: center;
   gap: 6px;
   margin-top: 12px;
 }
 
 .slider-dots span {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #ccc;
 }
@@ -376,11 +373,8 @@ img {
   background: var(--azul-escuro);
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-
   .slider {
     overflow-x: auto;
   }
@@ -389,15 +383,7 @@ img {
     transform: none !important;
   }
 
-  .slider-track > .card {
-    flex: 0 0 90%;
-  }
-
   .arrow {
     display: none;
-  }
-
-  .slider-dots {
-    display: flex;
   }
 }
