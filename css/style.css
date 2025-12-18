@@ -110,13 +110,8 @@ img {
   padding: 0;
   border: none;
   background-color: #F5F5F5;
+  border: 1px solid #ccc;
   border-radius: 14px;
-}
-
-.card button:hover {
-  background-color: #f3f3f3;
-  border-color: #999;
-  color: #333;
 }
 
 .descricao {
