@@ -144,16 +144,16 @@ text-decoration: underline;
   .nav {
     position: fixed;
     top: 0;
-    left: -260px;              /* escondido */
+    left: -260px;
     width: 260px;
     height: 100vh;
-    background-color: var(--azul-escuro);
+    background-color: #ffffff; /* fundo branco */
     padding-top: 80px;
     transition: left 0.3s ease;
     z-index: 1002;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.15);
   }
 
-  /* menu aberto */
   .nav.active {
     left: 0;
   }
@@ -166,8 +166,12 @@ text-decoration: underline;
 
   .nav a {
     font-size: 1rem;
-    color: var(--branco);
+    color: #222; /* texto preto */
+    text-decoration: none;
   }
 
- }
+  .nav a:hover {
+    color: var(--azul-escuro);
+  }
+}
 
