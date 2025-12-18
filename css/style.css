@@ -80,9 +80,11 @@ img {
    CARD DE PRODUTO
    ============================================================ */
 .card {
-  background-color: var(--branco);
+  background-color: transparent; /* 🔹 remove fundo branco */
+  border: 1px solid var(--azul-escuro); /* 🔹 contorno azul */
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+  box-shadow: none; /* 🔹 remove sombra pesada */
   padding: 16px;
 
   display: flex;
