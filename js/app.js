@@ -40,12 +40,13 @@ function renderMenuCategorias() {
     const a = document.createElement("a");
 
     a.href = `#${cat.id}`;
-    a.textContent = cat.nome;
+    a.textContent = cat.nomeMenu || cat.nome;
 
     li.appendChild(a);
     menuCategorias.appendChild(li);
   });
 }
+
 
 
 // ============================================================
