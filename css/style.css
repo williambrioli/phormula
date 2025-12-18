@@ -313,64 +313,22 @@ img {
 }
 
 /* ============================================================
-   BANNER COMO SLIDER (IGUAL CATEGORIAS)
-   ============================================================ */
-
-.banner-slider {
-  position: relative;
-}
-
-.banner-track {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 12px;
-}
-
-/* cards do banner */
-.banner-track .card {
-  flex: 0 0 260px;
-}
-
-/* desktop: setas visíveis */
-.banner-slider .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.banner-slider .arrow.left {
-  left: -18px;
-}
-
-.banner-slider .arrow.right {
-  right: -18px;
-}
-
-/* ============================================================
-   SLIDER PADRÃO (BANNER + CATEGORIAS)
+   SLIDER PADRÃO — BANNER + CATEGORIAS
    ============================================================ */
 
 .slider {
   position: relative;
+  width: 100%;
 }
 
+/* trilha dos cards */
 .slider-track {
   display: flex;
   gap: 16px;
   scroll-behavior: smooth;
   padding-bottom: 16px;
 
-  /* remove barra feia */
-  overflow-x: hidden;
+  overflow-x: hidden; /* desktop */
   scrollbar-width: none;
 }
 
@@ -383,7 +341,10 @@ img {
   flex: 0 0 260px;
 }
 
-/* setas desktop */
+/* =========================
+   SETAS (DESKTOP)
+   ========================= */
+
 .arrow {
   position: absolute;
   top: 50%;
@@ -395,6 +356,8 @@ img {
   border: 1px solid #ccc;
   cursor: pointer;
   z-index: 10;
+  font-size: 20px;
+  line-height: 1;
 }
 
 .arrow.left {
@@ -405,7 +368,10 @@ img {
   right: -18px;
 }
 
-/* bolinhas */
+/* =========================
+   DOTS (INDICADORES)
+   ========================= */
+
 .slider-dots {
   display: none;
   justify-content: center;
@@ -424,7 +390,10 @@ img {
   background: var(--azul-escuro);
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+   ========================= */
+
 @media (max-width: 768px) {
   .slider-track {
     overflow-x: auto;
@@ -440,36 +409,6 @@ img {
     display: none;
   }
 
-  .slider-dots {
-    display: flex;
-  }
-}
-
-
-/* ============================================================
-   DOTS (INDICADORES) — MOBILE
-   ============================================================ */
-
-.slider-dots {
-  display: none;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.slider-dots span {
-  width: 8px;
-  height: 8px;
-  background: #ccc;
-  border-radius: 50%;
-}
-
-.slider-dots span.active {
-  background: var(--azul-escuro);
-}
-
-/* Mobile mostra dots */
-@media (max-width: 768px) {
   .slider-dots {
     display: flex;
   }
