@@ -107,7 +107,13 @@ body {
   .menu-toggle {
     display: block;
   }
-
+.menu-toggle {
+    display: block;
+    position: fixed;     /* 🔒 flutuante */
+    top: 16px;
+    left: 16px;
+    z-index: 1100;
+}
   /* esconde menu desktop */
   .nav {
     position: fixed;
