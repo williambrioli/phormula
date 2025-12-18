@@ -81,8 +81,8 @@ const produtos = [
   },
   {
     id: 5,
-    nome: "beleza",
-    categoria: "Beleza",
+    nome: "Beleza",
+    categoria: "beleza",
     preco: 15.90,
     descricao: "Limpeza suave para todos os tipos de pele.",
     imagem: "assets/img/imgpoteteste.png",
