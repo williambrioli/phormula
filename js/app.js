@@ -290,6 +290,7 @@ document.querySelectorAll(".slider").forEach(slider => {
   if (!track) return;
 
   const cards = [...track.children];
+  const visibleCards = Math.min(6, cards.length);
   let index = 0;
 
   // cria dots
@@ -309,6 +310,10 @@ document.querySelectorAll(".slider").forEach(slider => {
 
   function update() {
     const cardWidth = cards[0].offsetWidth + 16;
+    const maxIndex = cards.length - visibleCards;
+
+    index = Math.max(0, Math.min(index, maxIndex));
+
     track.scrollTo({
       left: index * cardWidth,
       behavior: "smooth"
@@ -322,12 +327,14 @@ document.querySelectorAll(".slider").forEach(slider => {
   }
 
   left?.addEventListener("click", () => {
-    index = Math.max(0, index - 1);
+    index--;
     update();
   });
 
   right?.addEventListener("click", () => {
-    index = Math.min(cards.length - 1, index + 1);
+    index++;
     update();
   });
+
+  update();
 });
