@@ -152,7 +152,7 @@ img {
   width: 100%;
   height: 220px;        /* altura fixa no desktop */
   object-fit: contain; /* NÃO corta, só enquadra */
-  background-color: #fff;
+  background-color: transparent; /* 🔹 remove fundo branco */;
 }
 
 /* ============================================================
@@ -277,20 +277,4 @@ img {
   color: var(--azul-escuro);
 }
 
-/* ===============================
-   BORDA LATERAL – SÓ DESKTOP
-   =============================== */
-@media (min-width: 1024px) {
 
-  .banner,
-  .categoria-section {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  /* mantém o conteúdo alinhado */
-  .banner > .container,
-  .categoria-section > .container {
-    background-color: var(--cinza-claro);
-  }
-}
