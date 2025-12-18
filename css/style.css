@@ -50,7 +50,7 @@ img {
    ============================================================ */
 .banner {
   background-color: var(--cinza-claro);
-  padding: 48px 8px;
+  padding: 48px 0;
   margin-bottom: 8px; /* 👈 ESPAÇO ENTRE DESTAQUES E CATEGORIAS */
 }
 
@@ -265,7 +265,7 @@ img {
 .categoria-section {
   width: 100%;
   background-color: var(--cinza-claro); /* MESMO CINZA DOS DESTAQUES */
-  padding: 32px 8px; /* 🔹 espaço interno da sessão */
+  padding: 32px 0; /* 🔹 espaço interno da sessão */
   margin-bottom: 8px; /* 🔹 espaço ENTRE uma sessão e outra */
 }
 
@@ -274,3 +274,14 @@ img {
   margin-bottom: 24px;
   color: var(--azul-escuro);
 }
+
+/* ============================================================
+   EFEITO DE BORDA LATERAL (SÓ DESKTOP)
+   ============================================================ */
+@media (min-width: 1024px) {
+  .categoria-section {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
