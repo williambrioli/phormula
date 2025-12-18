@@ -34,6 +34,7 @@ img {
   --branco: #FFFFFF;
   --cinza-claro: #F5F5F5;
   --cinza: #777;
+  --preto: #000000;
 }
 
 /* ============================================================
@@ -82,12 +83,12 @@ img {
 
 .card h3 {
   font-size: 1rem;
-  color: var(--azul-escuro);
+  color: var(--preto);
 }
 
 .card .preco {
   font-weight: bold;
-  color: var(--coral);
+  color: var(--preto);
 }
 
 .card .descricao {
@@ -109,6 +110,27 @@ img {
   padding: 0;
   border: none;
   background: none;
+}
+
+.descrição {
+  display: inline-block;
+  margin: 6px 0 10px;
+  padding: 6px 12px;
+
+  font-size: 0.85rem;
+  color: #666;
+
+  border: 1px solid #ccc;
+  border-radius: 14px;
+
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.descrição:hover {
+  background-color: #f3f3f3;
+  border-color: #999;
+  color: #333;
 }
 
 
