@@ -235,4 +235,19 @@ img {
 .search-box {
   max-width: 100%;
 }  
+
+   /* ============================================================
+   CARD MOBILE – OCUPA QUASE TODA A LARGURA
+   ============================================================ */
+
+  .produtos-grid {
+    grid-template-columns: 1fr; /* 1 card por linha */
+  }
+
+  .card {
+    max-width: 100%;       /* remove limite do desktop */
+    margin: 0 auto;        /* centraliza */
+  }
 }
+
+
