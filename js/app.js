@@ -278,28 +278,33 @@ document.addEventListener("click", function (event) {
 });
 
 // ============================================================
-// SLIDER PADRÃO (BANNER + CATEGORIAS)
+// SLIDER PROFISSIONAL (DESKTOP + MOBILE)
 // ============================================================
 
 document.querySelectorAll(".slider").forEach(slider => {
   const track = slider.querySelector(".slider-track");
   const left = slider.querySelector(".arrow.left");
   const right = slider.querySelector(".arrow.right");
-  const dotsContainer = slider.parentElement.querySelector(".slider-dots");
+  const dots = slider.parentElement.querySelector(".slider-dots");
 
   if (!track) return;
 
-  const cards = track.children;
+  const cards = [...track.children];
   let index = 0;
 
-  // cria bolinhas
-  if (dotsContainer) {
-    dotsContainer.innerHTML = "";
-    for (let i = 0; i < cards.length; i++) {
+  // cria dots
+  if (dots) {
+    dots.innerHTML = "";
+    cards.forEach((_, i) => {
       const dot = document.createElement("span");
       if (i === 0) dot.classList.add("active");
-      dotsContainer.appendChild(dot);
-    }
+      dots.appendChild(dot);
+
+      dot.addEventListener("click", () => {
+        index = i;
+        update();
+      });
+    });
   }
 
   function update() {
@@ -309,10 +314,10 @@ document.querySelectorAll(".slider").forEach(slider => {
       behavior: "smooth"
     });
 
-    if (dotsContainer) {
-      [...dotsContainer.children].forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-      });
+    if (dots) {
+      [...dots.children].forEach((d, i) =>
+        d.classList.toggle("active", i === index)
+      );
     }
   }
 
@@ -326,4 +331,3 @@ document.querySelectorAll(".slider").forEach(slider => {
     update();
   });
 });
-
