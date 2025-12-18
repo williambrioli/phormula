@@ -224,3 +224,15 @@ menuOverlay.addEventListener("click", () => {
   navMenu.classList.remove("active");
   menuOverlay.classList.remove("active");
 });
+
+/* ============================================================
+   FECHAR MENU AO CLICAR EM UMA CATEGORIA (MOBILE)
+   ============================================================ */
+
+document.addEventListener("click", function (e) {
+  if (e.target.closest(".nav a")) {
+    navMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
+  }
+});
+
