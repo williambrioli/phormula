@@ -74,7 +74,12 @@ function renderProdutos(listaProdutos) {
     if (produtosDaCategoria.length === 0) return;
 
     const section = document.createElement("section");
-    section.classList.add("categoria-section");
+section.classList.add("categoria-bg"); // fundo full width
+
+const container = document.createElement("div");
+container.classList.add("container"); // conteúdo central
+
+section.appendChild(container);
     section.id = cat.id;
 
     const titulo = document.createElement("h2");
