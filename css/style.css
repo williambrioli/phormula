@@ -49,7 +49,7 @@ img {
    BANNER DINÂMICO
    ============================================================ */
 .banner {
-  background-color: var(--cinza-claro);
+  background-color: var(--branco);
   padding: 48px 0;
   margin-bottom: 8px; /* 👈 ESPAÇO ENTRE DESTAQUES E CATEGORIAS */
 }
@@ -266,7 +266,7 @@ img {
 
 .categoria-section {
   width: 100%;
-  background-color: var(--cinza-claro); /* MESMO CINZA DOS DESTAQUES */
+  background-color: var(--branco); /* MESMO CINZA DOS DESTAQUES */
   padding: 32px 0; /* 🔹 espaço interno da sessão */
   margin-bottom: 8px; /* 🔹 espaço ENTRE uma sessão e outra */
 }
