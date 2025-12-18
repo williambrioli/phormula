@@ -84,13 +84,16 @@ img {
   color: var(--azul-escuro);
 }
 
-/* Grid de produtos */
+/* ============================================================
+   GRID DE PRODUTOS – DESKTOP
+   ============================================================ */
+
 .produtos-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 8px;
 }
+
 /* ============================================================
    CARD DE PRODUTO
    ============================================================ */
@@ -104,10 +107,10 @@ img {
   flex-direction: column;
   gap: 8px;
 
-  /* 🔒 TRAVA O TAMANHO DO CARD */
   width: 100%;
-  max-width: 280px;   /* desktop */
+  max-width: 100%;
 }
+
 
 .card h3 {
   font-size: 1rem;
@@ -242,26 +245,11 @@ img {
 }  
 
    /* ============================================================
-   CARD MOBILE – OCUPA QUASE TODA A LARGURA
+   MOBILE – SCROLL HORIZONTAL (TODAS AS SESSÕES)
    ============================================================ */
 
-  .produtos-grid {
-    grid-template-columns: 1fr; /* 1 card por linha */
-  }
-
-  .card {
-    max-width: 100%;       /* remove limite do desktop */
-    margin: 0 auto;        /* centraliza */
-  }
-
-
-
-   /* ============================================================
-   MOBILE – TODAS AS SESSÕES COM SCROLL HORIZONTAL
-   ============================================================ */
 @media (max-width: 768px) {
 
-  /* container de cards vira faixa horizontal */
   .produtos-grid {
     display: flex;
     gap: 16px;
@@ -270,18 +258,14 @@ img {
     padding-bottom: 8px;
   }
 
-  /* remove grid do desktop */
-  .produtos-grid > * {
+  .card {
+    flex: 0 0 92%;
+    max-width: 92%;
     scroll-snap-align: start;
   }
 
-
- .card {
-    flex: 0 0 95%;   /* largura do card */
-    max-width: 95%;
-  }
-
-.banner-cards {
+  /* Destaques iguais às categorias */
+  .banner-cards {
     display: flex;
     gap: 16px;
     overflow-x: auto;
@@ -289,12 +273,8 @@ img {
   }
 
   .banner-cards .card {
-    flex: 0 0 95%;
-    max-width: 95%;
+    flex: 0 0 92%;
+    max-width: 92%;
     scroll-snap-align: start;
   }
-   
 }
-
-
-
