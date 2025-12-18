@@ -30,7 +30,12 @@ function slugParaNomeCategoria(slug) {
 // ============================================================
 
 function renderMenuCategorias() {
+  menuCategorias.innerHTML = "";
+
   categorias.forEach(cat => {
+
+    if (!cat.mostrarNoMenu) return;
+
     const li = document.createElement("li");
     const a = document.createElement("a");
 
@@ -41,6 +46,7 @@ function renderMenuCategorias() {
     menuCategorias.appendChild(li);
   });
 }
+
 
 // ============================================================
 // BANNER DE DESTAQUES
