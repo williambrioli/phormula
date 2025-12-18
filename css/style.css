@@ -66,23 +66,6 @@ img {
 
 
 /* ============================================================
-   FUNDO DAS SESSÕES (IGUAL DESTAQUES)
-  ============================================================ */
-
-
-.categoria-section {
-  background-color: var(--cinza-claro);
-  padding: 48px 0;        /* espaço interno cinza */
-  margin-bottom: 48px;   /* espaço branco entre sessões */
-}
-
-.categoria-section h2 {
-  margin-bottom: 24px;
-  color: var(--azul-escuro);
-}
-
-
-/* ============================================================
    GRID DE PRODUTOS – DESKTOP
    ============================================================ */
 
@@ -198,7 +181,6 @@ img {
 }
 
 
-
 /* ============================================================
    RESPONSIVO MOBILE
    ============================================================ */
@@ -273,4 +255,21 @@ img {
     max-width: 92%;
     scroll-snap-align: start;
   }
+}
+
+/* ============================================================
+   SESSÕES DE CATEGORIA (FULL WIDTH COM ESPAÇO)
+   ============================================================ */
+
+.categoria-section {
+  width: 100%;
+  background-color: var(--cinza-claro); /* MESMO CINZA DOS DESTAQUES */
+  padding: 48px 0; /* 🔹 espaço interno da sessão */
+  margin-bottom: 48px; /* 🔹 espaço ENTRE uma sessão e outra */
+}
+
+/* título da categoria */
+.categoria-section h2 {
+  margin-bottom: 24px;
+  color: var(--azul-escuro);
 }
