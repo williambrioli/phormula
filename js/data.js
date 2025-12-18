@@ -13,23 +13,28 @@ const categorias = [
   {
     id: "analgesicos",
     nome: "Analgésicos"
+    mostrarNoMenu: true
   },
   {
     id: "cosmeticos",
     nome: "Cosméticos"
+    mostrarNoMenu: true
   },
   {
     id: "vitaminas",
     nome: "Vitaminas"
+    mostrarNoMenu: true
   },
   {
     id: "higiene",
     nome: "Higiene"
+    mostrarNoMenu: true
   },
 
    {
     id: "energia",
     nome: "Energia"
+    mostrarNoMenu: true
   }
 ];
 
