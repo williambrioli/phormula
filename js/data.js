@@ -12,28 +12,28 @@ const WHATSAPP_NUMERO = "5518988092571";
 const categorias = [
   {
     id: "analgesicos",
-    nome: "Analgésicos"
+    nome: "Analgésicos",
     mostrarNoMenu: true
   },
   {
     id: "cosmeticos",
-    nome: "Cosméticos"
+    nome: "Cosméticos",
     mostrarNoMenu: true
   },
   {
     id: "vitaminas",
-    nome: "Vitaminas"
+    nome: "Vitaminas",
     mostrarNoMenu: true
   },
   {
     id: "higiene",
-    nome: "Higiene"
+    nome: "Higiene",
     mostrarNoMenu: true
   },
 
    {
     id: "energia",
-    nome: "Energia"
+    nome: "Energia",
     mostrarNoMenu: true
   }
 ];
