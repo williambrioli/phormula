@@ -235,3 +235,19 @@ document.addEventListener("click", function (e) {
   }
 });
 
+/* ============================================================
+   FECHAR MENU AO CLICAR FORA (MENU HAMBÚRGUER)
+   ============================================================ */
+
+document.addEventListener("click", function (event) {
+  const menu = document.querySelector(".nav");
+  const botao = document.getElementById("menuToggle");
+
+  const clicouNoMenu = menu.contains(event.target);
+  const clicouNoBotao = botao.contains(event.target);
+
+  if (!clicouNoMenu && !clicouNoBotao) {
+    menu.classList.remove("active");
+  }
+});
+
