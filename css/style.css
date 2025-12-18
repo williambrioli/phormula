@@ -9,7 +9,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #FFFFFF;
+  background-color: #1B7396;
   color: #333;
   line-height: 1.6;
 }
@@ -51,7 +51,7 @@ img {
 .banner {
   background-color: var(--cinza-claro);
   padding: 32px 0;
-  margin-bottom: 16px; /* 👈 ESPAÇO ENTRE DESTAQUES E CATEGORIAS */
+  margin-bottom: 5px; /* 👈 ESPAÇO ENTRE DESTAQUES E CATEGORIAS */
 }
 
 .banner h2 {
@@ -266,7 +266,7 @@ img {
   width: 100%;
   background-color: var(--cinza-claro); /* MESMO CINZA DOS DESTAQUES */
   padding: 48px 0; /* 🔹 espaço interno da sessão */
-  margin-bottom: 48px; /* 🔹 espaço ENTRE uma sessão e outra */
+  margin-bottom: 5px; /* 🔹 espaço ENTRE uma sessão e outra */
 }
 
 /* título da categoria */
