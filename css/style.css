@@ -407,7 +407,7 @@ img {
 @media (max-width: 768px) {
 
   .categoria-section h2 {
-    font-size: 1rem;        /* diminui o tamanho */
+    font-size: 1.2rem;        /* diminui o tamanho */
     white-space: nowrap;      /* força uma única linha */
     overflow: hidden;         /* esconde excesso */
     text-overflow: ellipsis;  /* adiciona "..." se for muito longo */
