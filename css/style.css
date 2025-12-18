@@ -334,10 +334,10 @@ img {
   flex: 0 0 260px;
 }
 
-/* DESKTOP: até 6 cards inteiros */
+/* DESKTOP: até 4 cards inteiros */
 @media (min-width: 1024px) {
   .slider-track {
-    width: calc((260px * 4) + (16px * 5));
+    width: calc((260px * 4) + (16px * 4));
   }
 }
 
