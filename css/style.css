@@ -59,12 +59,6 @@ img {
   color: var(--azul-escuro);
 }
 
-.banner-cards {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-}
-
 
 /* ============================================================
    CARD DE PRODUTO
@@ -287,6 +281,18 @@ img {
     max-width: 92%;
     scroll-snap-align: start;
   }
+
+/* mobile: setas somem */
+
+  .banner-slider .arrow {
+    display: none;
+  }
+
+  .banner-track .card {
+    flex: 0 0 92%;
+    max-width: 92%;
+  }
+   
 }
 
 /* ============================================================
@@ -304,6 +310,49 @@ img {
 .categoria-section h2 {
   margin-bottom: 24px;
   color: var(--azul-escuro);
+}
+
+/* ============================================================
+   BANNER COMO SLIDER (IGUAL CATEGORIAS)
+   ============================================================ */
+
+.banner-slider {
+  position: relative;
+}
+
+.banner-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 12px;
+}
+
+/* cards do banner */
+.banner-track .card {
+  flex: 0 0 260px;
+}
+
+/* desktop: setas visíveis */
+.banner-slider .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.banner-slider .arrow.left {
+  left: -18px;
+}
+
+.banner-slider .arrow.right {
+  right: -18px;
 }
 
 /* ============================================================
@@ -358,11 +407,3 @@ img {
 .arrow.right {
   right: -18px;
 }
-
-/* mobile: sem setas */
-@media (max-width: 768px) {
-  .arrow {
-    display: none;
-  }
-}
-
