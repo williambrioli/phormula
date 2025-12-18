@@ -356,7 +356,7 @@ img {
 }
 
 /* ============================================================
-   SLIDER DE PRODUTOS (DESKTOP E MOBILE)
+   SLIDER PADRÃO (BANNER + CATEGORIAS)
    ============================================================ */
 
 .slider {
@@ -366,57 +366,33 @@ img {
 .slider-track {
   display: flex;
   gap: 16px;
-  overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 16px;
 
-  /* ESCONDE A BARRA FEIA */
-  scrollbar-width: none;       /* Firefox */
+  /* remove barra feia */
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 .slider-track::-webkit-scrollbar {
-  display: none;               /* Chrome / Edge */
+  display: none;
 }
 
-
-
-/* Desktop: cards inteiros, sem corte */
-@media (min-width: 769px) {
-  .slider-track {
-    overflow-x: hidden; /* desktop NÃO rola com scroll */
-  }
-
-  .slider-track .card {
-    flex: 0 0 260px; /* largura fixa do card */
-  }
-}
-
-
-/* cada card */
+/* cards nunca cortam */
 .slider-track .card {
-  flex: 0 0 260px;             /* largura fixa do card */
+  flex: 0 0 260px;
 }
 
-/* esconder barra feia */
-.slider-track::-webkit-scrollbar {
-  height: 6px;
-}
-
-.slider-track::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
-}
-
-/* setas (desktop) */
+/* setas desktop */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 50%;
   width: 36px;
   height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ccc;
   cursor: pointer;
   z-index: 10;
 }
@@ -427,6 +403,46 @@ img {
 
 .arrow.right {
   right: -18px;
+}
+
+/* bolinhas */
+.slider-dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.slider-dots span {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.slider-dots span.active {
+  background: var(--azul-escuro);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .slider-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slider-track .card {
+    flex: 0 0 92%;
+    scroll-snap-align: start;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .slider-dots {
+    display: flex;
+  }
 }
 
 
