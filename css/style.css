@@ -124,24 +124,40 @@ img {
   cursor: pointer;
 }
 
-/* Quantidade */
+/* ============================================================
+   AÇÕES DO CARD (QUANTIDADE + COMPRAR LADO A LADO)
+   ============================================================ */
+
+.card-acoes {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaço entre quantidade e comprar */
+}
+
+/* Quantidade ocupa menos espaço */
 .quantidade {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 6px;
+  flex: 0 0 auto;
 }
 
 .quantidade button {
   background-color: var(--azul-medio);
   color: var(--branco);
   width: 32px;
+  height: 32px;
+  border-radius: 6px;
 }
 
-/* Botão comprar */
+/* Botão comprar ocupa o resto */
 .btn-comprar {
+  flex: 1;
   background-color: var(--turquesa);
   color: var(--branco);
   font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .btn-comprar:hover {
@@ -226,6 +242,14 @@ img {
 .search-box {
   max-width: 100%;
 }  
+
+.card-acoes {
+    gap: 10px;
+  }
+
+  .btn-comprar {
+    font-size: 0.95rem;
+  }   
 
    /* ============================================================
    MOBILE – SCROLL HORIZONTAL (TODAS AS SESSÕES)
