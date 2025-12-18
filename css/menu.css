@@ -88,9 +88,9 @@ body {
 
   background-color: var(--azul-escuro); /* MESMO AZUL DO HEADER */
   border: none;
-  border-radius: 6px; /* 🔽 menos arredondado */
+  border-radius: 4px; /* 🔽 menos arredondado */
 
-  padding: 4px 6px; /* 🔽 MENOR FUNDO */
+  padding: 2px 4px; /* 🔽 MENOR FUNDO */
   font-size: 1.8rem; /* 🔽 risquinhos um pouco menores */
   color: #ffffff; /* risquinhos brancos */
   cursor: pointer;
