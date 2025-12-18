@@ -12,30 +12,20 @@ const WHATSAPP_NUMERO = "5518988092571";
 const categorias = [
   {
     id: "emagrecimento",
-    nome: "Emagrecimento",
+    nome: "Manipulados para emagrecimento",
     mostrarNoMenu: true
   },
   {
     id: "desempenhofisico",
-    nome: "Desempenho Físico",
+    nome: "Manipulados para desempenho físico",
     mostrarNoMenu: true
   },
   {
     id: "saude",
-    nome: "Saúde",
-    mostrarNoMenu: true
-  },
-  {
-    id: "quedacapilar",
-    nome: "Queda Capilar",
-    mostrarNoMenu: true
-  },
-
-   {
-    id: "beleza",
-    nome: "Beleza",
+    nome: "Manipulados para saúde e bem-estar",
     mostrarNoMenu: true
   }
+  
 ];
 
 /* ============================================================
@@ -195,98 +185,8 @@ const produtos = [
     descricao: "Proteção diária contra raios UVA e UVB.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true
-  },
-  {
-    id: 18,
-    nome: "Queda Capilar",
-    categoria: "quedacapilar",
-    preco: 29.90,
-    descricao: "Contribui para a imunidade e ação antioxidante.",
-    imagem: "assets/img/imgpoteteste.png",
-    destaque: true
-  },
-   {
-    id: 19,
-    nome: "Queda Capilar 1",
-    categoria: "quedacapilar",
-    preco: 29.90,
-    descricao: "Contribui para a imunidade e ação antioxidante.",
-    imagem: "assets/img/imgpoteteste.png",
-    destaque: true
-  },
-   {
-    id: 20,
-    nome: "Queda Capilar 2",
-    categoria: "quedacapilar",
-    preco: 29.90,
-    descricao: "Contribui para a imunidade e ação antioxidante.",
-    imagem: "assets/img/imgpoteteste.png",
-    destaque: true
-  },
-   {
-    id: 21,
-    nome: "Queda Capilar 3",
-    categoria: "quedacapilar",
-    preco: 29.90,
-    descricao: "Contribui para a imunidade e ação antioxidante.",
-    imagem: "assets/img/imgpoteteste.png",
-    destaque: true
-  },
-   {
-    id: 22,
-    nome: "Queda Capilar 4",
-    categoria: "quedacapilar",
-    preco: 29.90,
-    descricao: "Contribui para a imunidade e ação antioxidante.",
-    imagem: "assets/img/imgpoteteste.png",
-    destaque: true
-  },
-   
-  {
-    id: 23,
-    nome: "Beleza",
-    categoria: "beleza",
-    preco: 15.90,
-    descricao: "Limpeza suave para todos os tipos de pele.",
-    imagem: "assets/img/imgpoteteste.png",
-    destaque: true
-  },
-   {
-    id: 24,
-    nome: "Beleza 1",
-    categoria: "beleza",
-    preco: 15.90,
-    descricao: "Limpeza suave para todos os tipos de pele.",
-    imagem: "assets/img/imgpoteteste.png",
-    destaque: true
-  },
-   {
-    id: 25,
-    nome: "Beleza 2",
-    categoria: "beleza",
-    preco: 15.90,
-    descricao: "Limpeza suave para todos os tipos de pele.",
-    imagem: "assets/img/imgpoteteste.png",
-    destaque: true
-  },
-   {
-    id: 26,
-    nome: "Beleza 3",
-    categoria: "beleza",
-    preco: 15.90,
-    descricao: "Limpeza suave para todos os tipos de pele.",
-    imagem: "assets/img/imgpoteteste.png",
-    destaque: true
-  },
-   {
-    id: 27,
-    nome: "Beleza 4",
-    categoria: "beleza",
-    preco: 15.90,
-    descricao: "Limpeza suave para todos os tipos de pele.",
-    imagem: "assets/img/imgpoteteste.png",
-    destaque: true
   }
+  
   
 ];
 
