@@ -67,5 +67,13 @@ text-decoration: underline;
   border-color: var(--azul-medio);
   box-shadow: 0 0 0 2px rgba(1, 161, 219, 0.15);
 }
+/* ============================================================
+   AJUSTE MOBILE (busca ocupa largura total)
+   ============================================================ */
+@media (max-width: 768px) {
+  .search-box input {
+    width: 100%;
+  }
+}
 
 }
