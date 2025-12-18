@@ -313,23 +313,25 @@ img {
 }
 
 /* ============================================================
-   SLIDER PROFISSIONAL (DESKTOP + MOBILE)
+   SLIDER PROFISSIONAL — MODELO ESTÁVEL
    ============================================================ */
 
 .slider {
   position: relative;
-  margin-top: 16px;
+  overflow: hidden;
+  width: 100%;
 }
 
 /* TRACK */
 .slider-track {
   display: flex;
   gap: 16px;
-  transition: transform 0.4s ease;
+  transition: transform 0.45s ease;
+  will-change: transform;
 }
 
 /* CARD */
-.slider-track > * {
+.slider-track > .card {
   flex: 0 0 260px;
 }
 
@@ -344,15 +346,15 @@ img {
   border: 1px solid #ccc;
   background: #fff;
   cursor: pointer;
-  z-index: 10;
+  z-index: 5;
 }
 
 .arrow.left {
-  left: -18px;
+  left: 0;
 }
 
 .arrow.right {
-  right: -18px;
+  right: 0;
 }
 
 /* BOLINHAS */
@@ -379,13 +381,16 @@ img {
    ========================= */
 @media (max-width: 768px) {
 
-  .slider-track {
+  .slider {
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
   }
 
-  .slider-track > * {
-    scroll-snap-align: center;
+  .slider-track {
+    transform: none !important;
+  }
+
+  .slider-track > .card {
+    flex: 0 0 90%;
   }
 
   .arrow {
