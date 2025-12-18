@@ -52,8 +52,8 @@ img {
 }
 
 .categoria-section {
-  background-color: var(--cinza-claro);
   padding: 32px 0;
+  margin-bottom: 16px;
 }
 
 .banner h2 {
