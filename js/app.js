@@ -132,9 +132,10 @@ function criarCardProduto(produto, isBanner = false) {
   card.innerHTML = `
     <img src="${produto.imagem}" alt="${produto.nome}">
     <h3>${produto.nome}</h3>
-    <span class="preco">${formatarPreco(produto.preco)}</span>
     <button class="btn-detalhes">Ver mais</button>
     <p class="descricao">${produto.descricao}</p>
+    <span class="preco">${formatarPreco(produto.preco)}</span>
+    
 
     <div class="card-acoes">
   <div class="quantidade">
