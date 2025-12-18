@@ -117,19 +117,19 @@ img {
   word-break: break-word;
 }
 
-.card button {
-  padding: 8px;
+/* ===========================
+   BOTÕES GENÉRICOS DO CARD
+   =========================== */
+
+.card button:not(.btn-comprar) {
+  padding: 0;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  background: none;
 }
+
 
 /* ============================================================
    AÇÕES DO CARD (QUANTIDADE + COMPRAR LADO A LADO)
-   ============================================================ */
-
-/* ============================================================
-   AÇÕES DO CARD (QUANTIDADE + COMPRAR)
    ============================================================ */
 
 .card-acoes {
