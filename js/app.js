@@ -200,3 +200,15 @@ whatsappFooter.href = `https://wa.me/${WHATSAPP_NUMERO}`;
 renderMenuCategorias();
 renderBanner();
 renderProdutos(produtos);
+
+/* ============================================================
+   MENU HAMBÚRGUER MOBILE
+   ============================================================ */
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.querySelector(".nav");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
