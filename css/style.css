@@ -313,47 +313,38 @@ img {
 }
 
 /* ============================================================
-   SLIDER PROFISSIONAL – LIMPO E SEM CORTE
+   SLIDER PROFISSIONAL (DESKTOP + MOBILE)
    ============================================================ */
 
 .slider {
   position: relative;
-  margin: 0 auto;
-  display: inline-flex;
-  align-items: center;
+  margin-top: 16px;
 }
 
-/* ===== TRACK ===== */
+/* TRACK */
 .slider-track {
   display: flex;
   gap: 16px;
-  overflow: hidden;
+  transition: transform 0.4s ease;
 }
 
-/* CARD FIXO */
-.slider-track .card {
+/* CARD */
+.slider-track > * {
   flex: 0 0 260px;
 }
 
-/* ===== DESKTOP ===== */
-@media (min-width: 1024px) {
-  .slider-track {
-    width: calc((260px * 4) + (16px * 3)); /* 4 cards inteiros */
-  }
-}
-
-/* ===== SETAS ===== */
+/* SETAS */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: #fff;
   border: 1px solid #ccc;
+  background: #fff;
   cursor: pointer;
-  z-index: 5;
+  z-index: 10;
 }
 
 .arrow.left {
@@ -364,38 +355,44 @@ img {
   right: -18px;
 }
 
-/* ===== DOTS ===== */
+/* BOLINHAS */
 .slider-dots {
-  display: flex;
+  display: none;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   margin-top: 12px;
 }
 
 .slider-dots span {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: #cfcfcf;
+  background: #ccc;
 }
 
 .slider-dots span.active {
   background: var(--azul-escuro);
 }
 
-/* ===== MOBILE ===== */
+/* =========================
+   MOBILE
+   ========================= */
 @media (max-width: 768px) {
+
   .slider-track {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   }
 
-  .slider-track .card {
-    flex: 0 0 99%;
-    scroll-snap-align: start;
+  .slider-track > * {
+    scroll-snap-align: center;
   }
 
   .arrow {
     display: none;
+  }
+
+  .slider-dots {
+    display: flex;
   }
 }
