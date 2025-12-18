@@ -3,34 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phormula Ativa – Catálogo</title>
+  <title>Phormula Ativa – Catálogo Online</title>
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
 <header class="header">
   <div class="container header-content">
-    <img src="assets/img/logophormula1.png" class="logo" alt="Phormula Ativa">
-    <input type="text" id="searchInput" placeholder="O que você está buscando?" />
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <div class="logo">
+      <img src="assets/img/logophormula1.png" alt="Phormula Ativa">
+    </div>
+
+    <nav class="nav" id="navMenu">
+      <ul id="menu-categorias"></ul>
+    </nav>
+
+    <div class="search-box">
+      <input type="text" placeholder="O que você está buscando?" />
+    </div>
+
   </div>
 </header>
 
-<main class="main container">
+<main class="main">
 
   <!-- DESTAQUES -->
-  <section>
+  <section class="section">
     <h2>Destaques</h2>
-    <div id="banner" class="product-row"></div>
+    <div id="destaques" class="product-grid"></div>
   </section>
 
   <!-- CATEGORIAS -->
   <div id="produtos-container"></div>
 
 </main>
-
-<footer class="footer">
-  <p>© Phormula Ativa</p>
-</footer>
 
 <script src="js/data.js"></script>
 <script src="js/app.js"></script>
