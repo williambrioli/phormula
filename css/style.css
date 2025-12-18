@@ -428,3 +428,34 @@ img {
 .arrow.right {
   right: -18px;
 }
+
+
+/* ============================================================
+   DOTS (INDICADORES) — MOBILE
+   ============================================================ */
+
+.slider-dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.slider-dots span {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.slider-dots span.active {
+  background: var(--azul-escuro);
+}
+
+/* Mobile mostra dots */
+@media (max-width: 768px) {
+  .slider-dots {
+    display: flex;
+  }
+}
+
