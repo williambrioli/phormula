@@ -68,47 +68,24 @@ img {
   gap: 16px;
   overflow-x: auto;
 }
-/* ============================================================
-   FUNDO DAS SEÇÕES (IGUAL DESTAQUES)
-   ============================================================ */
-
-.categoria-wrapper {
-  background-color: var(--cinza-claro);
-  padding: 32px 0;
-}
-
-/* mantém conteúdo centralizado */
-.categoria-wrapper .categoria-section {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* FUNDO DAS SESSÕES (FULL WIDTH) */
-.categoria-bg {
-  background-color: var(--cinza-claro);
-  padding: 48px 0;       /* espaço interno */
-  margin-bottom: 48px;  /* espaço branco entre sessões */
-}
 
 
 /* ============================================================
-   CONTEÚDO PRINCIPAL
-   ============================================================ */
-.main {
-  padding: 32px 0;
-  background-color: var(--cinza-claro);
-}
+   FUNDO DAS SESSÕES (IGUAL DESTAQUES)
+  ============================================================ */
 
-/* Seção de categoria */
+
 .categoria-section {
-  margin-bottom: 16px;
+  background-color: var(--cinza-claro);
+  padding: 48px 0;        /* espaço interno cinza */
+  margin-bottom: 48px;   /* espaço branco entre sessões */
 }
 
 .categoria-section h2 {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   color: var(--azul-escuro);
 }
+
 
 /* ============================================================
    GRID DE PRODUTOS – DESKTOP
