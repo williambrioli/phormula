@@ -81,13 +81,21 @@ body {
    ============================================================ */
 
 .menu-toggle {
-  display: none;
-  background: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1100;
+
+  background-color: var(--azul-escuro); /* MESMO AZUL DO HEADER */
   border: none;
+  border-radius: 8px;
+
+  padding: 8px 10px;
   font-size: 1.8rem;
-  color: var(--branco);
+  color: #ffffff; /* risquinhos brancos */
   cursor: pointer;
-  z-index: 1003;
+
+  display: none; /* escondido no desktop */
 }
 
 /* ============================================================
