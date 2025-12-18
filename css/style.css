@@ -67,16 +67,6 @@ img {
 
 
 /* ============================================================
-   GRID DE PRODUTOS – DESKTOP
-   ============================================================ */
-
-.produtos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-/* ============================================================
    CARD DE PRODUTO
    ============================================================ */
 .card {
@@ -277,14 +267,7 @@ img {
    MOBILE – SCROLL HORIZONTAL (TODAS AS SESSÕES)
    ============================================================ */
 
-  .produtos-grid {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 8px;
-  }
-
+  
   .card {
     flex: 0 0 92%;
     max-width: 92%;
@@ -323,4 +306,63 @@ img {
   color: var(--azul-escuro);
 }
 
+/* ============================================================
+   SLIDER DE PRODUTOS (DESKTOP E MOBILE)
+   ============================================================ */
+
+.slider {
+  position: relative;
+}
+
+.slider-track {
+  display: flex;              /* 🔥 ISSO resolve o problema */
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 12px;
+}
+
+/* cada card */
+.slider-track .card {
+  flex: 0 0 260px;             /* largura fixa do card */
+}
+
+/* esconder barra feia */
+.slider-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.slider-track::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* setas (desktop) */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: -18px;
+}
+
+.arrow.right {
+  right: -18px;
+}
+
+/* mobile: sem setas */
+@media (max-width: 768px) {
+  .arrow {
+    display: none;
+  }
+}
 
