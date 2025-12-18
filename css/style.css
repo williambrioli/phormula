@@ -109,7 +109,7 @@ img {
 .card button:not(.btn-comprar) {
   padding: 0;
   border: none;
-  background: none;
+  background-color: #F5F5F5;
 }
 
 .descricao {
