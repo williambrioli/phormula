@@ -290,40 +290,52 @@ document.querySelectorAll(".slider").forEach(slider => {
   if (!track) return;
 
   const cards = [...track.children];
-  const cardWidth = cards[0].offsetWidth + 16;
+  if (cards.length === 0) return;
+
+  const gap = 16;
+  const cardWidth = cards[0].offsetWidth + gap;
 
   const isMobile = window.innerWidth <= 768;
   const visible = isMobile ? 1 : 4;
 
-  const pages = Math.ceil(cards.length / visible);
+  const maxPage = Math.max(0, Math.ceil(cards.length / visible) - 1);
   let page = 0;
 
-  /* ESCONDE CONTROLES SE NÃO PRECISAR */
+  /* ESCONDE SETAS SE NÃO PRECISAR */
   if (!isMobile && cards.length <= visible) {
     left.style.display = "none";
     right.style.display = "none";
-    return;
   }
 
-  /* CRIA BOLINHAS (SÓ MOBILE) */
+  /* BOLINHAS (APENAS MOBILE) */
   if (isMobile && dots) {
     dots.innerHTML = "";
-    for (let i = 0; i < pages; i++) {
+    for (let i = 0; i <= maxPage; i++) {
       const dot = document.createElement("span");
       if (i === 0) dot.classList.add("active");
       dots.appendChild(dot);
     }
   }
 
-  const update = () => {
-    track.style.transform = `translateX(-${page * cardWidth * visible}px)`;
+  function update() {
+    const targetIndex = page * visible;
+    const maxTranslate =
+      (cards.length * cardWidth) -
+      (visible * cardWidth);
+
+    const translate = Math.min(
+      targetIndex * cardWidth,
+      maxTranslate
+    );
+
+    track.style.transform = `translateX(-${translate}px)`;
 
     if (dots) {
       [...dots.children].forEach((d, i) =>
         d.classList.toggle("active", i === page)
       );
     }
-  };
+  }
 
   left?.addEventListener("click", () => {
     page = Math.max(0, page - 1);
@@ -331,7 +343,7 @@ document.querySelectorAll(".slider").forEach(slider => {
   });
 
   right?.addEventListener("click", () => {
-    page = Math.min(pages - 1, page + 1);
+    page = Math.min(maxPage, page + 1);
     update();
   });
 });
