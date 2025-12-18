@@ -222,7 +222,7 @@ img {
 
   /* 🔽 ADICIONE ISTO */
   .card img {
-    height: 200px; /* menor no celular */
+    height: 300px; /* menor no celular */
   }
 
    
