@@ -1,0 +1,294 @@
+/* ============================================================
+   RESET BÁSICO
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFFFF;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+/* ============================================================
+   VARIÁVEIS DE CORES (PALETA DA FARMÁCIA)
+   ============================================================ */
+:root {
+  --azul-escuro: #1B7396;   /* institucional */
+  --azul-medio:  #01A1DB;   /* destaque */
+  --turquesa:    #2CCCD3;   /* apoio / promoção */
+  --coral:       #C49154;   /* CTA suave */
+  --rosa-claro:  #EBEBEB;   /* fundo leve */
+
+  --branco: #FFFFFF;
+  --cinza-claro: #F5F5F5;
+  --cinza: #777;
+}
+
+/* ============================================================
+   CONTAINER PADRÃO
+   ============================================================ */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   BANNER DINÂMICO
+   ============================================================ */
+.banner {
+  background-color: var(--cinza-claro);
+  padding: 48px 0;
+  margin-bottom: 8px; /* 👈 ESPAÇO ENTRE DESTAQUES E CATEGORIAS */
+}
+
+.banner h2 {
+  margin-bottom: 16px;
+  color: var(--azul-escuro);
+}
+
+.banner-cards {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+
+/* ============================================================
+   GRID DE PRODUTOS – DESKTOP
+   ============================================================ */
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ============================================================
+   CARD DE PRODUTO
+   ============================================================ */
+.card {
+  background-color: var(--branco);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  width: 100%;
+  max-width: 100%;
+}
+
+
+.card h3 {
+  font-size: 1rem;
+  color: var(--azul-escuro);
+}
+
+.card .preco {
+  font-weight: bold;
+  color: var(--coral);
+}
+
+.card .descricao {
+  font-size: 0.85rem;
+  color: var(--cinza);
+  display: none; /* JS controla */
+
+   /* 🔽 ISSO RESOLVE O PROBLEMA PARA O TEXTO SEGUIR TAMENHO DO CARD */
+  width: 100%;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.card button {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Quantidade */
+.quantidade {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantidade button {
+  background-color: var(--azul-medio);
+  color: var(--branco);
+  width: 32px;
+}
+
+/* Botão comprar */
+.btn-comprar {
+  background-color: var(--turquesa);
+  color: var(--branco);
+  font-weight: bold;
+}
+
+.btn-comprar:hover {
+  opacity: 0.9;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;        /* altura fixa no desktop */
+  object-fit: contain; /* NÃO corta, só enquadra */
+  background-color: #fff;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  padding: 32px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer a {
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.btn-whatsapp {
+  background-color: var(--turquesa);
+  padding: 10px 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+
+/* ============================================================
+   RESPONSIVO MOBILE
+   ============================================================ */
+@media (max-width: 768px) {
+  
+.header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  /* 🔽 ADICIONE ISTO */
+  .card img {
+    height: 160px; /* menor no celular */
+  }
+
+   
+   .header-bottom-content {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  margin: 0 auto;
+}
+
+ .header-bottom-content {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.category-box,
+.search-box {
+  max-width: 100%;
+}  
+
+   /* ============================================================
+   MOBILE – SCROLL HORIZONTAL (TODAS AS SESSÕES)
+   ============================================================ */
+
+  .produtos-grid {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+  }
+
+  .card {
+    flex: 0 0 92%;
+    max-width: 92%;
+    scroll-snap-align: start;
+  }
+
+  /* Destaques iguais às categorias */
+  .banner-cards {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .banner-cards .card {
+    flex: 0 0 92%;
+    max-width: 92%;
+    scroll-snap-align: start;
+  }
+}
+
+/* ============================================================
+   SESSÕES DE CATEGORIA (FULL WIDTH COM ESPAÇO)
+   ============================================================ */
+
+.categoria-section {
+  width: 100%;
+  background-color: var(--cinza-claro); /* MESMO CINZA DOS DESTAQUES */
+  padding: 32px 0; /* 🔹 espaço interno da sessão */
+  margin-bottom: 8px; /* 🔹 espaço ENTRE uma sessão e outra */
+}
+
+/* título da categoria */
+.categoria-section h2 {
+  margin-bottom: 24px;
+  color: var(--azul-escuro);
+}
+
+/* ===============================
+   BORDA LATERAL – SÓ DESKTOP
+   =============================== */
+@media (min-width: 1024px) {
+
+  .banner,
+  .categoria-section {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* mantém o conteúdo alinhado */
+  .banner > .container,
+  .categoria-section > .container {
+    background-color: var(--cinza-claro);
+  }
+}
