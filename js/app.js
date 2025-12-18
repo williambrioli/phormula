@@ -290,49 +290,47 @@ document.querySelectorAll(".slider").forEach(slider => {
   if (!track) return;
 
   const cards = [...track.children];
-  const visibleCards = Math.min(6, cards.length);
-  let index = 0;
+  const cardWidth = cards[0].offsetWidth + 16;
 
-  // cria dots
+  const maxVisible =
+    window.innerWidth >= 1024 ? Math.min(6, cards.length) : 1;
+
+  const pages = Math.ceil(cards.length / maxVisible);
+  let page = 0;
+
+  /* cria dots */
   if (dots) {
     dots.innerHTML = "";
-    cards.forEach((_, i) => {
+    for (let i = 0; i < pages; i++) {
       const dot = document.createElement("span");
       if (i === 0) dot.classList.add("active");
       dots.appendChild(dot);
 
       dot.addEventListener("click", () => {
-        index = i;
+        page = i;
         update();
       });
-    });
+    }
   }
 
   function update() {
-    const cardWidth = cards[0].offsetWidth + 16;
-    const maxIndex = cards.length - visibleCards;
-
-    index = Math.max(0, Math.min(index, maxIndex));
-
-    track.scrollTo({
-      left: index * cardWidth,
-      behavior: "smooth"
-    });
+    const scrollX = page * cardWidth * maxVisible;
+    track.scrollTo({ left: scrollX, behavior: "smooth" });
 
     if (dots) {
       [...dots.children].forEach((d, i) =>
-        d.classList.toggle("active", i === index)
+        d.classList.toggle("active", i === page)
       );
     }
   }
 
   left?.addEventListener("click", () => {
-    index--;
+    page = Math.max(0, page - 1);
     update();
   });
 
   right?.addEventListener("click", () => {
-    index++;
+    page = Math.min(pages - 1, page + 1);
     update();
   });
 
