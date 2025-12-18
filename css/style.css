@@ -313,57 +313,33 @@ img {
 }
 
 /* ============================================================
-   SLIDER PROFISSIONAL (DESKTOP + MOBILE)
+   SLIDER LIMPO E RESPONSIVO (DESKTOP + MOBILE)
    ============================================================ */
 
 .slider {
   position: relative;
   margin: 0 auto;
-}
-
-/* ===== TRACK ===== */
-.slider-track {
-  display: flex;
-  gap: 16px;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-/* cards não encolhem */
-.slider-track .card {
-  flex: 0 0 260px;
-}
-
-/* ============================================================
-   SLIDER – CONTROLE REAL DE LARGURA (DESKTOP)
-   ============================================================ */
-
-.slider {
-  position: relative;
   width: fit-content;
   max-width: 100%;
-  margin: 0 auto;
 }
 
-/* track nunca estoura */
 .slider-track {
   display: flex;
   gap: 16px;
   overflow: hidden;
 }
 
-/* card fixo */
+/* CARD FIXO */
 .slider-track .card {
   flex: 0 0 260px;
 }
 
-/* até 6 cards visíveis */
+/* DESKTOP: até 6 cards inteiros */
 @media (min-width: 1024px) {
   .slider-track {
-    max-width: calc((260px * 6) + (16px * 5));
+    width: calc((260px * 6) + (16px * 5));
   }
 }
-
 
 /* ===== SETAS ===== */
 .arrow {
@@ -376,20 +352,18 @@ img {
   background: #fff;
   border: 1px solid #ccc;
   cursor: pointer;
-  z-index: 5;
-  font-size: 20px;
+  z-index: 10;
 }
 
 .arrow.left {
-  left: -12px;
+  left: -18px;
 }
 
 .arrow.right {
-  right: -12px;
+  right: -18px;
 }
 
-
-/* ===== DOTS (DESKTOP + MOBILE) ===== */
+/* ===== DOTS ===== */
 .slider-dots {
   display: flex;
   justify-content: center;
@@ -416,7 +390,7 @@ img {
   }
 
   .slider-track .card {
-    flex: 0 0 100%;
+    flex: 0 0 92%;
     scroll-snap-align: start;
   }
 
@@ -424,4 +398,3 @@ img {
     display: none;
   }
 }
-
