@@ -292,44 +292,38 @@ document.querySelectorAll(".slider").forEach(slider => {
   const cards = [...track.children];
   const cardWidth = cards[0].offsetWidth + 16;
 
-  const visible =
-    window.innerWidth >= 1024 ? Math.min(4, cards.length) : 1;
+  const isMobile = window.innerWidth <= 768;
+  const visible = isMobile ? 1 : 4;
 
-   // Esconde setas se não houver overflow
-if (cards.length <= visible) {
-  left.style.display = "none";
-  right.style.display = "none";
-}
   const pages = Math.ceil(cards.length / visible);
   let page = 0;
 
-  /* dots */
-  if (dots) {
+  /* ESCONDE CONTROLES SE NÃO PRECISAR */
+  if (!isMobile && cards.length <= visible) {
+    left.style.display = "none";
+    right.style.display = "none";
+    return;
+  }
+
+  /* CRIA BOLINHAS (SÓ MOBILE) */
+  if (isMobile && dots) {
     dots.innerHTML = "";
     for (let i = 0; i < pages; i++) {
       const dot = document.createElement("span");
       if (i === 0) dot.classList.add("active");
       dots.appendChild(dot);
-
-      dot.onclick = () => {
-        page = i;
-        update();
-      };
     }
   }
 
-  function update() {
-    track.scrollTo({
-      left: page * cardWidth * visible,
-      behavior: "smooth"
-    });
+  const update = () => {
+    track.style.transform = `translateX(-${page * cardWidth * visible}px)`;
 
     if (dots) {
       [...dots.children].forEach((d, i) =>
         d.classList.toggle("active", i === page)
       );
     }
-  }
+  };
 
   left?.addEventListener("click", () => {
     page = Math.max(0, page - 1);
@@ -340,6 +334,4 @@ if (cards.length <= visible) {
     page = Math.min(pages - 1, page + 1);
     update();
   });
-
-  update();
 });
