@@ -292,13 +292,13 @@ document.querySelectorAll(".slider").forEach(slider => {
   const cards = [...track.children];
   const cardWidth = cards[0].offsetWidth + 16;
 
-  const maxVisible =
-    window.innerWidth >= 1024 ? Math.min(6, cards.length) : 1;
+  const visible =
+    window.innerWidth >= 1024 ? Math.min(4, cards.length) : 1;
 
-  const pages = Math.ceil(cards.length / maxVisible);
+  const pages = Math.ceil(cards.length / visible);
   let page = 0;
 
-  /* cria dots */
+  /* dots */
   if (dots) {
     dots.innerHTML = "";
     for (let i = 0; i < pages; i++) {
@@ -306,16 +306,18 @@ document.querySelectorAll(".slider").forEach(slider => {
       if (i === 0) dot.classList.add("active");
       dots.appendChild(dot);
 
-      dot.addEventListener("click", () => {
+      dot.onclick = () => {
         page = i;
         update();
-      });
+      };
     }
   }
 
   function update() {
-    const scrollX = page * cardWidth * maxVisible;
-    track.scrollTo({ left: scrollX, behavior: "smooth" });
+    track.scrollTo({
+      left: page * cardWidth * visible,
+      behavior: "smooth"
+    });
 
     if (dots) {
       [...dots.children].forEach((d, i) =>
