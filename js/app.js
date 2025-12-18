@@ -277,3 +277,45 @@ document.addEventListener("click", function (event) {
   }
 });
 
+document.querySelectorAll(".slider").forEach(slider => {
+  const track = slider.querySelector(".slider-track");
+  const left = slider.querySelector(".arrow.left");
+  const right = slider.querySelector(".arrow.right");
+  const dotsContainer = slider.parentElement.querySelector(".slider-dots");
+
+  if (!track) return;
+
+  const cards = track.children;
+  let index = 0;
+
+  // cria bolinhas
+  if (dotsContainer) {
+    dotsContainer.innerHTML = "";
+    for (let i = 0; i < cards.length; i++) {
+      const dot = document.createElement("span");
+      if (i === 0) dot.classList.add("active");
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  const update = () => {
+    const cardWidth = cards[0].offsetWidth + 16;
+    track.scrollTo({ left: index * cardWidth, behavior: "smooth" });
+
+    if (dotsContainer) {
+      [...dotsContainer.children].forEach((d, i) =>
+        d.classList.toggle("active", i === index)
+      );
+    }
+  };
+
+  left?.addEventListener("click", () => {
+    index = Math.max(0, index - 1);
+    update();
+  });
+
+  right?.addEventListener("click", () => {
+    index = Math.min(cards.length - 1, index + 1);
+    update();
+  });
+});
