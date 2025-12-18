@@ -277,8 +277,8 @@ img {
 
 
  .card {
-    flex: 0 0 85%;   /* largura do card */
-    max-width: 85%;
+    flex: 0 0 95%;   /* largura do card */
+    max-width: 95%;
   }
 
 .banner-cards {
@@ -289,8 +289,8 @@ img {
   }
 
   .banner-cards .card {
-    flex: 0 0 85%;
-    max-width: 85%;
+    flex: 0 0 95%;
+    max-width: 95%;
     scroll-snap-align: start;
   }
    
