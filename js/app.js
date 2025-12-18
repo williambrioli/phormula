@@ -277,6 +277,10 @@ document.addEventListener("click", function (event) {
   }
 });
 
+// ============================================================
+// SLIDER PADRÃO (BANNER + CATEGORIAS)
+// ============================================================
+
 document.querySelectorAll(".slider").forEach(slider => {
   const track = slider.querySelector(".slider-track");
   const left = slider.querySelector(".arrow.left");
@@ -298,16 +302,19 @@ document.querySelectorAll(".slider").forEach(slider => {
     }
   }
 
-  const update = () => {
+  function update() {
     const cardWidth = cards[0].offsetWidth + 16;
-    track.scrollTo({ left: index * cardWidth, behavior: "smooth" });
+    track.scrollTo({
+      left: index * cardWidth,
+      behavior: "smooth"
+    });
 
     if (dotsContainer) {
-      [...dotsContainer.children].forEach((d, i) =>
-        d.classList.toggle("active", i === index)
-      );
+      [...dotsContainer.children].forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
     }
-  };
+  }
 
   left?.addEventListener("click", () => {
     index = Math.max(0, index - 1);
@@ -319,3 +326,4 @@ document.querySelectorAll(".slider").forEach(slider => {
     update();
   });
 });
+
