@@ -117,13 +117,16 @@ function criarCardProduto(produto, isBanner = false) {
     <button class="btn-detalhes">Ver mais</button>
     <p class="descricao">${produto.descricao}</p>
 
-    <div class="quantidade">
-      <button class="btn-menos">-</button>
-      <span class="qtd">1</span>
-      <button class="btn-mais">+</button>
-    </div>
+    <div class="card-acoes">
+  <div class="quantidade">
+    <button class="btn-menos">-</button>
+    <span class="qtd">1</span>
+    <button class="btn-mais">+</button>
+  </div>
 
-    <button class="btn-comprar">Comprar</button>
+  <button class="btn-comprar">Comprar</button>
+</div>
+
   `;
 
   // Elementos internos
