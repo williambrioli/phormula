@@ -19,6 +19,8 @@ img {
   display: block;
 }
 
+
+
 /* ============================================================
    VARIÁVEIS DE CORES (PALETA DA FARMÁCIA)
    ============================================================ */
@@ -81,6 +83,14 @@ img {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* FUNDO DAS SESSÕES (FULL WIDTH) */
+.categoria-bg {
+  background-color: var(--cinza-claro);
+  padding: 48px 0;       /* espaço interno */
+  margin-bottom: 48px;  /* espaço branco entre sessões */
+}
+
 
 /* ============================================================
    CONTEÚDO PRINCIPAL
