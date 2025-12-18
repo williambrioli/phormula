@@ -275,13 +275,20 @@ img {
   color: var(--azul-escuro);
 }
 
-/* ============================================================
-   EFEITO DE BORDA LATERAL (SÓ DESKTOP)
-   ============================================================ */
+/* ===============================
+   BORDA LATERAL – SÓ DESKTOP
+   =============================== */
 @media (min-width: 1024px) {
+
+  .banner,
   .categoria-section {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* mantém o conteúdo alinhado */
+  .banner > .container,
+  .categoria-section > .container {
+    background-color: var(--cinza-claro);
   }
 }
-
