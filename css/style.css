@@ -87,6 +87,7 @@ img {
    ============================================================ */
 .main {
   padding: 32px 0;
+  background-color: var(--cinza-claro);
 }
 
 /* Seção de categoria */
