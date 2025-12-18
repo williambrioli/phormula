@@ -1,136 +1,401 @@
+/* ============================================================
+   RESET BÁSICO
+   ============================================================ */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  padding-top: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFFFF;
+  color: #333;
+  line-height: 1.6;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+/* ============================================================
+   VARIÁVEIS DE CORES (PALETA DA FARMÁCIA)
+   ============================================================ */
+:root {
+  --azul-escuro: #1B7396;   /* institucional */
+  --azul-medio:  #01A1DB;   /* destaque */
+  --turquesa:    #2CCCD3;   /* apoio / promoção */
+  --coral:       #C49154;   /* CTA suave */
+  --rosa-claro:  #EBEBEB;   /* fundo leve */
+
+  --branco: #FFFFFF;
+  --cinza-claro: #F5F5F5;
+  --cinza: #777;
+}
+
+/* ============================================================
+   CONTAINER PADRÃO
+   ============================================================ */
 .container {
+  width: 90%;
   max-width: 1200px;
-  margin: auto;
-  padding: 0 16px;
+  margin: 0 auto;
 }
 
-/* HEADER */
-.header {
-  position: fixed;
-  top: 0;
+/* ============================================================
+   BANNER DINÂMICO
+   ============================================================ */
+.banner {
+  background-color: var(--branco);
+  padding: 48px 0;
+  margin-bottom: 8px; /* 👈 ESPAÇO ENTRE DESTAQUES E CATEGORIAS */
+}
+
+.banner h2 {
+  margin-bottom: 16px;
+  color: var(--azul-escuro);
+}
+
+
+/* ============================================================
+   CARD DE PRODUTO
+   ============================================================ */
+.card {
+  background-color: transparent; /* 🔹 remove fundo branco */
+  border: 1.3px solid var(--cinza); /* 🔹 contorno azul */
+  border-radius: 16px;
+
+  box-shadow: none; /* 🔹 remove sombra pesada */
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
   width: 100%;
-  background: #0d6a8a;
-  z-index: 1000;
+  max-width: 100%;
 }
 
-.header-content {
+
+.card h3 {
+  font-size: 1rem;
+  color: var(--azul-escuro);
+}
+
+.card .preco {
+  font-weight: bold;
+  color: var(--coral);
+}
+
+.card .descricao {
+  font-size: 0.85rem;
+  color: var(--cinza);
+  display: none; /* JS controla */
+
+   /* 🔽 ISSO RESOLVE O PROBLEMA PARA O TEXTO SEGUIR TAMENHO DO CARD */
+  width: 100%;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* ===========================
+   BOTÕES GENÉRICOS DO CARD
+   =========================== */
+
+.card button:not(.btn-comprar) {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+
+/* ============================================================
+   AÇÕES DO CARD (QUANTIDADE + COMPRAR LADO A LADO)
+   ============================================================ */
+
+.card-acoes {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  margin-top: 12px;
 }
 
-.logo img {
-  height: 42px;
-}
-
-.nav ul {
+/* QUANTIDADE (formato oval) */
+.quantidade {
   display: flex;
-  gap: 16px;
-  list-style: none;
+  align-items: center;
+  border: 1px solid #dcdcdc;
+  border-radius: 999px;
+  padding: 4px 8px;   /* 🔽 mais fino */
+  gap: 8px;           /* 🔽 menos espaço interno */
+  background: transparent;
 }
 
-.nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.search-box input {
-  padding: 10px;
-  border-radius: 20px;
+.quantidade button {
+  background: none;
   border: none;
+  font-size: 16px;      /* 🔽 menor */
+  font-weight: 400;     /* 🔽 não é bold */
+  cursor: pointer;
+  color: #333;
+  width: 20px;
+  line-height: 1;
 }
-
-.menu-toggle {
-  display: none;
-}
-
-/* SEÇÕES */
-.section {
-  padding: 32px 16px;
-}
-
-.section h2 {
-  margin-bottom: 16px;
-}
-
-/* GRID */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
-}
-
-/* CARD */
-.card {
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 16px;
+.quantidade span {
+  font-size: 14px;
+  min-width: 16px;
   text-align: center;
 }
 
-.card img {
-  width: 100%;
-  max-height: 180px;
-  object-fit: contain;
-}
-
-.price {
-  color: #c97a00;
-}
-
-.btn {
-  background: #2e8b2e;
+/* BOTÃO COMPRAR (pill verde) */
+.btn-comprar {
+  flex: 1;                 /* 🔹 ocupa mais espaço que a quantidade */
+  background-color: #2e8b2d;
   color: #fff;
   border: none;
-  padding: 10px 16px;
-  border-radius: 20px;
+  border-radius: 999px;    /* 🔹 pill perfeito */
+  padding: 14px 24px;      /* 🔹 MAIOR */
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
 }
 
-/* MOBILE */
+.btn-comprar:hover {
+  background-color: #256f24;
+}
+
+
+.card img {
+  width: 100%;
+  height: 220px;        /* altura fixa no desktop */
+  object-fit: contain; /* NÃO corta, só enquadra */
+  background-color: transparent; /* 🔹 remove fundo branco */;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  padding: 32px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer a {
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.btn-whatsapp {
+  background-color: var(--turquesa);
+  padding: 10px 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+
+/* ============================================================
+   RESPONSIVO MOBILE
+   ============================================================ */
 @media (max-width: 768px) {
-  body {
-    padding-top: 0;
-  }
-
-  .menu-toggle {
-    display: block;
-    color: #fff;
-    background: none;
-    border: none;
-    font-size: 24px;
-  }
-
-  .nav {
-    position: fixed;
-    left: -260px;
-    top: 0;
-    width: 260px;
-    height: 100vh;
-    background: #fff;
-    transition: 0.3s;
-  }
-
-  .nav.active {
-    left: 0;
-  }
-
-  .nav ul {
+  
+.header-content {
     flex-direction: column;
-    padding: 80px 16px;
+    align-items: flex-start;
   }
 
-  .nav a {
-    color: #000;
+  .search-box input {
+    width: 100%;
+  }
+
+  /* 🔽 ADICIONE ISTO */
+  .card img {
+    height: 160px; /* menor no celular */
+  }
+
+   
+   .header-bottom-content {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  margin: 0 auto;
+}
+
+ .header-bottom-content {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.category-box,
+.search-box {
+  max-width: 100%;
+}  
+
+.card-acoes {
+    gap: 10px;
+  }
+
+  .btn-comprar {
+    font-size: 0.95rem;
+  }   
+
+   /* ============================================================
+   MOBILE – SCROLL HORIZONTAL (TODAS AS SESSÕES)
+   ============================================================ */
+
+  
+  .card {
+    flex: 0 0 92%;
+    max-width: 92%;
+    scroll-snap-align: start;
+  }
+
+  /* Destaques iguais às categorias */
+  .banner-cards {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .banner-cards .card {
+    flex: 0 0 92%;
+    max-width: 92%;
+    scroll-snap-align: start;
+  }
+
+/* mobile: setas somem */
+
+  .banner-slider .arrow {
+    display: none;
+  }
+
+  .banner-track .card {
+    flex: 0 0 92%;
+    max-width: 92%;
+  }
+   
+}
+
+/* ============================================================
+   SESSÕES DE CATEGORIA (FULL WIDTH COM ESPAÇO)
+   ============================================================ */
+
+.categoria-section {
+  width: 100%;
+  background-color: var(--branco); /* MESMO CINZA DOS DESTAQUES */
+  padding: 32px 0; /* 🔹 espaço interno da sessão */
+  margin-bottom: 8px; /* 🔹 espaço ENTRE uma sessão e outra */
+}
+
+/* título da categoria */
+.categoria-section h2 {
+  margin-bottom: 24px;
+  color: var(--azul-escuro);
+}
+
+/* ============================================================
+   SLIDER PROFISSIONAL – LIMPO E SEM CORTE
+   ============================================================ */
+
+.slider {
+  position: relative;
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* ===== TRACK ===== */
+.slider-track {
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+}
+
+/* CARD FIXO */
+.slider-track .card {
+  flex: 0 0 260px;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 1024px) {
+  .slider-track {
+    width: calc((260px * 4) + (16px * 3)); /* 4 cards inteiros */
+  }
+}
+
+/* ===== SETAS ===== */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.arrow.left {
+  left: -14px;
+}
+
+.arrow.right {
+  right: -14px;
+}
+
+/* ===== DOTS ===== */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.slider-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #cfcfcf;
+}
+
+.slider-dots span.active {
+  background: var(--azul-escuro);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .slider-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slider-track .card {
+    flex: 0 0 99%;
+    scroll-snap-align: start;
+  }
+
+  .arrow {
+    display: none;
   }
 }
