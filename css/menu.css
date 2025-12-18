@@ -96,6 +96,13 @@ body {
 
 @media (max-width: 768px) {
 
+   .header {
+    position: relative; /* 🔓 solta o header no mobile */
+  }
+
+  body {
+    padding-top: 0; /* remove espaço extra */
+  }
   /* mostra botão */
   .menu-toggle {
     display: block;
