@@ -51,6 +51,11 @@ img {
   padding: 32px 0;
 }
 
+.categoria-section {
+  background-color: var(--cinza-claro);
+  padding: 32px 0;
+}
+
 .banner h2 {
   margin-bottom: 16px;
   color: var(--azul-escuro);
