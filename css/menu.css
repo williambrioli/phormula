@@ -1,40 +1,36 @@
 /* ============================================================
-   EMPURRA SITE PARA BAIXO PARA O MENU FIXO
+   EMPURRA SITE PARA BAIXO (MENU FIXO)
    ============================================================ */
 
 body {
-  padding-top: 88px; /* altura do menu */
+  padding-top: 88px; /* altura do header fixo */
 }
 
-
 /* ============================================================
-   HEADER / TOPO
+   HEADER FIXO
    ============================================================ */
+
 .header {
-  position: fixed;        /* 🔒 fixa no topo */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;           /* fica acima do site */
-  
+  z-index: 999;
   background-color: var(--azul-escuro);
   color: var(--branco);
   padding: 16px 0;
 }
 
-
 .header-content {
-display: flex;
-align-items: center;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
-
-.logo h1 {
-font-size: 1.5rem;
-}
+/* ============================================================
+   LOGO
+   ============================================================ */
 
 .logo img {
   height: 48px;
@@ -42,29 +38,28 @@ font-size: 1.5rem;
   display: block;
 }
 
-/* Menu */
-.nav ul {
-list-style: none;
-display: flex;
-gap: 16px;
-flex-wrap: wrap;
-}
+/* ============================================================
+   MENU DESKTOP
+   ============================================================ */
 
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
 
 .nav a {
-color: var(--branco);
-text-decoration: none;
-font-size: 0.95rem;
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 0.95rem;
 }
-
 
 .nav a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
-
 /* ============================================================
-   CAMPO DE BUSCA – DESKTOP
+   BUSCA
    ============================================================ */
 
 .search-box input {
@@ -73,29 +68,18 @@ text-decoration: underline;
   border-radius: 24px;
   border: 1px solid #ddd;
   font-size: 0.95rem;
-  transition: all 0.2s ease;
 }
 
-/* efeito ao clicar */
 .search-box input:focus {
   outline: none;
   border-color: var(--azul-medio);
   box-shadow: 0 0 0 2px rgba(1, 161, 219, 0.15);
 }
-/* ============================================================
-   AJUSTE MOBILE (busca ocupa largura total)
-   ============================================================ */
-@media (max-width: 768px) {
-  .search-box input {
-    width: 100%;
-  }
-}
 
 /* ============================================================
-   MENU HAMBÚRGUER (MOBILE)
+   BOTÃO HAMBÚRGUER
    ============================================================ */
 
-/* botão escondido no desktop */
 .menu-toggle {
   display: none;
   background: none;
@@ -103,75 +87,35 @@ text-decoration: underline;
   font-size: 1.8rem;
   color: var(--branco);
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1003;
 }
 
-/* comportamento no mobile */
-@media (max-width: 768px) {
+/* ============================================================
+   MOBILE (MENU FLUTUANTE)
+   ============================================================ */
 
-  .header-content {
-    justify-content: space-between;
-  }
+@media (max-width: 768px) {
 
   /* mostra botão */
   .menu-toggle {
     display: block;
   }
 
-  /* esconde menu */
-  .nav {
-    display: none;
-    width: 100%;
-    background-color: var(--azul-escuro);
-    margin-top: 12px;
-  }
-
-  /* menu aberto */
-  .nav.active {
-    display: block;
-  }
-
-  .nav ul {
-    flex-direction: column;
-    gap: 12px;
-    padding: 16px;
-  }
-
-  .nav a {
-    font-size: 1rem;
-  }
-
-   /* ============================================================
-   MENU FLUTUANTE MOBILE (OFF-CANVAS)
-   ============================================================ */
-
-@media (max-width: 768px) {
-
-  /* botão hamburguer no canto esquerdo */
- .menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: var(--branco);
-  cursor: pointer;
-  z-index: 1001;
-}
-  
-  /* menu lateral */
+  /* esconde menu desktop */
   .nav {
     position: fixed;
     top: 0;
     left: -260px;
     width: 260px;
     height: 100vh;
-    background-color: #ffffff; /* fundo branco */
-    padding-top: 80px;
+    background-color: #ffffff;
+    padding-top: 88px;
     transition: left 0.3s ease;
     z-index: 1002;
     box-shadow: 2px 0 12px rgba(0,0,0,0.15);
   }
 
+  /* menu aberto */
   .nav.active {
     left: 0;
   }
@@ -183,13 +127,17 @@ text-decoration: underline;
   }
 
   .nav a {
+    color: #222;
     font-size: 1rem;
-    color: #222; /* texto preto */
     text-decoration: none;
   }
 
   .nav a:hover {
     color: var(--azul-escuro);
   }
-}
 
+  /* busca ocupa largura total */
+  .search-box input {
+    width: 100%;
+  }
+}
