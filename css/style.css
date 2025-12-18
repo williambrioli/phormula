@@ -112,7 +112,7 @@ img {
   background: none;
 }
 
-.descrição {
+.descricao {
   display: inline-block;
   margin: 6px 0 10px;
   padding: 6px 12px;
@@ -127,7 +127,7 @@ img {
   transition: all 0.2s ease;
 }
 
-.descrição:hover {
+.descricao:hover {
   background-color: #f3f3f3;
   border-color: #999;
   color: #333;
