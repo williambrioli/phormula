@@ -313,38 +313,36 @@ img {
 }
 
 /* ============================================================
-   SLIDER PADRÃO — BANNER + CATEGORIAS
+   SLIDER PROFISSIONAL (DESKTOP + MOBILE)
    ============================================================ */
 
 .slider {
   position: relative;
-  width: 100%;
+  margin: 0 auto;
 }
 
-/* trilha dos cards */
+/* ===== TRACK ===== */
 .slider-track {
   display: flex;
   gap: 16px;
   scroll-behavior: smooth;
-  padding-bottom: 16px;
-
-  overflow-x: hidden; /* desktop */
-  scrollbar-width: none;
+  overflow-x: hidden;
 }
 
-.slider-track::-webkit-scrollbar {
-  display: none;
-}
-
-/* cards nunca cortam */
+/* cards não encolhem */
 .slider-track .card {
   flex: 0 0 260px;
 }
 
-/* =========================
-   SETAS (DESKTOP)
-   ========================= */
+/* ===== LIMITA LARGURA NO DESKTOP ===== */
+/* 6 cards x 260px + gaps */
+@media (min-width: 1024px) {
+  .slider {
+    max-width: calc((260px * 6) + (16px * 5));
+  }
+}
 
+/* ===== SETAS ===== */
 .arrow {
   position: absolute;
   top: 50%;
@@ -355,9 +353,8 @@ img {
   background: #fff;
   border: 1px solid #ccc;
   cursor: pointer;
-  z-index: 10;
+  z-index: 5;
   font-size: 20px;
-  line-height: 1;
 }
 
 .arrow.left {
@@ -368,32 +365,26 @@ img {
   right: -18px;
 }
 
-/* =========================
-   DOTS (INDICADORES)
-   ========================= */
-
+/* ===== DOTS (DESKTOP + MOBILE) ===== */
 .slider-dots {
-  display: none;
+  display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .slider-dots span {
   width: 8px;
   height: 8px;
-  background: #ccc;
   border-radius: 50%;
+  background: #ccc;
 }
 
 .slider-dots span.active {
   background: var(--azul-escuro);
 }
 
-/* =========================
-   MOBILE
-   ========================= */
-
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .slider-track {
     overflow-x: auto;
@@ -401,16 +392,12 @@ img {
   }
 
   .slider-track .card {
-    flex: 0 0 92%;
+    flex: 0 0 90%;
     scroll-snap-align: start;
   }
 
   .arrow {
     display: none;
-  }
-
-  .slider-dots {
-    display: flex;
   }
 }
 
