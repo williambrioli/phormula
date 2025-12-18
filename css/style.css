@@ -319,8 +319,8 @@ img {
 .slider {
   position: relative;
   margin: 0 auto;
-  width: fit-content;
-  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* ===== TRACK ===== */
@@ -357,11 +357,11 @@ img {
 }
 
 .arrow.left {
-  left: -14px;
+  left: -18px;
 }
 
 .arrow.right {
-  right: -14px;
+  right: -18px;
 }
 
 /* ===== DOTS ===== */
