@@ -334,13 +334,36 @@ img {
   flex: 0 0 260px;
 }
 
-/* ===== LIMITA LARGURA NO DESKTOP ===== */
-/* 6 cards x 260px + gaps */
+/* ============================================================
+   SLIDER – CONTROLE REAL DE LARGURA (DESKTOP)
+   ============================================================ */
+
+.slider {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* track nunca estoura */
+.slider-track {
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+}
+
+/* card fixo */
+.slider-track .card {
+  flex: 0 0 260px;
+}
+
+/* até 6 cards visíveis */
 @media (min-width: 1024px) {
-  .slider {
+  .slider-track {
     max-width: calc((260px * 6) + (16px * 5));
   }
 }
+
 
 /* ===== SETAS ===== */
 .arrow {
@@ -358,12 +381,13 @@ img {
 }
 
 .arrow.left {
-  left: -18px;
+  left: -12px;
 }
 
 .arrow.right {
-  right: -18px;
+  right: -12px;
 }
+
 
 /* ===== DOTS (DESKTOP + MOBILE) ===== */
 .slider-dots {
@@ -392,7 +416,7 @@ img {
   }
 
   .slider-track .card {
-    flex: 0 0 90%;
+    flex: 0 0 100%;
     scroll-snap-align: start;
   }
 
