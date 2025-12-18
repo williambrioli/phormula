@@ -263,8 +263,8 @@ img {
 
   
   .card {
-    flex: 0 0 92%;
-    max-width: 92%;
+    flex: 0 0 99%;
+    max-width: 99%;
     scroll-snap-align: start;
   }
 
@@ -277,8 +277,8 @@ img {
   }
 
   .banner-cards .card {
-    flex: 0 0 92%;
-    max-width: 92%;
+    flex: 0 0 99%;
+    max-width: 99%;
     scroll-snap-align: start;
   }
 
@@ -289,8 +289,8 @@ img {
   }
 
   .banner-track .card {
-    flex: 0 0 92%;
-    max-width: 92%;
+    flex: 0 0 99%;
+    max-width: 99%;
   }
    
 }
