@@ -295,6 +295,11 @@ document.querySelectorAll(".slider").forEach(slider => {
   const visible =
     window.innerWidth >= 1024 ? Math.min(4, cards.length) : 1;
 
+   // Esconde setas se não houver overflow
+if (cards.length <= visible) {
+  left.style.display = "none";
+  right.style.display = "none";
+}
   const pages = Math.ceil(cards.length / visible);
   let page = 0;
 
