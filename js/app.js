@@ -217,12 +217,11 @@ const menuOverlay = document.getElementById("menuOverlay");
 
 menuToggle.addEventListener("click", () => {
   navMenu.classList.add("active");
-  menuOverlay.classList.add("active");
 });
 
 menuOverlay.addEventListener("click", () => {
   navMenu.classList.remove("active");
-  menuOverlay.classList.remove("active");
+  
 });
 
 /* ============================================================
@@ -232,7 +231,7 @@ menuOverlay.addEventListener("click", () => {
 document.addEventListener("click", function (e) {
   if (e.target.closest(".nav a")) {
     navMenu.classList.remove("active");
-    menuOverlay.classList.remove("active");
+    
   }
 });
 
