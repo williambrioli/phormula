@@ -87,6 +87,15 @@ const produtos = [
     descricao: "Limpeza suave para todos os tipos de pele.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true
+  },
+   {
+    id: 6,
+    nome: "Emagrecimento 1",
+    categoria: "emagrecimento",
+    preco: 90.00,
+    descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
+    imagem: "assets/img/imgpoteteste.png",
+    destaque: true
   }
 ];
 
