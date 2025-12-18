@@ -128,41 +128,62 @@ img {
    AÇÕES DO CARD (QUANTIDADE + COMPRAR LADO A LADO)
    ============================================================ */
 
+/* ============================================================
+   AÇÕES DO CARD (QUANTIDADE + COMPRAR)
+   ============================================================ */
+
 .card-acoes {
   display: flex;
   align-items: center;
-  gap: 8px; /* espaço entre quantidade e comprar */
+  gap: 12px;
+  margin-top: 12px;
 }
 
-/* Quantidade ocupa menos espaço */
+/* QUANTIDADE (formato oval) */
 .quantidade {
   display: flex;
   align-items: center;
-  gap: 6px;
-  flex: 0 0 auto;
+  border: 1px solid #dcdcdc;
+  border-radius: 999px;
+  padding: 4px 10px;
+  gap: 12px;
+  background: transparent;
 }
 
 .quantidade button {
-  background-color: var(--azul-medio);
-  color: var(--branco);
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  width: 24px;
 }
 
-/* Botão comprar ocupa o resto */
+.quantidade span {
+  font-size: 14px;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* BOTÃO COMPRAR (pill verde) */
 .btn-comprar {
   flex: 1;
-  background-color: var(--turquesa);
-  color: var(--branco);
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 8px;
+  background-color: #2e8b2d; /* verde elegante */
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .btn-comprar:hover {
-  opacity: 0.9;
+  background-color: #256f24;
 }
+
 
 .card img {
   width: 100%;
