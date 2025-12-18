@@ -76,7 +76,7 @@ img {
 
 /* Seção de categoria */
 .categoria-section {
-  margin-bottom: 48px;
+  margin-bottom: 16px;
 }
 
 .categoria-section h2 {
@@ -86,11 +86,11 @@ img {
 
 /* Grid de produtos */
 .produtos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  display: flex;
   gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 8px;
 }
-
 /* ============================================================
    CARD DE PRODUTO
    ============================================================ */
@@ -106,7 +106,7 @@ img {
 
   /* 🔒 TRAVA O TAMANHO DO CARD */
   width: 100%;
-  max-width: 260px;   /* desktop */
+  max-width: 280px;   /* desktop */
 }
 
 .card h3 {
