@@ -72,30 +72,30 @@ function renderProdutos(listaProdutos) {
     const produtosDaCategoria = listaProdutos.filter(p => p.categoria === cat.id);
     if (produtosDaCategoria.length === 0) return;
 
-    const section = document.createElement("section");
-    section.classList.add("categoria-bg");
-    section.id = cat.id;
+     const section = document.createElement("section");
+     section.classList.add("categoria-section");
+     section.id = cat.id;
 
-    const container = document.createElement("div");
-    container.classList.add("container");
+     const container = document.createElement("div");
+     container.classList.add("container");
 
-    section.appendChild(container);
+     const titulo = document.createElement("h2");
+     titulo.textContent = cat.nome;
 
-    const titulo = document.createElement("h2");
-    titulo.textContent = cat.nome;
+     const grid = document.createElement("div");
+     grid.classList.add("produtos-grid");
 
-    const grid = document.createElement("div");
-    grid.classList.add("produtos-grid");
+     produtosDaCategoria.forEach(produto => {
+     const card = criarCardProduto(produto);
+     grid.appendChild(card);
+});
 
-    produtosDaCategoria.forEach(produto => {
-      const card = criarCardProduto(produto);
-      grid.appendChild(card);
-    });
+container.appendChild(titulo);
+container.appendChild(grid);
+section.appendChild(container);
 
-    container.appendChild(titulo);
-    container.appendChild(grid);
+produtosContainer.appendChild(section);
 
-    produtosContainer.appendChild(section);
   });
 }
 
