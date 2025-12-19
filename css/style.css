@@ -484,6 +484,7 @@ img {
   width: 100%;
   background-color: transparent;
   padding: 0;
+  margin-top: 24px; /* 👈 ESPAÇO ENTRE HEADER E SLIDE */
 }
 
 /* container alinhado com o site */
