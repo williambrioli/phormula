@@ -476,3 +476,37 @@ img {
 
 }
 
+/* ============================================================
+   SLIDER DE PROPAGANDA
+   ============================================================ */
+
+.ads-slider {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.ads-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.ads-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* altura desktop */
+@media (min-width: 769px) {
+  .ads-track img {
+    height: 320px;
+  }
+}
+
+/* altura mobile */
+@media (max-width: 768px) {
+  .ads-track img {
+    height: 200px;
+  }
+}
