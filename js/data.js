@@ -44,7 +44,8 @@ const produtos = [
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: true
+    mostrarlancamento: true,
+    textoParcelamento: "ou 1x de R$ 90,00"
   },
    {
     id: 2,
@@ -54,7 +55,8 @@ const produtos = [
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 90,00"
   },
    {
     id: 3,
@@ -64,7 +66,8 @@ const produtos = [
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 90,00"
   },
    {
     id: 4,
@@ -74,7 +77,8 @@ const produtos = [
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: true
+    mostrarlancamento: true,
+    textoParcelamento: "ou 1x de R$ 90,00"
   },
    {
     id: 5,
@@ -84,7 +88,8 @@ const produtos = [
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 90,00"
   },
    {
     id: 6,
@@ -94,7 +99,8 @@ const produtos = [
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 90,00"
   },
   {
     id: 7,
@@ -104,7 +110,8 @@ const produtos = [
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: false,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 12,50"
   },
    {
     id: 8,
@@ -114,7 +121,8 @@ const produtos = [
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: false,
-    mostrarlancamento: true
+    mostrarlancamento: true,
+    textoParcelamento: "ou 1x de R$ 12,50"
   },
    {
     id: 9,
@@ -124,7 +132,8 @@ const produtos = [
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: false,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 12,50"
   },
    {
     id: 10,
@@ -134,7 +143,8 @@ const produtos = [
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: false,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 12,50"
   },
    {
     id: 11,
@@ -144,7 +154,8 @@ const produtos = [
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: false,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 12,50"
   },
    {
     id: 12,
@@ -154,7 +165,8 @@ const produtos = [
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: false,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 12,50"
   },
   {
     id: 13,
@@ -164,7 +176,8 @@ const produtos = [
     descricao: "Proteção diária contra raios UVA e UVB.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: true
+    mostrarlancamento: true,
+    textoParcelamento: "ou 1x de R$ 49,90"
   },
    {
     id: 14,
@@ -174,7 +187,8 @@ const produtos = [
     descricao: "Proteção diária contra raios UVA e UVB.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 49,90"
   },
    {
     id: 15,
@@ -184,7 +198,8 @@ const produtos = [
     descricao: "Proteção diária contra raios UVA e UVB.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 49,90"
   },
    {
     id: 16,
@@ -194,7 +209,8 @@ const produtos = [
     descricao: "Proteção diária contra raios UVA e UVB.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 49,90"
   },
    {
     id: 17,
@@ -204,7 +220,8 @@ const produtos = [
     descricao: "Proteção diária contra raios UVA e UVB.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: false
+    mostrarlancamento: false,
+    textoParcelamento: "ou 1x de R$ 49,90"
   }
   
   
