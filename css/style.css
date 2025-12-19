@@ -249,7 +249,8 @@ img {
 
 .footer-content {
   display: flex;
-  justify-content: flex-start; /* esquerda */
+  flex-direction: column; /* 👈 força tudo para baixo */
+  align-items: flex-start; /* 👈 alinhado à esquerda */
 }
 
 .footer-info {
