@@ -74,7 +74,7 @@ const produtos = [
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
     destaque: true,
-    mostrarlancamento: false
+    mostrarlancamento: true
   },
    {
     id: 5,
