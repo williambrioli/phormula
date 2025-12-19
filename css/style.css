@@ -510,21 +510,8 @@ img {
 
 /* desktop */
 @media (min-width: 769px) {
-
-  .ads-slider {
-    padding: 32px 0; /* mais respiro visual */
-  }
-
-  .ads-track {
-    min-height: 420px;              /* 👈 altura visual maior */
-    align-items: center;
-    justify-content: center;
-  }
-
   .ads-track img {
-    height: 380px;                  /* 👈 imagem maior */
-    max-width: 900px;               /* 👈 evita estourar */
-    margin: 0 auto;
+    height: 320px;
   }
 }
 
@@ -534,41 +521,3 @@ img {
     height: 200px;
   }
 }
-
-/* ============================================================
-   DESKTOP — FUNDO DESFOCADO PREMIUM (SEM CORTAR IMAGEM)
-   ============================================================ */
-
-@media (min-width: 769px) {
-
-  .ads-container {
-    position: relative;
-  }
-
-  .ads-track {
-    position: relative;
-  }
-
-  .ads-track img {
-    position: relative;
-    z-index: 2;
-  }
-
-  /* camada de fundo desfocada */
-  .ads-track::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background-image: var(--ads-bg);
-    background-size: cover;
-    background-position: center;
-
-    filter: blur(24px);
-    transform: scale(1.1);
-    opacity: 0.35;
-
-    z-index: 1;
-  }
-}
-
