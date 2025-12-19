@@ -130,6 +130,7 @@ function criarCardProduto(produto, isBanner = false) {
   card.id = `produto-${produto.id}`;
 
   card.innerHTML = `
+    ${produto.mostrarlancamento ? `<span class="badge-lancamento">Lançamento</span>` : ``}
     <img src="${produto.imagem}" alt="${produto.nome}">
     <h3>${produto.nome}</h3>
     <button class="btn-detalhes">Ver mais</button>
