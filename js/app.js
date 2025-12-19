@@ -155,10 +155,7 @@ function criarCardProduto(produto, isBanner = false) {
     <button class="btn-mais">+</button>
   </div>
 
-  <button class="btn-comprar">
-  <img src="assets/img/whatsapp.svg" alt="WhatsApp">
-  <span>Enviar pedido</span>
-</button>
+  <button class="btn-comprar">Comprar</button>
 </div>
 
   `;

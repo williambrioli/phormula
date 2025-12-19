@@ -506,12 +506,14 @@ img {
   flex-shrink: 0;
   object-fit: contain; /* 🔹 NÃO CORTA */
   background-color: transparent;
+  
 }
 
 /* desktop */
 @media (min-width: 769px) {
   .ads-track img {
-    height: 320px;
+    height: 700px;
+    
   }
 }
 
@@ -519,5 +521,33 @@ img {
 @media (max-width: 768px) {
   .ads-track img {
     height: 200px;
+    
   }
 }
+
+/* ============================================================
+   DOTS — SLIDER DE PROPAGANDA
+   ============================================================ */
+
+.ads-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 6px; /* 👈 RESPIRO AQUI */
+}
+
+.ads-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #cfcfcf;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ads-dots span.active {
+  background-color: #0b6c8f; /* azul da marca */
+  transform: scale(1.2);
+}
+
