@@ -483,7 +483,7 @@ img {
 .ads-slider {
   width: 100%;
   background-color: transparent;
-  padding: 4px;
+  padding: 0;
 }
 
 /* container alinhado com o site */
@@ -504,7 +504,7 @@ img {
   width: 100%;
   flex-shrink: 0;
   object-fit: contain; /* 🔹 NÃO CORTA */
-  background-color: #f5f5f5;
+  background-color: transparent;;
 }
 
 /* desktop */
