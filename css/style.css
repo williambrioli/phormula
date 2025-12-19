@@ -534,7 +534,7 @@ img {
   justify-content: center;
   gap: 8px;
   margin-top: 12px;
-  margin-bottom: 16px; /* 👈 RESPIRO AQUI */
+  margin-bottom: 6px; /* 👈 RESPIRO AQUI */
 }
 
 .ads-dots span {
