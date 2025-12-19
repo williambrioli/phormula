@@ -524,3 +524,29 @@ img {
     
   }
 }
+
+/* ============================================================
+   DOTS — SLIDER DE PROPAGANDA
+   ============================================================ */
+
+.ads-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ads-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #cfcfcf;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ads-dots span.active {
+  background-color: #0b6c8f; /* azul da marca */
+  transform: scale(1.2);
+}
+
