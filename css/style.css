@@ -151,7 +151,7 @@ img {
   background-color: #e8f4f8;
   color: #0a6fa1;
 
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -159,13 +159,13 @@ img {
   padding: 4px 8px;
   border-radius: 12px;
 
-  border: 1px solid #FF0000;
+  border: 1px solid #b9dcea;
 }
 
 
 
 /* ============================================================
-   AÇÕES DO CARD (QUANTIDADE + COMPRAR LADO A LADO) b9dcea
+   AÇÕES DO CARD (QUANTIDADE + COMPRAR LADO A LADO) 
    ============================================================ */
 
 .card-acoes {
