@@ -136,6 +136,33 @@ img {
   color: #333;
 }
 
+/* ============================================================
+ ICONE DE LANÇAMENTO PRODUTO NO CARD
+   ============================================================ */
+.produto-card {
+  position: relative; /* obrigatório para posicionar o selo */
+}
+
+.badge-lancamento {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  background-color: #e8f4f8;
+  color: #0a6fa1;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  padding: 4px 8px;
+  border-radius: 12px;
+
+  border: 1px solid #b9dcea;
+}
+
+
 
 /* ============================================================
    AÇÕES DO CARD (QUANTIDADE + COMPRAR LADO A LADO)
