@@ -382,18 +382,42 @@ document.querySelectorAll(".slider").forEach(slider => {
 });
 
 // ============================================================
-// SLIDER DE PROPAGANDA AUTOMÁTICO
+// SLIDER DE PROPAGANDA AUTOMÁTICO + DOTS
 // ============================================================
 
 const adsTrack = document.querySelector(".ads-track");
 const adsImages = document.querySelectorAll(".ads-track img");
+const adsDotsContainer = document.querySelector(".ads-dots");
 
 let adsIndex = 0;
-const adsInterval = 15000; // tempo em ms (4 segundos)
+const adsInterval = 15000;
+
+// cria dots
+adsImages.forEach((_, i) => {
+  const dot = document.createElement("span");
+  if (i === 0) dot.classList.add("active");
+
+  dot.addEventListener("click", () => {
+    adsIndex = i;
+    atualizarAds();
+  });
+
+  adsDotsContainer.appendChild(dot);
+});
+
+const adsDots = adsDotsContainer.querySelectorAll("span");
+
+function atualizarAds() {
+  adsTrack.style.transform = `translateX(-${adsIndex * 100}%)`;
+
+  adsDots.forEach((dot, i) =>
+    dot.classList.toggle("active", i === adsIndex)
+  );
+}
 
 function trocarSlideAds() {
   adsIndex = (adsIndex + 1) % adsImages.length;
-  adsTrack.style.transform = `translateX(-${adsIndex * 100}%)`;
+  atualizarAds();
 }
 
 setInterval(trocarSlideAds, adsInterval);
