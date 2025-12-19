@@ -43,7 +43,8 @@ const produtos = [
     preco: 90.00,
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: true
+    destaque: true,
+    mostrarlancamento: true
   },
    {
     id: 2,
@@ -52,7 +53,8 @@ const produtos = [
     preco: 90.00,
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: true
+    destaque: true,
+    mostrarlancamento: false
   },
    {
     id: 3,
@@ -61,7 +63,8 @@ const produtos = [
     preco: 90.00,
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: true
+    destaque: true,
+    mostrarlancamento: false
   },
    {
     id: 4,
@@ -70,7 +73,8 @@ const produtos = [
     preco: 90.00,
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: true
+    destaque: true,
+    mostrarlancamento: false
   },
    {
     id: 5,
@@ -79,7 +83,8 @@ const produtos = [
     preco: 90.00,
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: true
+    destaque: true,
+    mostrarlancamento: false
   },
    {
     id: 6,
@@ -88,7 +93,8 @@ const produtos = [
     preco: 90.00,
     descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: true
+    destaque: true,
+    mostrarlancamento: false
   },
   {
     id: 7,
@@ -97,7 +103,8 @@ const produtos = [
     preco: 12.50,
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: false
+    destaque: false,
+    mostrarlancamento: false
   },
    {
     id: 8,
@@ -106,7 +113,8 @@ const produtos = [
     preco: 12.50,
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: false
+    destaque: false,
+    mostrarlancamento: true
   },
    {
     id: 9,
@@ -115,7 +123,8 @@ const produtos = [
     preco: 12.50,
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: false
+    destaque: false,
+    mostrarlancamento: false
   },
    {
     id: 10,
@@ -124,7 +133,8 @@ const produtos = [
     preco: 12.50,
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: false
+    destaque: false,
+    mostrarlancamento: false
   },
    {
     id: 11,
@@ -133,7 +143,8 @@ const produtos = [
     preco: 12.50,
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: false
+    destaque: false,
+    mostrarlancamento: false
   },
    {
     id: 12,
@@ -142,7 +153,8 @@ const produtos = [
     preco: 12.50,
     descricao: "Auxilia no tratamento de dores leves a moderadas.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: false
+    destaque: false,
+    mostrarlancamento: false
   },
   {
     id: 13,
@@ -151,7 +163,8 @@ const produtos = [
     preco: 49.90,
     descricao: "Proteção diária contra raios UVA e UVB.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: true
+    destaque: true,
+    mostrarlancamento: true
   },
    {
     id: 14,
@@ -160,7 +173,8 @@ const produtos = [
     preco: 49.90,
     descricao: "Proteção diária contra raios UVA e UVB.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: true
+    destaque: true,
+    mostrarlancamento: false
   },
    {
     id: 15,
@@ -169,7 +183,8 @@ const produtos = [
     preco: 49.90,
     descricao: "Proteção diária contra raios UVA e UVB.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: true
+    destaque: true,
+    mostrarlancamento: false
   },
    {
     id: 16,
@@ -178,7 +193,8 @@ const produtos = [
     preco: 49.90,
     descricao: "Proteção diária contra raios UVA e UVB.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: true
+    destaque: true,
+    mostrarlancamento: false
   },
    {
     id: 17,
@@ -187,7 +203,8 @@ const produtos = [
     preco: 49.90,
     descricao: "Proteção diária contra raios UVA e UVB.",
     imagem: "assets/img/imgpoteteste.png",
-    destaque: true
+    destaque: true,
+    mostrarlancamento: false
   }
   
   
