@@ -35,21 +35,8 @@
     messages: {
       // Mensagem padrão ("generic").
       // Essa é usada caso nenhuma outra mensagem seja especificada.
-      generic: "Oi, William! Encontrei seu site e preciso conversar com você sobre...",
-      rodapegeneric: "William! Encontrei seu site e preciso conversar com você sobre...",
-      duvidageneric: "Olá, William! Encontrei seu site e preciso conversar com você sobre...",
-      psicoterapiaindividuall: "Olá, William! Quero falar sobre Psicoterapia Individual.",
-      psicoterapiabrevee: "Olá, William! Quero falar sobre Psicoterapia Breve.",
-      psicoterapiaunica: "Olá, William! Quero falar sobre Psicoterapia de Sessão Única.",
-      terapiadecasall: "Olá, William! Quero falar sobre Terapia de Casal.",
-      terapiaparaempreendedoress: "Olá, William! Quero falar sobre Terapia para empreendedores.",
-      mediadorextrajudiciall: "Olá, William! Quero falar sobre Mediação Extrajudicial.",
-      consultoriadesenvolvimentohumanoo: "Olá, William! Quero falar sobre Consultoria em Desenvolvimento Humano e Organizacional.",
-      transicaocarreira: "Olá, William! Quero falar sobre Orientação e Transição de Carreira.",
-      treinadorfinanc: "Olá, William! Quero falar sobre Orientação e Transição de Carreira.",
-      nr1: "Olá, William! Quero falar sobre implementação de NR-1.",
-      depoimentogeneric: "Olá, William! Vi o conteúdo do seu site e depoimento dos clientes e quero falar sobre atendimento com você.",
-      palestrageneric: "Olá, William! Vi que você é palestrante e quero falar sobre palestras."
+      generic: "Olá,Phormula Ativa! Estou no site e gostaria de ajuda sobre...",
+      palestrageneric: ""
       
       
       // Exemplos de mensagens adicionais (comentadas).
