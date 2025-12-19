@@ -390,7 +390,7 @@ const adsImages = document.querySelectorAll(".ads-track img");
 const adsDotsContainer = document.querySelector(".ads-dots");
 
 let adsIndex = 0;
-const adsInterval = 15000;
+const adsInterval = 8000;
 
 // cria dots
 adsImages.forEach((_, i) => {
