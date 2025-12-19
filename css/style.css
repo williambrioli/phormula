@@ -210,44 +210,24 @@ img {
   text-align: center;
 }
 
-/* ============================================================
-   BOTÃO ENVIAR PEDIDO (WHATSAPP)
-   ============================================================ */
-
+/* BOTÃO COMPRAR (pill verde) */
 .btn-comprar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-
-  background-color: #25D366; /* verde oficial WhatsApp */
-  color: #ffffff;
-
+  flex: 1;                 /* 🔹 ocupa mais espaço que a quantidade */
+  background-color: #2e8b2d;
+  color: #fff;
   border: none;
-  border-radius: 24px;
-
-  padding: 12px 16px;
-  font-size: 0.95rem;
+  border-radius: 999px;    /* 🔹 pill perfeito */
+  padding: 14px 24px;      /* 🔹 MAIOR */
+  font-size: 15px;
   font-weight: 600;
-
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.btn-comprar img {
-  width: 18px;
-  height: 18px;
-  display: block;
+  transition: background 0.2s ease;
+  white-space: nowrap;
 }
 
 .btn-comprar:hover {
-  background-color: #1ebe5d;
+  background-color: #256f24;
 }
-
-.btn-comprar:active {
-  transform: scale(0.97);
-}
-
 
 
 .card img {
@@ -526,14 +506,12 @@ img {
   flex-shrink: 0;
   object-fit: contain; /* 🔹 NÃO CORTA */
   background-color: transparent;
-  
 }
 
 /* desktop */
 @media (min-width: 769px) {
   .ads-track img {
-    height: 700px;
-    
+    height: 320px;
   }
 }
 
@@ -541,33 +519,5 @@ img {
 @media (max-width: 768px) {
   .ads-track img {
     height: 200px;
-    
   }
 }
-
-/* ============================================================
-   DOTS — SLIDER DE PROPAGANDA
-   ============================================================ */
-
-.ads-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 12px;
-  margin-bottom: 6px; /* 👈 RESPIRO AQUI */
-}
-
-.ads-dots span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #cfcfcf;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.ads-dots span.active {
-  background-color: #0b6c8f; /* azul da marca */
-  transform: scale(1.2);
-}
-
