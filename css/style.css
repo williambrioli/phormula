@@ -504,20 +504,30 @@ img {
 .ads-track img {
   width: 100%;
   flex-shrink: 0;
-  object-fit: contain; /* 🔹 NÃO CORTA */
-  background-color: transparent;;
+  background-color: transparent;
 }
 
-/* desktop */
+/* DESKTOP: banner cheio, visual forte */
 @media (min-width: 769px) {
+  .ads-container {
+    max-width: 100%;
+  }
+
   .ads-track img {
-    height: 320px;
+    height: 380px;            /* mais presença */
+    object-fit: cover;        /* 🔥 PREENCHE O ESPAÇO */
+    object-position: center;  /* centraliza o foco */
   }
 }
 
-/* mobile */
+/* MOBILE: mantém imagem inteira */
 @media (max-width: 768px) {
+  .ads-container {
+    max-width: 100%;
+  }
+
   .ads-track img {
     height: 200px;
+    object-fit: contain;      /* não corta no mobile */
   }
 }
