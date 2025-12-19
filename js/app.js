@@ -2,6 +2,16 @@
    APP.JS – LÓGICA PRINCIPAL DO SITE
    ============================================================ */
 
+// Nomalizar texto
+
+function normalizarTexto(texto) {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+
 // Elementos principais
 const menuCategorias = document.getElementById("menu-categorias");
 const produtosContainer = document.getElementById("produtos-container");
@@ -211,16 +221,23 @@ btnComprar.addEventListener("click", () => {
 // ============================================================
 
 searchInput.addEventListener("input", () => {
-  const termo = searchInput.value.toLowerCase();
+  const termo = normalizarTexto(searchInput.value);
 
-  const filtrados = produtos.filter(p =>
-    p.nome.toLowerCase().includes(termo) ||
-    p.descricao.toLowerCase().includes(termo) ||
-    slugParaNomeCategoria(p.categoria).toLowerCase().includes(termo)
-  );
+  const produtosFiltrados = produtos.filter(produto => {
+    const nome = normalizarTexto(produto.nome);
+    const categoria = normalizarTexto(produto.categoria);
+    const descricao = normalizarTexto(produto.descricao || "");
 
-  renderProdutos(filtrados);
+    return (
+      nome.includes(termo) ||
+      categoria.includes(termo) ||
+      descricao.includes(termo)
+    );
+  });
+
+  renderProdutos(produtosFiltrados);
 });
+
 
 // ============================================================
 // FOOTER WHATSAPP
