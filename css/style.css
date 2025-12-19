@@ -506,14 +506,14 @@ img {
   flex-shrink: 0;
   object-fit: contain; /* 🔹 NÃO CORTA */
   background-color: transparent;
-  border-radius: 12px;
+  border-radius: 100px;
 }
 
 /* desktop */
 @media (min-width: 769px) {
   .ads-track img {
-    height: 620px;
-    border-radius: 12px;
+    height: 700px;
+    border-radius: 100px;
   }
 }
 
@@ -521,6 +521,6 @@ img {
 @media (max-width: 768px) {
   .ads-track img {
     height: 200px;
-    border-radius: 12px;
+    border-radius: 100px;
   }
 }
