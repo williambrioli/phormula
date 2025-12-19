@@ -136,7 +136,7 @@ function criarCardProduto(produto, isBanner = false) {
     <button class="btn-detalhes">Ver mais</button>
     <p class="descricao">${produto.descricao}</p>
     <span class="preco">${formatarPreco(produto.preco)}</span>
-    
+    ${produto.textoParcelamento ? `<span class="texto-parcelamento">${produto.textoParcelamento}</span>` : ``}
 
     <div class="card-acoes">
   <div class="quantidade">
