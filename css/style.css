@@ -84,6 +84,7 @@ img {
 .card h3 {
   font-size: 1rem;
   color: var(--preto);
+  font-weight: normal;
 }
 
 .card .preco {
