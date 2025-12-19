@@ -92,6 +92,14 @@ img {
   color: var(--preto);
 }
 
+.texto-parcelamento {
+  display: block;
+  margin-top: 4px;
+
+  font-size: 0.8rem;
+  color: #777; /* cinza elegante */
+}
+
 .card .descricao {
   font-size: 0.85rem;
   color: var(--cinza);
