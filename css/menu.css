@@ -87,7 +87,7 @@ body {
   z-index: 1100;
 
   background-color: transparent; /*var(--azul-escuro);  MESMO AZUL DO HEADER */
-  border: none;
+  border: 1.3px solid var(#ffffff); /* 🔹 contorno azul border: none;*/
   border-radius: 2px; /* 🔽 menos arredondado */
 
   padding: 2px 2px; /* 🔽 MENOR FUNDO */
