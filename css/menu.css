@@ -87,11 +87,11 @@ body {
   z-index: 1100;
 
   background-color: transparent; /*var(--azul-escuro);  MESMO AZUL DO HEADER */
-  border: 1.3px solid var(#ffffff); /* 🔹 contorno azul border: none;*/
+  border: none;
   border-radius: 2px; /* 🔽 menos arredondado */
 
   padding: 2px 2px; /* 🔽 MENOR FUNDO */
-  font-size: 1.8rem; /* 🔽 risquinhos um pouco menores */
+  font-size: 1.5rem; /* 🔽 risquinhos um pouco menores */
   color: #808080; /* risquinhos brancos */
   cursor: pointer;
 
