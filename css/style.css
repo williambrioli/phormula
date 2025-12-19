@@ -262,7 +262,7 @@ img {
 
 .footer-info p {
   margin-bottom: 16px;
-  color: #555;
+  color: #FFFFFF;
   max-width: 420px;
 }
 
@@ -273,7 +273,7 @@ img {
 }
 
 .footer-social a {
-  color: var(--azul-escuro);
+  color: var(--branco);
   text-decoration: none;
   font-weight: 500;
 }
