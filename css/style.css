@@ -489,7 +489,7 @@ img {
 
 /* container alinhado com o site */
 .ads-container {
-  max-width: 1900px;
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -511,7 +511,7 @@ img {
 /* desktop */
 @media (min-width: 769px) {
   .ads-track img {
-    height: 320px;
+    height: 620px;
   }
 }
 
