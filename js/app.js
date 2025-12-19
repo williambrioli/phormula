@@ -389,7 +389,7 @@ const adsTrack = document.querySelector(".ads-track");
 const adsImages = document.querySelectorAll(".ads-track img");
 
 let adsIndex = 0;
-const adsInterval = 4000; // tempo em ms (4 segundos)
+const adsInterval = 15000; // tempo em ms (4 segundos)
 
 function trocarSlideAds() {
   adsIndex = (adsIndex + 1) % adsImages.length;
