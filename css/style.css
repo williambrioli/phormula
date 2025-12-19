@@ -159,13 +159,13 @@ img {
   padding: 4px 8px;
   border-radius: 12px;
 
-  border: 1px solid #b9dcea;
+  border: 1px solid #FF0000;
 }
 
 
 
 /* ============================================================
-   AÇÕES DO CARD (QUANTIDADE + COMPRAR LADO A LADO)
+   AÇÕES DO CARD (QUANTIDADE + COMPRAR LADO A LADO) b9dcea
    ============================================================ */
 
 .card-acoes {
