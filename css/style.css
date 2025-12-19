@@ -477,34 +477,44 @@ img {
 }
 
 /* ============================================================
-   SLIDER DE PROPAGANDA
+   SLIDER DE PROPAGANDA — PROFISSIONAL
    ============================================================ */
 
 .ads-slider {
   width: 100%;
-  overflow: hidden;
   background-color: #f5f5f5;
+  padding: 0;
 }
 
+/* container alinhado com o site */
+.ads-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* trilha */
 .ads-track {
   display: flex;
   transition: transform 0.6s ease;
 }
 
+/* imagens */
 .ads-track img {
   width: 100%;
   flex-shrink: 0;
-  object-fit: cover;
+  object-fit: contain; /* 🔹 NÃO CORTA */
+  background-color: #f5f5f5;
 }
 
-/* altura desktop */
+/* desktop */
 @media (min-width: 769px) {
   .ads-track img {
     height: 320px;
   }
 }
 
-/* altura mobile */
+/* mobile */
 @media (max-width: 768px) {
   .ads-track img {
     height: 200px;
