@@ -139,7 +139,7 @@ img {
 /* ============================================================
  ICONE DE LANÇAMENTO PRODUTO NO CARD
    ============================================================ */
-.produto-card {
+.card {
   position: relative; /* obrigatório para posicionar o selo */
 }
 
