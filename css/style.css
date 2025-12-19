@@ -510,8 +510,21 @@ img {
 
 /* desktop */
 @media (min-width: 769px) {
+
+  .ads-slider {
+    padding: 32px 0; /* mais respiro visual */
+  }
+
+  .ads-track {
+    min-height: 420px;              /* 👈 altura visual maior */
+    align-items: center;
+    justify-content: center;
+  }
+
   .ads-track img {
-    height: 320px;
+    height: 380px;                  /* 👈 imagem maior */
+    max-width: 900px;               /* 👈 evita estourar */
+    margin: 0 auto;
   }
 }
 
