@@ -210,24 +210,44 @@ img {
   text-align: center;
 }
 
-/* BOTÃO COMPRAR (pill verde) */
+/* ============================================================
+   BOTÃO ENVIAR PEDIDO (WHATSAPP)
+   ============================================================ */
+
 .btn-comprar {
-  flex: 1;                 /* 🔹 ocupa mais espaço que a quantidade */
-  background-color: #2e8b2d;
-  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: #25D366; /* verde oficial WhatsApp */
+  color: #ffffff;
+
   border: none;
-  border-radius: 999px;    /* 🔹 pill perfeito */
-  padding: 14px 24px;      /* 🔹 MAIOR */
-  font-size: 15px;
+  border-radius: 24px;
+
+  padding: 12px 16px;
+  font-size: 0.95rem;
   font-weight: 600;
+
   cursor: pointer;
-  transition: background 0.2s ease;
-  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-comprar img {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
 
 .btn-comprar:hover {
-  background-color: #256f24;
+  background-color: #1ebe5d;
 }
+
+.btn-comprar:active {
+  transform: scale(0.97);
+}
+
 
 
 .card img {
