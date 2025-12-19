@@ -72,7 +72,7 @@
 
     // Fallback adicional: se por algum motivo a mensagem estiver vazia,
     // nunca deixa "undefined". Coloca sempre esta frase padrão.
-    const finalText = raw || "Olá, William! Gostaria de conversar sobre atendimento.";
+    const finalText = raw || "Olá,Phormula Ativa! Estou no site e gostaria de ajuda sobre...";
 
     // Codifica o texto para URL, para evitar erros com acentos e espaços.
     const encoded = encodeURIComponent(finalText);
