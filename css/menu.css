@@ -86,13 +86,13 @@ body {
   left: 16px;
   z-index: 1100;
 
-  background-color: var(--azul-escuro); /* MESMO AZUL DO HEADER */
+ /* background-color: var(--azul-escuro);  MESMO AZUL DO HEADER */
   border: none;
   border-radius: 2px; /* 🔽 menos arredondado */
 
   padding: 2px 2px; /* 🔽 MENOR FUNDO */
   font-size: 1.8rem; /* 🔽 risquinhos um pouco menores */
-  color: #ffffff; /* risquinhos brancos */
+  color: #808080; /* risquinhos brancos */
   cursor: pointer;
 
   display: none; /* escondido no desktop */
