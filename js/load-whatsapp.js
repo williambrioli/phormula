@@ -22,7 +22,7 @@
 function carregarWhatsApp() {
 
   // Faz uma requisição para pegar o conteúdo do arquivo /whatsapp.html.
-  fetch("/whatsapp.html")
+  fetch("./whatsapp.html")
 
     // Quando a resposta chega, convertemos ela para texto.
     .then(resp => resp.text())
