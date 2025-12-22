@@ -570,3 +570,23 @@ img {
   transform: scale(1.2);
 }
 
+/* ============================================================
+   BARRA DE PROGRESSO DO SLIDER DE ADS
+   ============================================================ */
+
+.ads-progress {
+  width: 100%;
+  height: 2px;                 /* fininha */
+  background-color: #e6e6e6;   /* cinza discreto */
+  margin: 10px 0 6px;          /* espaço entre imagem e dots */
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+.ads-progress-bar {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background-color: var(--azul-escuro); /* cor do site */
+}
+
