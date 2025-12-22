@@ -575,7 +575,7 @@ img {
    ============================================================ */
 
 .ads-progress {
-  width: 55%; /* 🔽 40% menor que a imagem */
+  width: 45%; /* 🔽 55% menor que a imagem */
   height: 2px; /* mantém fininha */
   background-color: rgba(0,0,0,0.08);
   margin: 8px auto 6px; /* 🔥 centraliza */
