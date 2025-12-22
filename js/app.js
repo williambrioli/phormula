@@ -389,6 +389,7 @@ function inicializarAds() {
   const adsTrack = document.querySelector(".ads-track");
   const adsImages = document.querySelectorAll(".ads-track img");
   const adsDotsContainer = document.querySelector(".ads-dots");
+  const progressBar = document.querySelector(".ads-progress-bar");
 
   if (!adsTrack || adsImages.length === 0) return;
 
@@ -415,6 +416,8 @@ function inicializarAds() {
     adsDots.forEach((dot, i) =>
       dot.classList.toggle("active", i === adsIndex)
     );
+
+     iniciarProgresso(); // 🔥 AQUI a barra começa a crescer
   }
 
   function trocarSlideAds() {
@@ -448,4 +451,15 @@ function inicializarAds() {
 // inicia quando DOM estiver pronto
 document.addEventListener("DOMContentLoaded", inicializarAds);
 
+function iniciarProgresso() {
+  if (!progressBar) return;
 
+  progressBar.style.transition = "none";
+  progressBar.style.width = "0%";
+
+  // força o navegador a “resetar” a barra
+  progressBar.offsetHeight;
+
+  progressBar.style.transition = `width ${adsInterval}ms linear`;
+  progressBar.style.width = "100%";
+}
