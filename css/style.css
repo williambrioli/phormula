@@ -575,10 +575,10 @@ img {
    ============================================================ */
 
 .ads-progress {
-  width: 60%;                 /* 🔽 40% menor que a imagem */
-  height: 2px;                /* mantém fininha */
-  background-color: #e6e6e6;
-  margin: 10px auto 6px;      /* 🔥 centraliza */
+  width: 55%; /* 🔽 40% menor que a imagem */
+  height: 2px; /* mantém fininha */
+  background-color: rgba(0,0,0,0.08);
+  margin: 8px auto 6px; /* 🔥 centraliza */
   overflow: hidden;
   border-radius: 999px;
 }
