@@ -249,8 +249,15 @@ img {
 
 .footer-content {
   display: flex;
-  flex-direction: column; /* 👈 força tudo para baixo */
-  align-items: flex-start; /* 👈 alinhado à esquerda */
+  flex-wrap: wrap;       /* 🔥 permite quebrar linha */
+  gap: 32px;             /* espaço entre blocos */
+  align-items: flex-start;
+}
+
+.footer-info,
+.footer-social,
+.footer-whatsapp {
+  min-width: 200px;
 }
 
 .footer-info {
@@ -595,8 +602,8 @@ img {
    ============================================================ */
 
 .footer-mapa {
-  margin-top: 24px;
-  max-width: 420px;
+  flex: 1;
+  min-width: 300px;
 }
 
 .footer-mapa h3 {
@@ -618,4 +625,5 @@ img {
 .mapa-acoes a:hover {
   text-decoration: underline;
 }
+
 
