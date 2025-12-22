@@ -382,43 +382,70 @@ document.querySelectorAll(".slider").forEach(slider => {
 });
 
 // ============================================================
-// SLIDER DE PROPAGANDA AUTOMÁTICO + DOTS
+// SLIDER DE PROPAGANDA AUTOMÁTICO + DOTS (COM RANDOM REAL)
 // ============================================================
 
-const adsTrack = document.querySelector(".ads-track");
-const adsImages = document.querySelectorAll(".ads-track img");
-const adsDotsContainer = document.querySelector(".ads-dots");
+function inicializarAds() {
+  const adsTrack = document.querySelector(".ads-track");
+  const adsImages = document.querySelectorAll(".ads-track img");
+  const adsDotsContainer = document.querySelector(".ads-dots");
 
-let adsIndex = Math.floor(Math.random() * adsImages.length);
-const adsInterval = 8000;
+  if (!adsTrack || adsImages.length === 0) return;
 
-// cria dots
-adsImages.forEach((_, i) => {
-  const dot = document.createElement("span");
-  if (i === 0) dot.classList.add("active");
+  let adsIndex = Math.floor(Math.random() * adsImages.length);
+  const adsInterval = 8000;
 
-  dot.addEventListener("click", () => {
-    adsIndex = i;
-    atualizarAds();
+  // cria dots
+  adsDotsContainer.innerHTML = "";
+  adsImages.forEach((_, i) => {
+    const dot = document.createElement("span");
+    adsDotsContainer.appendChild(dot);
+
+    dot.addEventListener("click", () => {
+      adsIndex = i;
+      atualizarAds();
+    });
   });
 
-  adsDotsContainer.appendChild(dot);
-});
+  const adsDots = adsDotsContainer.querySelectorAll("span");
 
-const adsDots = adsDotsContainer.querySelectorAll("span");
+  function atualizarAds() {
+    adsTrack.style.transform = `translateX(-${adsIndex * 100}%)`;
 
-function atualizarAds() {
-  adsTrack.style.transform = `translateX(-${adsIndex * 100}%)`;
+    adsDots.forEach((dot, i) =>
+      dot.classList.toggle("active", i === adsIndex)
+    );
+  }
 
-  adsDots.forEach((dot, i) =>
-    dot.classList.toggle("active", i === adsIndex)
-  );
+  function trocarSlideAds() {
+    adsIndex = (adsIndex + 1) % adsImages.length;
+    atualizarAds();
+  }
+
+  // 🔑 ESPERA AS IMAGENS CARREGAREM
+  let carregadas = 0;
+
+  adsImages.forEach(img => {
+    if (img.complete) {
+      carregadas++;
+    } else {
+      img.onload = () => {
+        carregadas++;
+        if (carregadas === adsImages.length) {
+          atualizarAds(); // aplica random corretamente
+        }
+      };
+    }
+  });
+
+  if (carregadas === adsImages.length) {
+    atualizarAds();
+  }
+
+  setInterval(trocarSlideAds, adsInterval);
 }
 
-function trocarSlideAds() {
-  adsIndex = (adsIndex + 1) % adsImages.length;
-  atualizarAds();
-}
+// inicia quando DOM estiver pronto
+document.addEventListener("DOMContentLoaded", inicializarAds);
 
-setInterval(trocarSlideAds, adsInterval);
 
