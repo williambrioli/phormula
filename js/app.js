@@ -454,12 +454,15 @@ document.addEventListener("DOMContentLoaded", inicializarAds);
 function iniciarProgresso() {
   if (!progressBar) return;
 
+  // reseta
   progressBar.style.transition = "none";
   progressBar.style.width = "0%";
 
-  // força o navegador a “resetar” a barra
-  progressBar.offsetHeight;
-
-  progressBar.style.transition = `width ${adsInterval}ms linear`;
-  progressBar.style.width = "100%";
+  // força novo frame de renderização
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      progressBar.style.transition = `width ${adsInterval}ms linear`;
+      progressBar.style.width = "100%";
+    });
+  });
 }
