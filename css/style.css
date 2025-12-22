@@ -268,8 +268,6 @@ img {
 }
 
 
-
-
 .footer-info,
 .footer-social,
 .footer-whatsapp {
@@ -290,10 +288,11 @@ img {
   max-width: 420px;
 }
 
-.footer-social {
+.footer-info .footer-social {
+  margin-top: 8px;
   display: flex;
-  flex-direction: column; /* um abaixo do outro */
-  gap: 8px;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .footer-social a {
