@@ -410,6 +410,19 @@ function inicializarAds() {
 
   const adsDots = adsDotsContainer.querySelectorAll("span");
 
+   function iniciarProgresso() {
+  if (!progressBar) return;
+
+  progressBar.style.transition = "none";
+  progressBar.style.width = "0%";
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      progressBar.style.transition = `width ${adsInterval}ms linear`;
+      progressBar.style.width = "100%";
+    });
+  });
+}
   function atualizarAds() {
     adsTrack.style.transform = `translateX(-${adsIndex * 100}%)`;
 
@@ -451,18 +464,3 @@ function inicializarAds() {
 // inicia quando DOM estiver pronto
 document.addEventListener("DOMContentLoaded", inicializarAds);
 
-function iniciarProgresso() {
-  if (!progressBar) return;
-
-  // reseta
-  progressBar.style.transition = "none";
-  progressBar.style.width = "0%";
-
-  // força novo frame de renderização
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      progressBar.style.transition = `width ${adsInterval}ms linear`;
-      progressBar.style.width = "100%";
-    });
-  });
-}
