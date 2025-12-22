@@ -389,7 +389,7 @@ const adsTrack = document.querySelector(".ads-track");
 const adsImages = document.querySelectorAll(".ads-track img");
 const adsDotsContainer = document.querySelector(".ads-dots");
 
-let adsIndex = 0;
+let adsIndex = Math.floor(Math.random() * adsImages.length);
 const adsInterval = 8000;
 
 // cria dots
