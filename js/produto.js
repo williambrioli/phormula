@@ -113,22 +113,24 @@ function abrirVideo(src) {
     </div>
   `;
 
-  // adiciona ao DOM
   document.body.appendChild(modal);
 
-  // 🔹 FECHAR AO CLICAR NO X
   const btnClose = modal.querySelector(".video-close");
-  btnClose.addEventListener("click", () => {
+
+  // 🔹 FECHAR PELO X
+  btnClose.addEventListener("click", (e) => {
+    e.stopPropagation(); // 🔥 impede conflito
     modal.remove();
   });
 
-  // 🔹 FECHAR AO CLICAR FORA DO VÍDEO
+  // 🔹 FECHAR AO CLICAR FORA
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.remove();
     }
   });
 }
+
 
 
 // ================================
