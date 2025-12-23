@@ -47,7 +47,12 @@ const produtos = [
     ],
     descricao: {
       resumo: "Deseja melhorar o humor e dormir de forma tranquila?",
-      oQueE: "O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...O 5-HTP é um precursor da serotonina...",
+      
+       oQueE: `
+      
+      O 5-HTP é um precursor da serotonina...otonina...O 5-HTP é um precursor da
+      
+      `,      
       composicao: "5-Hidroxitriptofano 50mg...",
       comoUsar: "Tomar 1 cápsula antes de dormir...",
       advertencias: "Não utilizar sem orientação profissional..."
