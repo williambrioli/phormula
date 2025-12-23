@@ -23,6 +23,10 @@ function montarProduto(produto) {
     <div class="produto-card">
 
       <div class="produto-imagem">
+      
+      ${produto.mostrarlancamento ? `
+    <span class="badge-lancamento">Lançamento</span>
+  ` : ""}
         <img src="${produto.imagem}" alt="${produto.nome}">
         ${produto.videos?.length ? `
           <button class="produto-video-btn" onclick="abrirVideo('${produto.videos[0]}')">
