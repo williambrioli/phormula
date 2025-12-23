@@ -943,8 +943,8 @@ img {
   }
 
   .produto-imagem {
-    flex: 0 0 40%;
-    max-width: 40%;
+    flex: 0 0 34%;
+    max-width: 34%;
     position: relative;
   }
 
@@ -987,11 +987,11 @@ img {
   }
 
   .produto-acoes {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: nowrap; /* 🔥 força ficar lado a lado */
-  }
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
 }
 
 .produto-quantidade-anel {
@@ -999,6 +999,8 @@ img {
   }
 
   .btn-comprar {
-    flex: 1;           /* ocupa o espaço restante */
-    min-width: 120px;  /* garante clique confortável */
-  }
+  flex: 1;
+  min-width: auto;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+}
