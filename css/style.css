@@ -1062,3 +1062,13 @@ img {
   font-size: 14px;
   color: #333;
 }
+
+
+/* 🔒 impede a busca invisível de bloquear cliques */
+.search-results {
+  pointer-events: none;
+}
+
+.search-results.active {
+  pointer-events: auto;
+}
