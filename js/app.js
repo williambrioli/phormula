@@ -36,30 +36,6 @@ function slugParaNomeCategoria(slug) {
 }
 
 // ============================================================
-// MENU DE CATEGORIAS
-// ============================================================
-
-function renderMenuCategorias() {
-  menuCategorias.innerHTML = "";
-
-  categorias.forEach(cat => {
-
-    if (!cat.mostrarNoMenu) return;
-
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-
-    a.href = `#${cat.id}`;
-    a.textContent = cat.nomeMenu || cat.nome;
-
-    li.appendChild(a);
-    menuCategorias.appendChild(li);
-  });
-}
-
-
-
-// ============================================================
 // BANNER DE DESTAQUES
 // ============================================================
 
