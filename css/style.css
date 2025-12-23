@@ -957,7 +957,7 @@ img {
   /* bolinha do vídeo no lado esquerdo da imagem */
   .produto-video-btn {
     position: absolute;
-    bottom: 6px;
+    bottom: -16px;
     left: 12px;
     right: auto;
     width: 44px;
