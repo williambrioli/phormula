@@ -52,7 +52,7 @@ function montarProduto(produto) {
     <span id="quantidade">1</span>
     <button onclick="alterarQuantidade(1)">+</button>
   </div>
-
+  </div>
 
     <button class="btn-comprar">
       Comprar
