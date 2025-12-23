@@ -992,6 +992,12 @@ img {
   gap: 8px;
   width: 100%;
 }
+
+   .produto-quantidade-anel {
+    transform: scale(0.9); /* reduz ~10% tudo */
+    transform-origin: left center;
+  }
+
 }
 
 .produto-quantidade-anel {
