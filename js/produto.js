@@ -25,7 +25,7 @@ function montarProduto(produto) {
       <div class="produto-imagem">
       
       ${produto.mostrarlancamento ? `
-    <span class="badge-lancamento">Lançamento</span>
+    <span class="badge-lancamento-produto">Lançamento</span>
   ` : ""}
         <img src="${produto.imagem}" alt="${produto.nome}">
         ${produto.videos?.length ? `
