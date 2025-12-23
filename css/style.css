@@ -715,10 +715,14 @@ img {
   position: relative;
 }
 
-.produto-imagem img {
-  width: 300px;
-  border-radius: 16px;
+/* IMAGEM DO PRODUTO — DESKTOP */
+@media (min-width: 769px) {
+  .produto-imagem img {
+    width: 300px;
+    border-radius: 16px;
+  }
 }
+
 
 /* ================================
    BOTÃO DE VÍDEO (PREVIEW)
@@ -940,14 +944,24 @@ img {
   }
 }
 
-/* ================================
-   IMAGEM DO PRODUTO — MOBILE
-   (apenas página do produto)
-   ================================ */
+/* ================================ 
+IMAGEM DO PRODUTO — MOBILE 
+================================*/
 @media (max-width: 768px) {
-  .produto-page .produto-imagem img {
-    width: 180%;
-    max-width: none;
+  .produto-card .produto-imagem img {
+    width: 115%;
+    max-width: none;      /* 🔥 libera crescimento */
+  }
+}
+
+/* ================================ 
+CENTRALIZAR IMAGEM DO PRODUTO — MOBILE 
+================================*/
+
+@media (max-width: 768px) {
+  .produto-imagem {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -976,8 +990,8 @@ img {
    ================================ */
 @media (max-width: 768px) {
   .produto-card .produto-video-btn {
-    bottom: 24px;
-    right: 24px;
+    bottom: 20px;
+    right: 20px;
     width: 44px;
     height: 44px;
   }
