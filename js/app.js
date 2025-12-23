@@ -225,7 +225,6 @@ whatsappFooter.href = `https://wa.me/${WHATSAPP_NUMERO}`;
 // INICIALIZAÇÃO
 // ============================================================
 
-renderMenuCategorias();
 renderBanner();
 renderProdutos(produtos);
 
