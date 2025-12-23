@@ -949,7 +949,7 @@ IMAGEM DO PRODUTO — MOBILE
 ================================*/
 @media (max-width: 768px) {
   .produto-card .produto-imagem img {
-    width: 115%;
+    width: 50%;
     max-width: none;      /* 🔥 libera crescimento */
   }
 }
