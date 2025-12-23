@@ -26,8 +26,15 @@ function montarProduto(produto) {
         <img src="${produto.imagem}" alt="${produto.nome}">
         ${produto.videos?.length ? `
           <button class="produto-video-btn" onclick="abrirVideo('${produto.videos[0]}')">
-            ▶
-          </button>
+  <video
+    src="${produto.videos[0]}"
+    muted
+    autoplay
+    loop
+    playsinline
+  ></video>
+  <span class="play-indicador">▶</span>
+</button>
         ` : ""}
       </div>
 
