@@ -1072,3 +1072,55 @@ img {
 .search-results.active {
   pointer-events: auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mantém layout original do header */
+.search-box {
+  position: relative;
+  flex: 1;
+}
+
+/* dropdown da busca */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 9999;
+  display: none;
+}
+
+.search-results.active {
+  display: block;
+}
+
+/* item da busca */
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.search-item:hover {
+  background: #f2f2f2;
+}
+
+.search-item img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+}
