@@ -665,3 +665,30 @@ img {
 .footer-social .social-link:hover {
   opacity: 0.85;
 }
+
+/* ============================================================
+   RODAPÉ — INFORMAÇÕES LEGAIS
+   ============================================================ */
+
+.footer-legal {
+  margin-top: 24px;
+  padding: 16px 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.8rem; /* texto menor */
+  line-height: 1.5;
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4); /* branco discreto */
+  margin: 0 auto 16px;
+  width: 100%;
+}
+
+.footer-legal-title {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
