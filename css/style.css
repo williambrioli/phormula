@@ -759,3 +759,46 @@ img {
   right: 8px;
 }
 
+/* ================================
+   INFO DO PRODUTO (PADRÃO CARD)
+   ================================ */
+
+.produto-info {
+  max-width: 320px;
+}
+
+.produto-preco {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 8px 0 4px;
+}
+
+.produto-parcelamento {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.produto-quantidade {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.produto-quantidade button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.produto-quantidade span {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 500;
+}
+
+
