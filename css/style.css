@@ -955,21 +955,21 @@ img {
 
 
 /* =========================================================
-   PRODUTO — MOBILE (LAYOUT LIMPO, NÃO CENTRALIZADO)
+   PRODUTO — MOBILE EM DUAS COLUNAS (IGUAL DESKTOP)
    ========================================================= */
 @media (max-width: 768px) {
 
   .produto-card {
-    flex-direction: column;
-    align-items: stretch; /* 🔥 NÃO centraliza */
+    display: flex;
+    flex-direction: row; /* 🔥 LADO A LADO */
+    align-items: flex-start;
     gap: 16px;
   }
 
+  /* imagem menor, mas NÃO empilhada */
   .produto-imagem {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    position: relative;
+    flex: 0 0 42%; /* controla largura da imagem */
+    max-width: 42%;
   }
 
   .produto-imagem img {
@@ -977,30 +977,31 @@ img {
     height: auto;
   }
 
-  /* bolinha do vídeo */
+  /* bolinha de vídeo presa na imagem */
   .produto-video-btn {
-    bottom: 16px;
-    right: 16px;
-    width: 48px;
-    height: 48px;
+    bottom: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
   }
 
-  /* textos seguem layout natural */
+  /* info ocupa o resto */
   .produto-info {
+    flex: 1;
     text-align: left;
-    margin: 0;
   }
 
   .produto-info h1 {
-    font-size: 1.2rem;
-    line-height: 1.3;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
   }
 
   .produto-resumo {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
   }
 
-  .produto-acoes {
-    justify-content: flex-start;
+  .produto-preco {
+    font-size: 1.1rem;
   }
 }
