@@ -41,13 +41,24 @@ const produtos = [
     nome: "Emagrecimento",
     categoria: "emagrecimento",
     preco: 90.00,
-    descricao: "Energia intensa, foco absoluto e performance contínua. Termogênese inteligente com disposição prolongada.",
     imagem: "assets/img/imgpoteteste.png",
+    videos: [
+      "assets/videos/5htp.mp4"
+    ],
+    descricao: {
+      resumo: "Deseja melhorar o humor e dormir de forma tranquila?",
+      oQueE: "O 5-HTP é um precursor da serotonina...",
+      composicao: "5-Hidroxitriptofano 50mg...",
+      comoUsar: "Tomar 1 cápsula antes de dormir...",
+      advertencias: "Não utilizar sem orientação profissional..."
+    }
+         
     destaque: true,
     mostrarlancamento: true,
     textoParcelamento: "ou 1x de R$ 90,00"
-  },
-   {
+    },
+   
+    {
     id: 2,
     nome: "Emagrecimento 1",
     categoria: "emagrecimento",
