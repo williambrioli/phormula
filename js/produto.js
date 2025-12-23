@@ -54,9 +54,9 @@ function montarProduto(produto) {
   </div>
   </div>
 
-    <button class="btn-comprar">
-      Comprar
-    </button>
+    <button class="btn-comprar" onclick="comprarProduto()">
+  Comprar
+</button>
 
   </div>
 
