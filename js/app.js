@@ -143,7 +143,7 @@ function criarCardProduto(produto, isBanner = false) {
     ${produto.mostrarlancamento ? `<span class="badge-lancamento">Lançamento</span>` : ``}
     <img src="${produto.imagem}" alt="${produto.nome}">
     <h3>${produto.nome}</h3>
-    <button onclick="abrirProduto('${produto.id}')">Ver mais</button>
+    <button class="btn-detalhes">Ver mais</button>
     <p class="descricao">${produto.descricao}</p>
     <span class="preco">${formatarPreco(produto.preco)}</span>
     ${produto.textoParcelamento ? `<span class="texto-parcelamento">${produto.textoParcelamento}</span>` : ``}
