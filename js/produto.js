@@ -35,6 +35,12 @@ function montarProduto(produto) {
 
   <h1>${produto.nome}</h1>
 
+  ${produto.descricao?.resumo ? `
+  <p class="produto-resumo">
+    ${produto.descricao.resumo}
+  </p>
+` : ""}
+
   <p class="produto-preco">
     R$ ${produto.preco.toFixed(2)}
   </p>
