@@ -32,11 +32,29 @@ function montarProduto(produto) {
       </div>
 
       <div class="produto-info">
-        <h1>${produto.nome}</h1>
-        <p class="produto-preco">R$ ${produto.preco.toFixed(2)}</p>
 
-        <button class="btn-comprar">Comprar</button>
-      </div>
+  <h1>${produto.nome}</h1>
+
+  <p class="produto-preco">
+    R$ ${produto.preco.toFixed(2)}
+  </p>
+
+  <p class="produto-parcelamento">
+    ${produto.textoParcelamento || ""}
+  </p>
+
+  <!-- CONTROLE DE QUANTIDADE -->
+  <div class="produto-quantidade">
+    <button onclick="alterarQuantidade(-1)">−</button>
+    <span id="quantidade">1</span>
+    <button onclick="alterarQuantidade(1)">+</button>
+  </div>
+
+  <button class="btn-comprar">
+    Comprar
+  </button>
+
+</div>
 
     </div>
   `;
@@ -84,3 +102,20 @@ function abrirVideo(src) {
 
   document.body.appendChild(modal);
 }
+
+// ================================
+// CONTROLE DE QUANTIDADE
+// ================================
+
+let quantidadeAtual = 1;
+
+function alterarQuantidade(valor) {
+  quantidadeAtual += valor;
+
+  if (quantidadeAtual < 1) {
+    quantidadeAtual = 1;
+  }
+
+  document.getElementById("quantidade").textContent = quantidadeAtual;
+}
+
