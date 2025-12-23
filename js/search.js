@@ -50,10 +50,15 @@ if (searchInput && searchResults) {
       return;
     }
 
-    const resultados = produtos.filter(produto =>
-      normalizarTexto(produto.nome).includes(termo)
-    );
+    const baseProdutos =
+  window.produtos ||
+  window.produtosData ||
+  (window.DATA && window.DATA.produtos) ||
+  [];
 
+const resultados = baseProdutos.filter(produto =>
+  normalizarTexto(produto.nome).includes(termo)
+);
     renderResultados(resultados);
   });
 
