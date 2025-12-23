@@ -693,3 +693,61 @@ img {
   font-weight: 600;
 }
 
+
+/* ================= PRODUTO ================= */
+
+.produto-card {
+  display: flex;
+  gap: 32px;
+  margin: 40px 0;
+}
+
+.produto-imagem {
+  position: relative;
+}
+
+.produto-imagem img {
+  width: 300px;
+  border-radius: 16px;
+}
+
+.produto-video-btn {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border: none;
+  cursor: pointer;
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.video-content {
+  background: #fff;
+  padding: 16px;
+  border-radius: 16px;
+  max-width: 90%;
+}
+
+.video-content video {
+  width: 100%;
+}
+
+.video-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
