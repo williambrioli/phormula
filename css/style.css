@@ -946,7 +946,7 @@ img {
    ================================ */
 @media (max-width: 768px) {
   .produto-page .produto-imagem img {
-    width: 125%;
+    width: 135%;
     max-width: none;
   }
 }
