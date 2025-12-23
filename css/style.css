@@ -940,6 +940,17 @@ img {
   }
 }
 
+/* ================================
+   IMAGEM DO PRODUTO — MOBILE
+   (apenas página do produto)
+   ================================ */
+@media (max-width: 768px) {
+  .produto-page .produto-imagem img {
+    width: 115%;
+    max-width: none;
+  }
+}
+
 
 /* ================================
    TÍTULO DO PRODUTO — MOBILE
