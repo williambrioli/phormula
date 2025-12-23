@@ -33,13 +33,15 @@
       <ul id="menu-categorias"></ul>
     </nav>
 
-    <div class="search-box">
-      <input 
-        type="text" 
-        id="searchInput" 
-        placeholder="O que você está buscando?" 
-      />
-    </div>
+    <div class="search-box search-wrapper">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="O que você está buscando?"
+    autocomplete="off"
+  />
+  <div id="searchResults" class="search-results"></div>
+</div>
 
   </div>
 </header>
@@ -237,11 +239,13 @@
   <!-- Dados (produtos, categorias, banner) -->
   <script src="js/data.js"></script>
 
-  
+  <script src="js/search.js"></script>
 
 <!-- carrega menu -->
   <script src="js/menu.js"></script>
 
+  
+  
   <!-- Lógica do site -->
   <script src="js/app.js"></script>
 
