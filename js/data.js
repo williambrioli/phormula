@@ -37,7 +37,7 @@ const categorias = [
 
 const produtos = [
   {
-    id: 1,
+    id: "1",
     nome: "Emagrecimento",
     categoria: "emagrecimento",
     preco: 90.00,
@@ -60,7 +60,7 @@ const produtos = [
 
 
  {
-    id: 2,
+    id: "2",
     nome: "Emagrecimento1",
     categoria: "emagrecimento",
     preco: 90.00,
@@ -82,7 +82,7 @@ const produtos = [
     },
    
 {
-    id: 3,
+    id: "3",
     nome: "Emagrecimento2",
     categoria: "emagrecimento",
     preco: 90.00,
@@ -105,7 +105,7 @@ const produtos = [
 
 
 {
-    id: 4,
+    id: "4",
     nome: "Emagrecimento3",
     categoria: "emagrecimento",
     preco: 90.00,
@@ -129,7 +129,7 @@ const produtos = [
 
 
 {
-    id: 5,
+    id: "5",
     nome: "Emagrecimento4",
     categoria: "emagrecimento",
     preco: 90.00,
@@ -153,7 +153,7 @@ const produtos = [
    
 
 {
-    id: 6,
+    id: "6",
     nome: "Emagrecimento5",
     categoria: "emagrecimento",
     preco: 90.00,
@@ -178,7 +178,7 @@ const produtos = [
 
 
    {
-    id: 7,
+    id: "7",
     nome: "Desempenho Físico",
     categoria: "desempenhofisico",
     preco: 90.00,
@@ -201,7 +201,7 @@ const produtos = [
 
    
     {
-    id: 8,
+    id: "8",
     nome: "Desempenho Físico1",
     categoria: "desempenhofisico",
     preco: 90.00,
@@ -225,7 +225,7 @@ const produtos = [
   
 
     {
-    id: 9,
+    id: "9",
     nome: "Desempenho Físico2",
     categoria: "desempenhofisico",
     preco: 90.00,
@@ -249,7 +249,7 @@ const produtos = [
    
 
     {
-    id: 10,
+    id: "10",
     nome: "Desempenho Físico3",
     categoria: "desempenhofisico",
     preco: 90.00,
@@ -272,7 +272,7 @@ const produtos = [
    
 
     {
-    id: 11,
+    id: "11",
     nome: "Desempenho Físico4",
     categoria: "desempenhofisico",
     preco: 90.00,
@@ -296,7 +296,7 @@ const produtos = [
 
 
     {
-    id: 12,
+    id: "12",
     nome: "Desempenho Físico5",
     categoria: "desempenhofisico",
     preco: 90.00,
@@ -319,7 +319,7 @@ const produtos = [
 
    
  {
-    id: 13,
+    id: "13",
     nome: "Saúde",
     categoria: "saude",
     preco: 90.00,
@@ -341,7 +341,7 @@ const produtos = [
     },
 
    {
-    id: 14,
+    id: "14",
     nome: "Saúde1",
     categoria: "saude",
     preco: 90.00,
@@ -364,7 +364,7 @@ const produtos = [
   
 
  {
-    id: 15,
+    id: "15",
     nome: "Saúde2",
     categoria: "saude",
     preco: 90.00,
@@ -388,7 +388,7 @@ const produtos = [
    
 
     {
-    id: 16,
+    id: "16",
     nome: "Saúde3",
     categoria: "saude",
     preco: 90.00,
@@ -411,7 +411,7 @@ const produtos = [
 
    
  {
-    id: 17,
+    id: "17",
     nome: "Saúde4",
     categoria: "saude",
     preco: 90.00,
