@@ -916,15 +916,30 @@ img {
 }
 
 /* ================================
-   BADGE LANÇAMENTO — MOBILE
+   BADGE LANÇAMENTO — PRODUTO
    ================================ */
+
+.badge-lancamento-produto {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #eaf6ff;
+  color: #0077b6;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 12px;
+  z-index: 2;
+}
+
 @media (max-width: 768px) {
-  .badge-lancamento {
-    font-size: 0.65rem;   /* menor */
-    padding: 4px 8px;     /* menos altura */
-    border-radius: 10px;  /* mais delicado */
+  .badge-lancamento-produto {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+    border-radius: 10px;
   }
 }
+
 
 /* ================================
    TÍTULO DO PRODUTO — MOBILE
