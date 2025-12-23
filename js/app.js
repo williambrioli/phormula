@@ -192,27 +192,6 @@ btnComprar.addEventListener("click", () => {
   return card;
 }
 
-// ============================================================
-// BUSCA
-// ============================================================
-
-searchInput.addEventListener("input", () => {
-  const termo = normalizarTexto(searchInput.value);
-
-  const produtosFiltrados = produtos.filter(produto => {
-    const nome = normalizarTexto(produto.nome);
-    const categoria = normalizarTexto(produto.categoria);
-    const descricao = normalizarTexto(produto.descricao?.resumo || "");
-
-    return (
-      nome.includes(termo) ||
-      categoria.includes(termo) ||
-      descricao.includes(termo)
-    );
-  });
-
-  renderProdutos(produtosFiltrados);
-});
 
 
 // ============================================================
