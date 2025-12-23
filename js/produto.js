@@ -106,15 +106,30 @@ function abrirVideo(src) {
 
   modal.innerHTML = `
     <div class="video-content">
-      <button class="video-close" onclick="this.parentElement.parentElement.remove()">✕</button>
+      <button class="video-close" aria-label="Fechar vídeo">✕</button>
       <video controls autoplay>
         <source src="${src}" type="video/mp4">
       </video>
     </div>
   `;
 
+  // adiciona ao DOM
   document.body.appendChild(modal);
+
+  // 🔹 FECHAR AO CLICAR NO X
+  const btnClose = modal.querySelector(".video-close");
+  btnClose.addEventListener("click", () => {
+    modal.remove();
+  });
+
+  // 🔹 FECHAR AO CLICAR FORA DO VÍDEO
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.remove();
+    }
+  });
 }
+
 
 // ================================
 // CONTROLE DE QUANTIDADE
