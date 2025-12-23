@@ -990,6 +990,15 @@ img {
     display: flex;
     align-items: center;
     gap: 12px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* 🔥 força ficar lado a lado */
   }
 }
+
+.produto-quantidade-anel {
+    flex-shrink: 0; /* não encolhe */
+  }
+
+  .btn-comprar {
+    flex: 1;           /* ocupa o espaço restante */
+    min-width: 120px;  /* garante clique confortável */
+  }
