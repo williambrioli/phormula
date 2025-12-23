@@ -25,22 +25,22 @@
   <img src="assets/img/logophormula1.png" alt="Logo da Farmácia">
 </div>
 
-   <button class="menu-toggle" id="menuToggle">☰</button>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    
+    <nav class="nav">
+    <div class="menu-overlay" id="menuOverlay"></div>
+      
+      <ul id="menu-categorias"></ul>
+    </nav>
 
-<div class="search-box search-wrapper">
-  <input 
-    type="text"
-    id="searchInput"
-    placeholder="O que você está buscando?"
-    autocomplete="off"
-  />
-  <div id="searchResults" class="search-results"></div>
-</div>
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="O que você está buscando?" 
+      />
+    </div>
 
-<nav class="nav">
-  <div class="menu-overlay" id="menuOverlay"></div>
-  <ul id="menu-categorias"></ul>
-</nav> 
   </div>
 </header>
 
@@ -115,7 +115,7 @@
       <h3>Contato</h3>
       <p>Entre em contato conosco pelas redes sociais ou WhatsApp.</p>
    
-    </div>
+
     <!-- Redes Sociais -->
     <div class="footer-social">
 
@@ -156,7 +156,7 @@
     </svg>
     (18) 99703-3495
   </a>
-    
+
   <!-- E-mail -->
   <a 
     href="mailto:phormulaativa@hotmail.com" class="social-link">
@@ -166,6 +166,10 @@
     </svg>
     phormulaativa@hotmail.com
   </a>
+
+
+      
+</div>
     </div>
     
     <!-- Mapa e rotas -->
@@ -232,8 +236,6 @@
 
   <!-- Dados (produtos, categorias, banner) -->
   <script src="js/data.js"></script>
-
-  <script src="js/search.js"></script>
 
 <!-- carrega menu -->
   <script src="js/menu.js"></script>
