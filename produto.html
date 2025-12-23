@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Produto | Phormula Ativa</title>
+
+  <!-- CSS padrão do site -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+
+</head>
+<body>
+
+  <!-- ================= HEADER (IGUAL AO INDEX) ================= -->
+  <header class="header">
+    <div class="container header-content">
+
+      <div class="logo">
+        <img src="assets/img/logophormula1.png" alt="Phormula Ativa">
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+      <nav class="nav">
+        <div class="menu-overlay" id="menuOverlay"></div>
+        <ul id="menu-categorias"></ul>
+      </nav>
+
+      <div class="search-box">
+        <input type="text" placeholder="O que você está buscando?">
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= PRODUTO ================= -->
+  <main class="container produto-page">
+
+    <!-- CARD DO PRODUTO (GERADO VIA JS) -->
+    <section id="produto-topo"></section>
+
+    <!-- DESCRIÇÃO COMPLETA -->
+    <section id="produto-descricao"></section>
+
+  </main>
+
+  <!-- ================= FOOTER (IGUAL AO INDEX) ================= -->
+  <footer class="footer">
+    <!-- você já tem o footer pronto -->
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- JS DA PÁGINA DE PRODUTO -->
+  <script src="js/produto.js"></script>
+
+</body>
+</html>
