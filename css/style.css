@@ -533,6 +533,7 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+  border-radius: 16px;     /* mesmo raio dos cards */
 }
 
 /* trilha */
