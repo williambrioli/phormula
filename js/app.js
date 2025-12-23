@@ -123,7 +123,7 @@ function criarCardProduto(produto, isBanner = false) {
   href="produto.html?id=${produto.id}" 
   class="btn-detalhes"
 >
-  Ver mais
+  Ver produto
 </a>
     <p class="descricao">${produto.descricao.resumo}</p>
     <span class="preco">${formatarPreco(produto.preco)}</span>
