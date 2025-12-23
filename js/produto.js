@@ -200,3 +200,47 @@ function formatarPreco(valor) {
   });
 }
 
+
+/* ============================================================
+   MENU HAMBÚRGUER FLUTUANTE (MOBILE)
+   ============================================================ */
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.querySelector(".nav");
+const menuOverlay = document.getElementById("menuOverlay");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.add("active");
+});
+
+menuOverlay.addEventListener("click", () => {
+  navMenu.classList.remove("active");
+  
+});
+
+/* ============================================================
+   FECHAR MENU AO CLICAR EM UMA CATEGORIA (MOBILE)
+   ============================================================ */
+
+document.addEventListener("click", function (e) {
+  if (e.target.closest(".nav a")) {
+    navMenu.classList.remove("active");
+    
+  }
+});
+
+/* ============================================================
+   FECHAR MENU AO CLICAR FORA (MENU HAMBÚRGUER)
+   ============================================================ */
+
+document.addEventListener("click", function (event) {
+  const menu = document.querySelector(".nav");
+  const botao = document.getElementById("menuToggle");
+
+  const clicouNoMenu = menu.contains(event.target);
+  const clicouNoBotao = botao.contains(event.target);
+
+  if (!clicouNoMenu && !clicouNoBotao) {
+    menu.classList.remove("active");
+  }
+});
