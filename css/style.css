@@ -524,7 +524,7 @@ img {
 .ads-slider {
   width: 100%;
   background-color: transparent;
-  padding: 0 16px;          /* 🔥 ESSENCIAL */
+  padding: 0px;          /* 🔥 ESSENCIAL padding: 0 16px;  */
   margin-top: 24px; /* 👈 ESPAÇO ENTRE HEADER E SLIDE */
 }
 
@@ -533,7 +533,7 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  border-radius: 16px;     /* mesmo raio dos cards */
+       /* mesmo raio dos cards border-radius: 16px; */
 }
 
 /* trilha */
