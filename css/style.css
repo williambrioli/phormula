@@ -944,15 +944,20 @@ img {
   }
 }
 
-/* ================================ 
-IMAGEM DO PRODUTO — MOBILE 
-================================*/
+/* ================================
+   IMAGEM DO PRODUTO — MOBILE (CORRETO)
+   ================================ */
 @media (max-width: 768px) {
-  .produto-card .produto-imagem img {
-    width: 50%;
-    max-width: none;      /* 🔥 libera crescimento */
+  .produto-imagem {
+    max-width: 320px;   /* controla tamanho */
+    margin: 0 auto;
+  }
+
+  .produto-imagem img {
+    width: 100%;
   }
 }
+
 
 /* ================================ 
 CENTRALIZAR IMAGEM DO PRODUTO — MOBILE 
@@ -969,8 +974,9 @@ CENTRALIZAR IMAGEM DO PRODUTO — MOBILE
    ESPAÇO ENTRE IMAGEM E TEXTO — MOBILE
    ================================ */
 @media (max-width: 768px) {
-  .produto-card .produto-info {
-    margin-top: 16px;
+  .produto-info {
+    margin-top: 12px;
+    text-align: center;
   }
 }
 
@@ -985,17 +991,6 @@ CENTRALIZAR IMAGEM DO PRODUTO — MOBILE
   }
 }
 
-/* ================================
-   Ajustar distância imagem ↔ texto — MOBILE
-   ================================ */
-
-@media (max-width: 768px) {
-  .produto-info {
-    width: 100%;
-    text-align: center;
-    margin-top: 12px;
-  }
-}
 
 
 /* ================================
@@ -1003,9 +998,8 @@ CENTRALIZAR IMAGEM DO PRODUTO — MOBILE
    ================================ */
 @media (max-width: 768px) {
   .produto-video-btn {
-    bottom: 12px;
-    right: 50%;
-    transform: translateX(50%);
+    bottom: 10px;
+    right: 10px;
     width: 44px;
     height: 44px;
   }
