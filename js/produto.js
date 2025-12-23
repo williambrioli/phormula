@@ -44,13 +44,13 @@ function montarProduto(produto) {
   </p>
 
   <!-- AÇÕES: quantidade + comprar -->
-  <div class="produto-acoes">
-
-    <div class="produto-quantidade">
-      <button onclick="alterarQuantidade(-1)">−</button>
-      <span id="quantidade">1</span>
-      <button onclick="alterarQuantidade(1)">+</button>
-    </div>
+  <div class="card-acoes">
+  
+  <div class="quantidade">
+    <button class="btn-menos">-</button>
+    <span class="qtd">1</span>
+    <button class="btn-mais">+</button>
+  </div>
 
     <button class="btn-comprar">
       Comprar
