@@ -143,7 +143,12 @@ function criarCardProduto(produto, isBanner = false) {
     ${produto.mostrarlancamento ? `<span class="badge-lancamento">Lançamento</span>` : ``}
     <img src="${produto.imagem}" alt="${produto.nome}">
     <h3>${produto.nome}</h3>
-    <button class="btn-detalhes">Ver mais</button>
+    <a 
+  href="produto.html?id=${produto.id}" 
+  class="btn-detalhes"
+>
+  Ver mais
+</a>
     <p class="descricao">${produto.descricao}</p>
     <span class="preco">${formatarPreco(produto.preco)}</span>
     ${produto.textoParcelamento ? `<span class="texto-parcelamento">${produto.textoParcelamento}</span>` : ``}
@@ -168,12 +173,7 @@ function criarCardProduto(produto, isBanner = false) {
   const qtdSpan = card.querySelector(".qtd");
   const btnComprar = card.querySelector(".btn-comprar");
 
-  // Mostrar / esconder descrição
-  btnDetalhes.addEventListener("click", () => {
-    descricao.style.display = descricao.style.display === "block" ? "none" : "block";
-  });
-
-  // Quantidade
+    // Quantidade
   btnMais.addEventListener("click", () => {
     quantidade++;
     qtdSpan.textContent = quantidade;
