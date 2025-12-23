@@ -125,7 +125,7 @@ function criarCardProduto(produto, isBanner = false) {
 >
   Ver mais
 </a>
-    <p class="descricao">${produto.descricao}</p>
+    <p class="descricao">${produto.descricao.resumo}</p>
     <span class="preco">${formatarPreco(produto.preco)}</span>
     ${produto.textoParcelamento ? `<span class="texto-parcelamento">${produto.textoParcelamento}</span>` : ``}
 
@@ -202,7 +202,7 @@ searchInput.addEventListener("input", () => {
   const produtosFiltrados = produtos.filter(produto => {
     const nome = normalizarTexto(produto.nome);
     const categoria = normalizarTexto(produto.categoria);
-    const descricao = normalizarTexto(produto.descricao || "");
+    const descricao = normalizarTexto(produto.descricao?.resumo || "");
 
     return (
       nome.includes(termo) ||
