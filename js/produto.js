@@ -31,32 +31,28 @@ function montarProduto(produto) {
         ` : ""}
       </div>
 
-      <div class="produto-info">
+     <div class="produto-info card">
+  
+  <h3>${produto.nome}</h3>
 
-  <h1>${produto.nome}</h1>
+  <span class="preco">R$ ${produto.preco.toFixed(2)}</span>
+  <span class="texto-parcelamento">ou 1x de R$ ${produto.preco.toFixed(2)}</span>
 
-  <p class="produto-preco">
-    R$ ${produto.preco.toFixed(2)}
-  </p>
+  <div class="card-acoes">
 
-  <p class="produto-parcelamento">
-    ${produto.textoParcelamento || ""}
-  </p>
+    <div class="quantidade">
+      <button>-</button>
+      <span>1</span>
+      <button>+</button>
+    </div>
 
-  <!-- CONTROLE DE QUANTIDADE -->
-  <div class="produto-quantidade">
-    <button onclick="alterarQuantidade(-1)">−</button>
-    <span id="quantidade">1</span>
-    <button onclick="alterarQuantidade(1)">+</button>
+    <button class="btn-comprar">Comprar</button>
+
   </div>
-
-  <button class="btn-comprar">
-    Comprar
-  </button>
 
 </div>
 
-    </div>
+
   `;
 
   // ----- DESCRIÇÃO COMPLETA -----
