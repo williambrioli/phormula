@@ -1,24 +1,28 @@
-// ================================
+// ============================================================
 // MENU DE CATEGORIAS (GLOBAL)
-// ================================
+// Funciona no index.html e no produto.html
+// Respeita mostrarNoMenu do data.js
+// ============================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  const menu = document.getElementById("menu-categorias");
-  if (!menu || typeof produtos === "undefined") return;
+  const menuCategorias = document.getElementById("menu-categorias");
 
-  // categorias únicas
-  const categorias = [...new Set(produtos.map(p => p.categoria))];
+  // segurança
+  if (!menuCategorias || typeof categorias === "undefined") return;
 
-  menu.innerHTML = "";
+  menuCategorias.innerHTML = "";
 
   categorias.forEach(cat => {
+    if (!cat.mostrarNoMenu) return;
+
     const li = document.createElement("li");
     const a = document.createElement("a");
 
-    a.href = `index.html#${cat}`;
-    a.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+    // link sempre aponta para o index
+    a.href = `index.html#${cat.id}`;
+    a.textContent = cat.nomeMenu || cat.nome;
 
     li.appendChild(a);
-    menu.appendChild(li);
+    menuCategorias.appendChild(li);
   });
 });
