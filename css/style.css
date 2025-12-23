@@ -524,7 +524,7 @@ img {
 .ads-slider {
   width: 100%;
   background-color: transparent;
-  padding: 0;
+  padding: 0 16px;          /* 🔥 ESSENCIAL */
   margin-top: 24px; /* 👈 ESPAÇO ENTRE HEADER E SLIDE */
 }
 
