@@ -850,22 +850,6 @@ img {
   gap: 16px;
 }
 
-/* quantidade */
-.produto-quantidade {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.produto-quantidade button {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  background: #fff;
-  cursor: pointer;
-  font-size: 1rem;
-}
 
 .produto-quantidade span {
   min-width: 24px;
@@ -944,6 +928,19 @@ img {
   }
 }
 
+
+@media (max-width: 768px) {
+  .produto-imagem {
+    padding-bottom: 32px; /* cria espaço interno */
+  }
+
+  .produto-video-btn {
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
 /* ================================
    IMAGEM DO PRODUTO — MOBILE (CORRETO)
    ================================ */
@@ -958,17 +955,6 @@ img {
   }
 }
 
-
-/* ================================ 
-CENTRALIZAR IMAGEM DO PRODUTO — MOBILE 
-================================*/
-
-@media (max-width: 768px) {
-  .produto-imagem {
-    display: flex;
-    justify-content: center;
-  }
-}
 
 /* ================================
    ESPAÇO ENTRE IMAGEM E TEXTO — MOBILE
