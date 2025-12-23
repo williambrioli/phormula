@@ -126,3 +126,38 @@ function alterarQuantidade(valor) {
   document.getElementById("quantidade").textContent = quantidadeAtual;
 }
 
+// ================================
+// COMPRAR PRODUTO (WHATSAPP)
+// ================================
+
+function comprarProduto() {
+
+  if (!produto) return;
+
+  const valorUnitario = produto.preco;
+  const quantidade = quantidadeAtual;
+  const valorTotal = valorUnitario * quantidade;
+
+  const linkProduto =
+    `${window.location.origin}/produto.html?id=${produto.id}`;
+
+  const mensagem =
+    `Olá! Gostaria de fazer um pedido:%0A%0A` +
+    `Produto: ${produto.nome}%0A` +
+    `Categoria: ${produto.categoria}%0A` +
+    `Quantidade: ${quantidade} unidade(s)%0A` +
+    `Valor unitário: ${formatarPreco(valorUnitario)}%0A` +
+    `Valor total: ${formatarPreco(valorTotal)}%0A%0A` +
+    `Link do produto:%0A${linkProduto}`;
+
+  const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensagem}`;
+  window.open(url, "_blank");
+}
+
+function formatarPreco(valor) {
+  return valor.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+  });
+}
+
