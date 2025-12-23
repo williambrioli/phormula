@@ -138,7 +138,7 @@ function comprarProduto() {
   const quantidade = quantidadeAtual;
   const valorTotal = valorUnitario * quantidade;
 
-  const linkProduto = `produto.html?id=${produto.id}`;
+  const linkProduto = `phormula/produto.html?id=${produto.id}`;
 
   const mensagem =
     `Olá! Gostaria de fazer um pedido:%0A%0A` +
