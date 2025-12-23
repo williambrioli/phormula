@@ -915,5 +915,24 @@ img {
   color: #555;
 }
 
+/* ================================
+   BADGE LANÇAMENTO — MOBILE
+   ================================ */
+@media (max-width: 768px) {
+  .badge-lancamento {
+    font-size: 0.65rem;   /* menor */
+    padding: 4px 8px;     /* menos altura */
+    border-radius: 10px;  /* mais delicado */
+  }
+}
 
+/* ================================
+   TÍTULO DO PRODUTO — MOBILE
+   ================================ */
+@media (max-width: 768px) {
+  .produto-info h1 {
+    font-size: 1.25rem;   /* diminui um pouco */
+    line-height: 1.3;
+  }
+}
 
