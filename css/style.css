@@ -955,17 +955,18 @@ img {
    ESPAÇO ENTRE IMAGEM E TEXTO — MOBILE
    ================================ */
 @media (max-width: 768px) {
-  .produto-page .produto-info {
+  .produto-card .produto-info {
     margin-top: 16px;
   }
 }
+
 
 /* ================================
    TÍTULO DO PRODUTO — MOBILE
    ================================ */
 @media (max-width: 768px) {
-  .produto-info h1 {
-    font-size: 1.25rem;   /* diminui um pouco */
+  .produto-card .produto-info h1 {
+    font-size: 1.25rem;
     line-height: 1.3;
   }
 }
@@ -974,7 +975,7 @@ img {
    BOTÃO DE VÍDEO — MOBILE
    ================================ */
 @media (max-width: 768px) {
-  .produto-page .produto-video-btn {
+  .produto-card .produto-video-btn {
     bottom: 24px;
     right: 24px;
     width: 44px;
