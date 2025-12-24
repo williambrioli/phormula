@@ -270,7 +270,11 @@ document.querySelectorAll(".slider").forEach(slider => {
     window.innerWidth >= 1024 ? Math.min(4, cards.length) : 1;
 
   const pages = Math.ceil(cards.length / visible);
-  let page = 0;
+  let page =
+  window.innerWidth >= 1024
+    ? Math.floor(Math.random() * pages)
+    : 0;
+
 
   /* dots */
   if (dots) {
