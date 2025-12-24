@@ -1140,3 +1140,16 @@ img {
   height: 36px;
   object-fit: cover;
 }
+
+
+/* ============================================================
+   TÍTULOS DAS SEÇÕES — PÁGINA DE PRODUTO
+   ============================================================ */
+
+#produto-descricao h2 {
+  color: var(--azul-escuro); /* mesma cor das categorias */
+  font-size: 1.2rem;        /* menor que o padrão */
+  font-weight: 600;
+  margin: 24px 0 8px;
+}
+
