@@ -702,6 +702,17 @@ img {
 }
 
 
+@media (max-width: 768px) {
+  .footer-legal {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    font-size: 0.6rem; /* texto menor */
+  }
+}
+
+
+
 /* ================= PRODUTO ================= */
 
 .produto-card {
