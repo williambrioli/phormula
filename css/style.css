@@ -711,7 +711,11 @@ img {
   }
 }
 
-
+@media (max-width: 768px) {
+  .footer {
+    padding-bottom: 110px; /* espaço para o botão flutuante */
+  }
+}
 
 /* ================= PRODUTO ================= */
 
