@@ -7,7 +7,7 @@ const params = new URLSearchParams(window.location.search);
 const produtoId = params.get("id");
 
 // busca o produto
-const produto = produtos.find(p => p.id === produtoId);
+const produto = produtos.find(p => p.id == produtoId);
 
 if (!produto) {
   document.getElementById("produto-topo").innerHTML =
