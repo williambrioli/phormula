@@ -14,7 +14,7 @@ const categorias = [
    {
     id: "inicio",
     nome: "#",
-    nomeMenu: "Inicio",
+    nomeMenu: "Início",
     mostrarNoMenu: true
   },
   {
