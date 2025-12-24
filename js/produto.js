@@ -183,7 +183,7 @@ const linkProduto =
   const mensagem =
     `Olá! Gostaria de fazer um pedido:%0A%0A` +
     `Produto: ${produto.nome}%0A` +
-    `Categoria: ${produto.categoria}%0A` +
+    `Categoria: ${slugParaNomeCategoria(produto.categoria)}%0A` +
     `Quantidade: ${quantidade} unidade(s)%0A` +
     `Valor unitário: ${formatarPreco(valorUnitario)}%0A` +
     `Valor total: ${formatarPreco(valorTotal)}%0A%0A` +
