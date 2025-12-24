@@ -42,6 +42,7 @@ const produtos = [
     categoria: "emagrecimento",
     preco: 90.00,
     imagem: "assets/img/imgpoteteste.png",
+    videoSrc: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     videos: [
       "assets/videos/5htp.mp4"
     ],
@@ -61,6 +62,7 @@ const produtos = [
     destaque: true,
     mostrarlancamento: true,
     mostrarVideo: true,
+    videoTipo: "youtube",
     textoParcelamento: "ou 1x de R$ 90,00"
     },
 
