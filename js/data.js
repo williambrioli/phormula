@@ -10,6 +10,13 @@ const WHATSAPP_NUMERO = "5518988092571";
    ============================================================ */
 
 const categorias = [
+
+   {
+    id: "inicio",
+    nome: "#",
+    nomeMenu: "Inicio",
+    mostrarNoMenu: true
+  },
   {
     id: "emagrecimento",
     nome: "Manipulados para emagrecimento",
