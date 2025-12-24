@@ -28,7 +28,7 @@ function montarProduto(produto) {
     <span class="badge-lancamento-produto">LANÇAMENTO</span>
   ` : ""}
         <img src="${produto.imagem}" alt="${produto.nome}">
-        ${produto.videos?.length ? `
+        ${produto.mostrarVideo && produto.videos?.length ? `
           <button class="produto-video-btn" onclick="abrirVideo('${produto.videos[0]}')">
   <video
     src="${produto.videos[0]}"
