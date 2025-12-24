@@ -28,14 +28,17 @@ function montarProduto(produto) {
     <span class="badge-lancamento-produto">LANÇAMENTO</span>
   ` : ""}
         <img src="${produto.imagem}" alt="${produto.nome}">
-        ${produto.mostrarVideo && produto.videoSrc ? `
-  <button class="produto-video-btn" onclick="abrirVideo('${produto.videoSrc}', '${produto.videoTipo}')">
-    ${produto.videoTipo === "youtube"
-      ? `<img src="https://img.youtube.com/vi/${extrairYoutubeId(produto.videoSrc)}/hqdefault.jpg">`
-      : `<video src="${produto.videoSrc}" muted autoplay loop playsinline></video>`
-    }
-    <span class="play-indicador">▶</span>
-  </button>
+        ${produto.mostrarVideo && produto.videos?.length ? `
+          <button class="produto-video-btn" onclick="abrirVideo('${produto.videos[0]}')">
+  <video
+    src="${produto.videos[0]}"
+    muted
+    autoplay
+    loop
+    playsinline
+  ></video>
+  <span class="play-indicador">▶</span>
+</button>
         ` : ""}
       </div>
 
@@ -104,49 +107,39 @@ function montarProduto(produto) {
   `;
 }
 
-
-
-// ================================
-// EXTRAIR VIDEO DO YOUTUBE
-// ================================
-
-function extrairYoutubeId(url) {
-  const match = url.match(/embed\/([a-zA-Z0-9_-]+)/);
-  return match ? match[1] : "";
-}
-
-
 // ================================
 // MODAL DE VÍDEO
 // ================================
 
-function abrirVideo(src, tipo = "mp4") {
+function abrirVideo(src) {
   const modal = document.createElement("div");
   modal.className = "video-modal";
 
   modal.innerHTML = `
     <div class="video-content">
-      <button class="video-close">✕</button>
-
-      ${tipo === "youtube"
-        ? `<iframe
-            src="${src}?autoplay=1"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen
-          ></iframe>`
-        : `<video controls autoplay>
-            <source src="${src}" type="video/mp4">
-          </video>`
-      }
-
+      <button class="video-close" aria-label="Fechar vídeo">✕</button>
+      <video controls autoplay>
+        <source src="${src}" type="video/mp4">
+      </video>
     </div>
   `;
 
   document.body.appendChild(modal);
 
-  modal.querySelector(".video-close").onclick = () => modal.remove();
-  modal.onclick = (e) => e.target === modal && modal.remove();
+  const btnClose = modal.querySelector(".video-close");
+
+  // 🔹 FECHAR PELO X
+  btnClose.addEventListener("click", (e) => {
+    e.stopPropagation(); // 🔥 impede conflito
+    modal.remove();
+  });
+
+  // 🔹 FECHAR AO CLICAR FORA
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.remove();
+    }
+  });
 }
 
 
