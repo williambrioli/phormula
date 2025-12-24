@@ -42,7 +42,7 @@ const produtos = [
     categoria: "emagrecimento",
     preco: 90.00,
     imagem: "assets/img/imgpoteteste.png",
-    videoSrc: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    videoSrc: "https://www.youtube.com/embed/bwxwvmAqdQI"
     videos: [
       "assets/videos/5htp.mp4"
     ],
