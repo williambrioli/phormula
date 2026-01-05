@@ -272,6 +272,18 @@ document.querySelectorAll(".slider").forEach(slider => {
   const pages = Math.ceil(cards.length / visible);
   let page = 0;
 
+   // 🔒 DESKTOP: se não há scroll real, desativa slider
+if (window.innerWidth >= 1024 && cards.length <= visible) {
+  left.style.display = "none";
+  right.style.display = "none";
+  if (dots) dots.style.display = "none";
+
+  track.style.justifyContent = "center";
+  track.style.overflow = "visible";
+
+  return; // 🔥 NÃO inicializa slider
+}
+
 
   /* dots */
   if (dots) {
