@@ -449,7 +449,36 @@ img {
   .slider-track {
     width: calc((260px * 4) + (16px * 3)); /* 4 cards inteiros */
   }
+
+
 }
+
+
+/* ============================================================
+   DESKTOP — esconder setas e dots quando houver MENOS de 4 cards
+   (regra por categoria, sem JS)
+   ============================================================ */
+
+@media (min-width: 1024px) {
+
+  /* se NÃO existir o 4º card, escondemos setas e dots */
+  .slider:not(:has(.card:nth-child(4))) .arrow {
+    display: none !important;
+  }
+
+  .slider:not(:has(.card:nth-child(4))) + .slider-dots {
+    display: none !important;
+  }
+
+  /* opcional: centraliza os cards quando forem menos de 4 */
+  .slider:not(:has(.card:nth-child(4))) .slider-track {
+    justify-content: center;
+  }
+
+}
+
+
+
 
 /* ===== SETAS ===== */
 .arrow {
